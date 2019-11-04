@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30AB74CC23688557004E0285 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30AB74CB23688557004E0285 /* Resnet50.mlmodel */; };
+		6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */; };
 		88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */; };
 		88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C41EF863CC00CC4360 /* ViewController.swift */; };
 		88C6A9C81EF863CC00CC4360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9C61EF863CC00CC4360 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		30AB74CB23688557004E0285 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		6567F2382370F0C800EC2B7B /* Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Images.xcdatamodel; sourceTree = "<group>"; };
 		88C6A9BF1EF863CC00CC4360 /* ShoeSleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeSleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C6A9C41EF863CC00CC4360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				88C6A9C91EF863CC00CC4360 /* Assets.xcassets */,
 				88C6A9CB1EF863CC00CC4360 /* LaunchScreen.storyboard */,
 				88C6A9CE1EF863CC00CC4360 /* Info.plist */,
+				6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */,
 			);
 			path = VisionSample;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */,
+				6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */,
 				30AB74CC23688557004E0285 /* Resnet50.mlmodel in Sources */,
 				88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */,
 			);
@@ -330,6 +334,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6567F2382370F0C800EC2B7B /* Images.xcdatamodel */,
+			);
+			currentVersion = 6567F2382370F0C800EC2B7B /* Images.xcdatamodel */;
+			path = Images.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 88C6A9B71EF863CB00CC4360 /* Project object */;
 }
