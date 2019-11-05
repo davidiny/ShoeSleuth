@@ -240,6 +240,7 @@ SWIFT_CLASS("_TtC10ShoeSleuth20IdentifiedController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favoriteButton;
 - (void)viewDidLoad;
 - (IBAction)favorite;
+- (IBAction)changeFavoriteButtonColorWithSender:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

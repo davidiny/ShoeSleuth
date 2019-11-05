@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Resnet50.mlmodel">
-   </FileRef>
-   <FileRef
       location = "self:VisionSample.xcodeproj">
    </FileRef>
 </Workspace>

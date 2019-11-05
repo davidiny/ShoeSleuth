@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Identified Controller-->
         <scene sceneID="Z36-rB-ErH">
             <objects>
-                <viewController id="G4m-g0-c2H" sceneMemberID="viewController">
+                <viewController id="G4m-g0-c2H" customClass="IdentifiedController" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1kP-2v-Kyc"/>
                         <viewControllerLayoutGuide type="bottom" id="bpq-WU-Ztb"/>
@@ -172,7 +172,7 @@
                 <tabBarItem systemItem="favorites" id="bdg-J2-CYN"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nv-OU-cNR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="32.833583208395808"/>
+            <point key="canvasLocation" x="985" y="20"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="nCI-MI-41u">
