@@ -10,7 +10,9 @@ import UIKit
 import AVFoundation
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  var imagePicker: UIImagePickerController!
+
   // video capture session
   let session = AVCaptureSession()
   // preview layer
@@ -32,6 +34,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
   @IBOutlet weak var resultView: UILabel!
   
   override func viewDidLoad() {
+      
+    
     super.viewDidLoad()
     // get hold of the default video camera
     guard let camera = AVCaptureDevice.default(for: .video) else {
@@ -70,8 +74,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
       // Start the session
       session.startRunning()
       
+      
+      
       // set up the vision model
-      guard let resNet50Model = try? VNCoreMLModel(for: Resnet50().model) else {
+      guard let resNet50Model = try? VNCoreMLModel(for: ShoeSleuthModel().model) else {
         fatalError("Could not load model")
       }
       // set up the request using our vision model
@@ -138,6 +144,53 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBAction func sliderValueChanged(slider: UISlider) {
         self.recognitionThreshold = slider.value
         updateThreshholdLabel()
+
+      
+        
+//      let vc = UIImagePickerController()
+//      vc.sourceType = .camera
+//      vc.allowsEditing = true
+//      vc.delegate = self
+//      present(vc, animated: true)
+//
+//      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//          picker.dismiss(animated: true)
+//
+////          var image:UIImage
+//
+//          guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+//              print("No image found")
+//              return
+//          }
+//
+//          // print out the image size as a test
+//          print(image.size)
+//          print("helloooo")
+//      }
+      
+//    func takeScreenshot(_ shouldSave: Bool = true) -> UIImage? {
+//          var screenshotImage :UIImage?
+//          let layer = UIApplication.shared.keyWindow!.layer
+//          let scale = UIScreen.main.scale
+//          UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+//          guard let context = UIGraphicsGetCurrentContext() else {return nil}
+//          layer.render(in:context)
+//          screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
+//          UIGraphicsEndImageContext()
+//          if let image = screenshotImage, shouldSave {
+//              UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//          }
+//          return screenshotImage
+//      }
+//      takeScreenshot()
+
+
+      
+  
+      
+      
+      
+      
     }
     
   func handleClassifications(request: VNRequest, error: Error?) {
@@ -150,11 +203,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
       return
     }
     
-    let classifications = observations[0...4] // top 4 results
-        .flatMap({ $0 as? VNClassificationObservation })
+    let classifications = observations[0...1] // top 2 results
+      .flatMap({ $0 as? VNClassificationObservation })
         .flatMap({$0.confidence > recognitionThreshold ? $0 : nil})
-      .map({ "\($0.identifier) \(String(format:"%.2f", $0.confidence))" })
+      .map({ "\($0.identifier) shoe" })
         .joined(separator: "\n")
+//        .flatMap({ $0 as? VNClassificationObservation })
+//        .flatMap({$0.confidence > recognitionThreshold ? $0 : nil})
+//      .map({ "\($0.identifier) \(String(format:"%.2f", $0.confidence))" })
+//        .joined(separator: "\n")
+
+    
     
     DispatchQueue.main.async {
         self.resultView.text = classifications

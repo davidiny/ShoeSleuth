@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30841619236E1CA20036A6C7 /* ShoeSleuth 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30841618236E1CA20036A6C7 /* ShoeSleuth 1.mlmodel */; };
+		3084161B2371FAFF0036A6C7 /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3084161A2371FAFF0036A6C7 /* ShoeSleuthModel.mlmodel */; };
 		30AB74CC23688557004E0285 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30AB74CB23688557004E0285 /* Resnet50.mlmodel */; };
 		88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */; };
 		88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C41EF863CC00CC4360 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30841618236E1CA20036A6C7 /* ShoeSleuth 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "ShoeSleuth 1.mlmodel"; sourceTree = "<group>"; };
+		3084161A2371FAFF0036A6C7 /* ShoeSleuthModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ShoeSleuthModel.mlmodel; sourceTree = "<group>"; };
 		30AB74CB23688557004E0285 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		88C6A9BF1EF863CC00CC4360 /* ShoeSleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeSleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		88C6A9C11EF863CC00CC4360 /* VisionSample */ = {
 			isa = PBXGroup;
 			children = (
+				3084161A2371FAFF0036A6C7 /* ShoeSleuthModel.mlmodel */,
+				30841618236E1CA20036A6C7 /* ShoeSleuth 1.mlmodel */,
 				88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */,
 				88C6A9C41EF863CC00CC4360 /* ViewController.swift */,
 				30AB74CB23688557004E0285 /* Resnet50.mlmodel */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3084161B2371FAFF0036A6C7 /* ShoeSleuthModel.mlmodel in Sources */,
 				88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */,
+				30841619236E1CA20036A6C7 /* ShoeSleuth 1.mlmodel in Sources */,
 				30AB74CC23688557004E0285 /* Resnet50.mlmodel in Sources */,
 				88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DDBFATNM35;
 				INFOPLIST_FILE = VisionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,6 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DDBFATNM35;
 				INFOPLIST_FILE = VisionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
