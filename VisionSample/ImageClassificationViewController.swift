@@ -178,6 +178,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     }
     
     @IBAction func favorite() {
+        print("Favorite button")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
@@ -194,6 +195,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
                     /*if (data.value(forKey: "Favorited") == true ) {
                         
                     }*/
+                    print("Favoriting")
                     data.setValue(true, forKey: "Favorited")
                     //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
                     try context.save()
