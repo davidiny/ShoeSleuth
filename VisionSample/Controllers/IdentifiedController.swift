@@ -35,8 +35,16 @@ class IdentifiedController: UIViewController {
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
+            /*for data in result as! [NSManagedObject] {
+                if (data.value(forKey: "name") as! String == shoeName.text) {
+                    
+                }
+            }*/
             for data in result as! [NSManagedObject] {
-                //favorited
+                if data == context {
+                    data.setValue(true, forKey: "Favorited")
+                    try context.save()
+                }
             }
         }
         catch {
