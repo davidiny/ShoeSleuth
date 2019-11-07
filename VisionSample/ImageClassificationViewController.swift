@@ -9,6 +9,8 @@ import UIKit
 import CoreML
 import Vision
 import ImageIO
+import Foundation
+import CoreData
 
 class ImageClassificationViewController: UIViewController {
     // MARK: - IBOutlets
@@ -143,6 +145,52 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         imageView.image = image
         classificationLabel.isHidden = false
         favoriteButton.isHidden = false
+        save()
         updateClassifications(for: image)
     }
+    
+    func save() {
+        let image = GalleryImage()
+        image.name = classificationLabel.text
+        image.photo = imageView.image
+        saveShoe(image: image)
+    }
+    
+    func saveShoe(image: GalleryImage){
+        // Connect to the context for the container stack
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        // Specifically select the People entity to save this object to
+        let entity = NSEntityDescription.entity(forEntityName: "Photo", in: context)
+        let newImage = NSManagedObject(entity: entity!, insertInto: context)
+        // Set values one at a time and save
+        newImage.setValue(image.name, forKey: "name")
+        newImage.setValue(image.favorited, forKey: "favorited")
+        // Safely unwrap the picture
+        if let pic = image.photo {
+            newImage.setValue(UIImagePNGRepresentation(pic), forKey: "photo")
+        }
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
+    
+    
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueName" {
+            let segueName:IdentifiedController = segue.destination as! IdentifiedController
+            segueName.shoeName = self.classificationLabel
+        }
+    }
+ */
+    
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is IdentifiedController {
+            let segEnd = segue.destination as? IdentifiedController
+            segEnd?.shoeLabel = self.classificationLabel
+        }
+    }*/
 }

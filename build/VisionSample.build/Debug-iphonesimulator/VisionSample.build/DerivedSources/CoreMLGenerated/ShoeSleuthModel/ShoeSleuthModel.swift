@@ -1,5 +1,5 @@
 //
-// Resnet50.swift
+// ShoeSleuthModel.swift
 //
 // This file was automatically generated and should not be edited.
 //
@@ -9,7 +9,7 @@ import CoreML
 
 /// Model Prediction Input Type
 @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
-class Resnet50Input : MLFeatureProvider {
+class ShoeSleuthModelInput : MLFeatureProvider {
 
     /// Input image of scene to be classified as color (kCVPixelFormatType_32BGRA) image buffer, 224 pixels wide by 224 pixels high
     var image: CVPixelBuffer
@@ -34,7 +34,7 @@ class Resnet50Input : MLFeatureProvider {
 
 /// Model Prediction Output Type
 @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
-class Resnet50Output : MLFeatureProvider {
+class ShoeSleuthModelOutput : MLFeatureProvider {
 
     /// Source provided by CoreML
 
@@ -71,13 +71,13 @@ class Resnet50Output : MLFeatureProvider {
 
 /// Class for model loading and prediction
 @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
-class Resnet50 {
+class ShoeSleuthModel {
     var model: MLModel
 
 /// URL of model assuming it was installed in the same bundle as this class
     class var urlOfModelInThisBundle : URL {
-        let bundle = Bundle(for: Resnet50.self)
-        return bundle.url(forResource: "Resnet50", withExtension:"mlmodelc")!
+        let bundle = Bundle(for: ShoeSleuthModel.self)
+        return bundle.url(forResource: "ShoeSleuthModel", withExtension:"mlmodelc")!
     }
 
     /**
@@ -121,25 +121,25 @@ class Resnet50 {
     /**
         Make a prediction using the structured interface
         - parameters:
-           - input: the input to the prediction as Resnet50Input
+           - input: the input to the prediction as ShoeSleuthModelInput
         - throws: an NSError object that describes the problem
-        - returns: the result of the prediction as Resnet50Output
+        - returns: the result of the prediction as ShoeSleuthModelOutput
     */
-    func prediction(input: Resnet50Input) throws -> Resnet50Output {
+    func prediction(input: ShoeSleuthModelInput) throws -> ShoeSleuthModelOutput {
         return try self.prediction(input: input, options: MLPredictionOptions())
     }
 
     /**
         Make a prediction using the structured interface
         - parameters:
-           - input: the input to the prediction as Resnet50Input
+           - input: the input to the prediction as ShoeSleuthModelInput
            - options: prediction options 
         - throws: an NSError object that describes the problem
-        - returns: the result of the prediction as Resnet50Output
+        - returns: the result of the prediction as ShoeSleuthModelOutput
     */
-    func prediction(input: Resnet50Input, options: MLPredictionOptions) throws -> Resnet50Output {
+    func prediction(input: ShoeSleuthModelInput, options: MLPredictionOptions) throws -> ShoeSleuthModelOutput {
         let outFeatures = try model.prediction(from: input, options:options)
-        return Resnet50Output(features: outFeatures)
+        return ShoeSleuthModelOutput(features: outFeatures)
     }
 
     /**
@@ -147,30 +147,30 @@ class Resnet50 {
         - parameters:
             - image: Input image of scene to be classified as color (kCVPixelFormatType_32BGRA) image buffer, 224 pixels wide by 224 pixels high
         - throws: an NSError object that describes the problem
-        - returns: the result of the prediction as Resnet50Output
+        - returns: the result of the prediction as ShoeSleuthModelOutput
     */
-    func prediction(image: CVPixelBuffer) throws -> Resnet50Output {
-        let input_ = Resnet50Input(image: image)
+    func prediction(image: CVPixelBuffer) throws -> ShoeSleuthModelOutput {
+        let input_ = ShoeSleuthModelInput(image: image)
         return try self.prediction(input: input_)
     }
 
     /**
         Make a batch prediction using the structured interface
         - parameters:
-           - inputs: the inputs to the prediction as [Resnet50Input]
+           - inputs: the inputs to the prediction as [ShoeSleuthModelInput]
            - options: prediction options 
         - throws: an NSError object that describes the problem
-        - returns: the result of the prediction as [Resnet50Output]
+        - returns: the result of the prediction as [ShoeSleuthModelOutput]
     */
     @available(macOS 10.14, iOS 12.0, tvOS 12.0, watchOS 5.0, *)
-    func predictions(inputs: [Resnet50Input], options: MLPredictionOptions = MLPredictionOptions()) throws -> [Resnet50Output] {
+    func predictions(inputs: [ShoeSleuthModelInput], options: MLPredictionOptions = MLPredictionOptions()) throws -> [ShoeSleuthModelOutput] {
         let batchIn = MLArrayBatchProvider(array: inputs)
         let batchOut = try model.predictions(from: batchIn, options: options)
-        var results : [Resnet50Output] = []
+        var results : [ShoeSleuthModelOutput] = []
         results.reserveCapacity(inputs.count)
         for i in 0..<batchOut.count {
             let outProvider = batchOut.features(at: i)
-            let result =  Resnet50Output(features: outProvider)
+            let result =  ShoeSleuthModelOutput(features: outProvider)
             results.append(result)
         }
         return results

@@ -16,10 +16,14 @@ class IdentifiedController: UIViewController {
     @IBOutlet weak var shoeName: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    //var shoeLabel:String = ""
+    
     // MARK: - General
     override func viewDidLoad() {
         super.viewDidLoad()
         //maybe automatically run save method when the screen appears
+        shoeName.text = shoeName.text
+        //note: segue??
     }
     
     //look through coredata to find the autosaved image

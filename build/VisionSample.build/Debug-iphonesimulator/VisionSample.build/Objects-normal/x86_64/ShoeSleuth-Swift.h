@@ -245,6 +245,25 @@ SWIFT_CLASS("_TtC10ShoeSleuth20IdentifiedController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10ShoeSleuth33ImageClassificationViewController")
+@interface ImageClassificationViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified cameraButton;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified classificationLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favoriteButton;
+- (void)viewDidLoad;
+- (IBAction)takePicture;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImagePickerController;
+
+@interface ImageClassificationViewController (SWIFT_EXTENSION(ShoeSleuth)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * _Nonnull)info;
+@end
+
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
