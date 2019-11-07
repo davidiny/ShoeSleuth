@@ -469,13 +469,12 @@
                                             <action selector="takePicture" destination="ryN-Sx-EFj" id="XYH-4e-P6e"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="3pu-RA-Yvb">
-                                        <connections>
-                                            <segue destination="Alx-Il-sL6" kind="show" id="HF3-7U-U9U"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="3pu-RA-Yvb"/>
                                     <barButtonItem title="Item" image="image 3gallery" width="103" id="znD-Qe-ou9">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <segue destination="Alx-Il-sL6" kind="showDetail" id="Kxi-xa-GeQ"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
