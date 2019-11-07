@@ -71,7 +71,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
       session.startRunning()
       
       // set up the vision model
-      guard let resNet50Model = try? VNCoreMLModel(for: Resnet50().model) else {
+      guard let resNet50Model = try? VNCoreMLModel(for: ShoeSleuthModel().model) else {
         fatalError("Could not load model")
       }
       // set up the request using our vision model
@@ -150,7 +150,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
       return
     }
     
-    let classifications = observations[0...4] // top 4 results
+    let classifications = observations[0...2] // top 4 results
         .flatMap({ $0 as? VNClassificationObservation })
         .flatMap({$0.confidence > recognitionThreshold ? $0 : nil})
       .map({ "\($0.identifier) \(String(format:"%.2f", $0.confidence))" })

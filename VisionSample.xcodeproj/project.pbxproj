@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300082412373B2D10095285D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9C61EF863CC00CC4360 /* Main.storyboard */; };
+		3084161F2373A3790036A6C7 /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3084161E2373A3790036A6C7 /* ShoeSleuthModel.mlmodel */; };
+		308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */; };
+		308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */; };
 		6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24023710BD700EC2B7B /* IdentifiedController.swift */; };
-		6567F24223710E2300EC2B7B /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6567F23E2371021900EC2B7B /* Resnet50.mlmodel */; };
 		6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
 		88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */; };
 		88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C41EF863CC00CC4360 /* ViewController.swift */; };
-		88C6A9C81EF863CC00CC4360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9C61EF863CC00CC4360 /* Main.storyboard */; };
 		88C6A9CA1EF863CC00CC4360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9C91EF863CC00CC4360 /* Assets.xcassets */; };
 		88C6A9CD1EF863CC00CC4360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9CB1EF863CC00CC4360 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3084161E2373A3790036A6C7 /* ShoeSleuthModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ShoeSleuthModel.mlmodel; sourceTree = "<group>"; };
+		308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
+		308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		6567F2382370F0C800EC2B7B /* Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Images.xcdatamodel; sourceTree = "<group>"; };
-		6567F23E2371021900EC2B7B /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = SOURCE_ROOT; };
 		6567F24023710BD700EC2B7B /* IdentifiedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedController.swift; sourceTree = "<group>"; };
 		6567F24523710FBF00EC2B7B /* GalleryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
 		88C6A9BF1EF863CC00CC4360 /* ShoeSleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeSleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,9 +83,11 @@
 		88C6A9C11EF863CC00CC4360 /* VisionSample */ = {
 			isa = PBXGroup;
 			children = (
+				308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */,
+				3084161E2373A3790036A6C7 /* ShoeSleuthModel.mlmodel */,
 				6567F24423710F9F00EC2B7B /* Controllers */,
 				6567F24323710F9800EC2B7B /* Models */,
-				6567F23E2371021900EC2B7B /* Resnet50.mlmodel */,
 				88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */,
 				88C6A9C61EF863CC00CC4360 /* Main.storyboard */,
 				88C6A9C91EF863CC00CC4360 /* Assets.xcassets */,
@@ -150,9 +156,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300082412373B2D10095285D /* Main.storyboard in Resources */,
 				88C6A9CD1EF863CC00CC4360 /* LaunchScreen.storyboard in Resources */,
 				88C6A9CA1EF863CC00CC4360 /* Assets.xcassets in Resources */,
-				88C6A9C81EF863CC00CC4360 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6567F24223710E2300EC2B7B /* Resnet50.mlmodel in Sources */,
 				88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */,
 				6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */,
+				3084161F2373A3790036A6C7 /* ShoeSleuthModel.mlmodel in Sources */,
 				6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */,
+				308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */,
 				6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */,
+				308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -295,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

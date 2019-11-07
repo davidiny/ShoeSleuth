@@ -13,9 +13,9 @@ import ImageIO
 class ImageClassificationViewController: UIViewController {
     // MARK: - IBOutlets
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var classificationLabel: UILabel!
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var cameraButton: UIButton!
+  @IBOutlet weak var classificationLabel: UILabel!
     
     // MARK: - Image Classification
     
@@ -41,11 +41,11 @@ class ImageClassificationViewController: UIViewController {
     
     /// - Tag: PerformRequests
     func updateClassifications(for image: UIImage) {
-        classificationLabel.text = "Classifying..."
-        
+      classificationLabel.text = "Classifying..."
+
         let orientation = CGImagePropertyOrientation(image.imageOrientation)
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
-        
+
         DispatchQueue.global(qos: .userInitiated).async {
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
             do {
@@ -115,7 +115,9 @@ class ImageClassificationViewController: UIViewController {
         picker.delegate = self
         picker.sourceType = sourceType
         present(picker, animated: true)
+
     }
+
 }
 
 extension ImageClassificationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
