@@ -16,6 +16,16 @@ class ImageClassificationViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var cameraButton: UIButton!
   @IBOutlet weak var classificationLabel: UILabel!
+  @IBOutlet weak var favoriteButton: UIButton!
+  
+
+  override func viewDidLoad() {
+      super.viewDidLoad()
+     classificationLabel.isHidden = true
+     favoriteButton.isHidden = true
+    
+      //maybe automatically run save method when the screen appears
+  }
     
     // MARK: - Image Classification
     
@@ -75,6 +85,8 @@ class ImageClassificationViewController: UIViewController {
             if classifications.isEmpty {
                 self.classificationLabel.text = "Nothing recognized."
             } else {
+              self.classificationLabel.isHidden = false
+
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(2)
                 let descriptions = topClassifications.map { classification in
@@ -129,6 +141,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         // We always expect `imagePickerController(:didFinishPickingMediaWithInfo:)` to supply the original image.
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
+        classificationLabel.isHidden = false
+        favoriteButton.isHidden = false
         updateClassifications(for: image)
     }
 }
