@@ -159,6 +159,7 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="lsj-NX-3Pn"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gf3-9H-W5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -457,16 +458,22 @@
                                 <items>
                                     <barButtonItem title="Item" image="image 2staricon" width="103" id="RXy-G0-g6c">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <segue destination="bFN-s0-cku" kind="show" id="djj-hy-FQt"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="4gh-0A-JV3"/>
-                                    <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="hUv-yp-Ndj"/>
                                     <barButtonItem title="Item" image="image 1camera" width="103" id="rko-Oo-2yO">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="takePicture" destination="ryN-Sx-EFj" id="XYH-4e-P6e"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="3pu-RA-Yvb"/>
+                                    <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="3pu-RA-Yvb">
+                                        <connections>
+                                            <segue destination="Alx-Il-sL6" kind="show" id="HF3-7U-U9U"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Item" image="image 3gallery" width="103" id="znD-Qe-ou9">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </barButtonItem>
@@ -559,6 +566,7 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="bdy-Mp-fhE"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfL-da-yJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
