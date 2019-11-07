@@ -153,6 +153,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         let image = GalleryImage()
         image.name = classificationLabel.text
         image.photo = imageView.image
+        print("Saving")
         saveShoe(image: image)
     }
     
@@ -171,6 +172,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
             newImage.setValue(UIImagePNGRepresentation(pic), forKey: "photo")
         }
         do {
+            print("Saved")
             try context.save()
         } catch {
             print("Failed saving")
