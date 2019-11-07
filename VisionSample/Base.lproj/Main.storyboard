@@ -477,6 +477,9 @@
                                 <rect key="frame" x="33" y="462" width="38" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="image 2staricon"/>
+                                <connections>
+                                    <action selector="favorite" destination="ryN-Sx-EFj" eventType="touchUpInside" id="msH-CL-Ste"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -486,7 +489,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="classificationLabel" destination="mU1-bj-cVj" id="lgX-Ac-3oE"/>
-                        <outlet property="favoriteButton" destination="dPc-1H-XA2" id="84t-V1-eX2"/>
                         <outlet property="imageView" destination="OHC-Fv-PMc" id="k9I-76-OwO"/>
                     </connections>
                 </viewController>

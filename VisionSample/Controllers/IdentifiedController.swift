@@ -43,6 +43,7 @@ class IdentifiedController: UIViewController {
             for data in result as! [NSManagedObject] {
                 if data == context {
                     data.setValue(true, forKey: "Favorited")
+                    //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
                     try context.save()
                 }
             }

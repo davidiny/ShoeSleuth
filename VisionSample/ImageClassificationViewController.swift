@@ -177,6 +177,34 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         }
     }
     
+    @IBAction func favorite() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            /*for data in result as! [NSManagedObject] {
+                if (data.value(forKey: "name") as! String == shoeName.text) {
+                    
+                }
+            }*/
+            for data in result as! [NSManagedObject] {
+                if data == context {
+                    /*if (data.value(forKey: "Favorited") == true ) {
+                        
+                    }*/
+                    data.setValue(true, forKey: "Favorited")
+                    //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
+                    try context.save()
+                }
+            }
+        }
+        catch {
+            print("Failed")
+        }
+    }
+    
     
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
