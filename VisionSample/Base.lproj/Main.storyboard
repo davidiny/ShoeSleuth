@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="984.05797101449286" y="19.419642857142858"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Starred-->
         <scene sceneID="nCI-MI-41u">
             <objects>
                 <collectionViewController id="bFN-s0-cku" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
                             <outlet property="delegate" destination="bFN-s0-cku" id="5F5-GM-g98"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="SQN-Q0-H6k"/>
+                    <tabBarItem key="tabBarItem" title="Starred" image="star.fill" catalog="system" selectedImage="star.fill" id="SQN-Q0-H6k"/>
                     <toolbarItems>
                         <barButtonItem title="Item" image="image 2staricon" width="103" id="nRN-Ao-Y45">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -467,7 +467,7 @@
             </objects>
             <point key="canvasLocation" x="876" y="-845"/>
         </scene>
-        <!--Item-->
+        <!--Camera-->
         <scene sceneID="VTe-18-ekO">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="ryN-Sx-EFj" customClass="ImageClassificationViewController" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
@@ -519,7 +519,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="camera.fill" catalog="system" selectedImage="camera.fill" id="Prf-xw-hdb"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera.fill" catalog="system" selectedImage="camera.fill" id="Prf-xw-hdb"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BUU-pQ-uIU"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -533,7 +533,7 @@
             </objects>
             <point key="canvasLocation" x="52.173913043478265" y="38.169642857142854"/>
         </scene>
-        <!--Gallery Collection View-->
+        <!--Pictures-->
         <scene sceneID="mj0-Jb-xkd">
             <objects>
                 <collectionViewController id="Alx-Il-sL6" customClass="GalleryCollectionView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
@@ -589,7 +589,7 @@
                             <outlet property="delegate" destination="Alx-Il-sL6" id="DV8-W9-3IB"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" image="photo.fill" catalog="system" selectedImage="photo.fill" id="GLl-ev-989"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="photo.fill" catalog="system" selectedImage="photo.fill" id="GLl-ev-989"/>
                     <toolbarItems>
                         <barButtonItem title="Item" image="image 2staricon" width="103" id="b8M-8F-KTd">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -618,6 +618,7 @@
         <image name="image 2staricon" width="40" height="40"/>
         <image name="image 3gallery" width="47" height="47"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SmF-t4-vl1"/>
