@@ -406,20 +406,20 @@
             </objects>
             <point key="canvasLocation" x="2564" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View-->
         <scene sceneID="47V-uW-QtH">
             <objects>
-                <viewController id="Jjj-tF-keK" sceneMemberID="viewController">
+                <viewController id="Jjj-tF-keK" customClass="ImageView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n4Z-Jv-QSl"/>
                         <viewControllerLayoutGuide type="bottom" id="zlV-Cm-wVB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="R79-wG-uTc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-NA-4Ql">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
@@ -439,6 +439,9 @@
                                 <rect key="frame" x="54" y="492" width="38" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="image 2staricon"/>
+                                <connections>
+                                    <action selector="favorite" destination="Jjj-tF-keK" eventType="touchUpInside" id="zYW-g7-Ici"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Oi-6O-m6V">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -463,12 +466,17 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="FKe-w9-8fu"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="classificationLabel" destination="7D5-CS-hij" id="XVs-kJ-l1B"/>
+                        <outlet property="imageView" destination="hJL-or-knh" id="aFb-6z-Atx"/>
+                    </connections>
                 </viewController>
                 <tabBarItem systemItem="favorites" id="nUC-RV-rQy"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoS-cR-7XT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="-845"/>
+            <point key="canvasLocation" x="2564" y="751"/>
         </scene>
         <!--Camera-->
         <scene sceneID="VTe-18-ekO">
@@ -608,6 +616,9 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="bdy-Mp-fhE"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Jjj-tF-keK" kind="show" identifier="shoeImage" id="PMZ-uQ-DA8"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfL-da-yJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

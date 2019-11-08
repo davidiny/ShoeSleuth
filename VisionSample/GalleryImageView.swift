@@ -19,7 +19,6 @@ class GalleryImageView: UICollectionViewController {
       super.viewDidLoad()
 //      self.registerClass(GalleryImageViewCell.self)
       getImages()
-
       print(":^) Gallery image loaded")
     }
     
@@ -79,6 +78,30 @@ class GalleryImageView: UICollectionViewController {
 
       return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "shoeImage" {
+            if let cell = sender as? GalleryImageViewCell, let indexPath = self.collectionView!.indexPath(for: cell) {
+                let galleryImage = photoGallery[indexPath.row]
+                (segue.destination as! ImageView).detailItem = galleryImage
+            }
+
+            /*
+             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                 if segue.identifier == "showDetail" {
+                     if let indexPath = self.tableView.indexPathForSelectedRow {
+                         let contact = contacts[indexPath.row]
+                         (segue.destination as! DetailViewController).detailItem = contact
+                     }
+                 } else if segue.identifier == "addContact" {
+                     let navigationController = segue.destination as! UINavigationController
+                     let controller = navigationController.topViewController as! AddContactController
+                     //controller.doneBarButton.isEnabled = false
+                     controller.delegate = self
+                 }
+             }
+             */
+    }
 
 /*
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -96,5 +119,6 @@ class GalleryImageView: UICollectionViewController {
       })
     }
  */
-    
+      
+}
 }

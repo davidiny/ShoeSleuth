@@ -231,6 +231,7 @@ SWIFT_CLASS("_TtC10ShoeSleuth12GalleryImage")
 
 @class UICollectionView;
 @class UICollectionViewCell;
+@class UIStoryboardSegue;
 @class UICollectionViewLayout;
 @class NSBundle;
 
@@ -239,6 +240,7 @@ SWIFT_CLASS("_TtC10ShoeSleuth16GalleryImageView")
 - (void)viewDidLoad;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -287,6 +289,19 @@ SWIFT_CLASS("_TtC10ShoeSleuth33ImageClassificationViewController")
 @interface ImageClassificationViewController (SWIFT_EXTENSION(ShoeSleuth)) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * _Nonnull)info;
 - (IBAction)favorite;
+@end
+
+
+SWIFT_CLASS("_TtC10ShoeSleuth9ImageView")
+@interface ImageView : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified classificationLabel;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favoriteButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)favorite;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSEntityDescription;
