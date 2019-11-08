@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="876" y="752"/>
         </scene>
-        <!--Gallery Collection View-->
+        <!--Gallery Image View-->
         <scene sceneID="TVL-Mg-s5Q">
             <objects>
-                <collectionViewController id="V4h-iL-qHh" customClass="GalleryCollectionView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="V4h-iL-qHh" customClass="GalleryImageView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1rO-30-3M5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
                             <viewLayoutGuide key="frameLayoutGuide" id="F2k-OW-xmr"/>
                         </scrollView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d7p-sS-IoC">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d7p-sS-IoC" customClass="GalleryImageViewCell" customModule="ShoeSleuth" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C1A-wF-RTs">
@@ -255,6 +255,9 @@
                                         </imageView>
                                     </subviews>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="lnb-7O-JDW" id="V0v-1J-RUH"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -536,8 +539,8 @@
         <!--Pictures-->
         <scene sceneID="mj0-Jb-xkd">
             <objects>
-                <collectionViewController id="Alx-Il-sL6" customClass="GalleryCollectionView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Meq-J4-nxJ" customClass="GalleryCollectionView" customModule="ShoeSleuth" customModuleProvider="target">
+                <collectionViewController id="Alx-Il-sL6" customClass="GalleryImageView" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Meq-J4-nxJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -569,7 +572,7 @@
                             <viewLayoutGuide key="frameLayoutGuide" id="czC-Fq-avC"/>
                         </scrollView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionViewCell" id="YxZ-hq-3Rn">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YxZ-hq-3Rn" customClass="GalleryImageViewCell" customModule="ShoeSleuth" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C0d-Zl-ZTI">
