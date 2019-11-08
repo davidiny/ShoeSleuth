@@ -11,6 +11,12 @@
 		3084161F2373A3790036A6C7 /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3084161E2373A3790036A6C7 /* ShoeSleuthModel.mlmodel */; };
 		308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */; };
 		308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		30DCC7D82374FEC300585780 /* PastPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7D72374FEC300585780 /* PastPhotosController.swift */; };
+		30DCC7DA2375043A00585780 /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7D92375043A00585780 /* CustomDataSource.swift */; };
+		30DCC7DC237505EF00585780 /* AsyncFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7DB237505EF00585780 /* AsyncFetcher.swift */; };
+		30DCC7DE2375063B00585780 /* AsyncFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7DD2375063B00585780 /* AsyncFetcherOperation.swift */; };
+		30DCC7E02375066D00585780 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7DF2375066D00585780 /* Cell.swift */; };
+		30DCC7E22375069E00585780 /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCC7E12375069E00585780 /* DisplayData.swift */; };
 		6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */; };
 		6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24023710BD700EC2B7B /* IdentifiedController.swift */; };
 		6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
@@ -24,6 +30,12 @@
 		3084161E2373A3790036A6C7 /* ShoeSleuthModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ShoeSleuthModel.mlmodel; sourceTree = "<group>"; };
 		308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
 		308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		30DCC7D72374FEC300585780 /* PastPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPhotosController.swift; sourceTree = "<group>"; };
+		30DCC7D92375043A00585780 /* CustomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
+		30DCC7DB237505EF00585780 /* AsyncFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFetcher.swift; sourceTree = "<group>"; };
+		30DCC7DD2375063B00585780 /* AsyncFetcherOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFetcherOperation.swift; sourceTree = "<group>"; };
+		30DCC7DF2375066D00585780 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		30DCC7E12375069E00585780 /* DisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayData.swift; sourceTree = "<group>"; };
 		6567F2382370F0C800EC2B7B /* Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Images.xcdatamodel; sourceTree = "<group>"; };
 		6567F24023710BD700EC2B7B /* IdentifiedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedController.swift; sourceTree = "<group>"; };
 		6567F24523710FBF00EC2B7B /* GalleryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
@@ -60,6 +72,12 @@
 			children = (
 				88C6A9C41EF863CC00CC4360 /* ViewController.swift */,
 				6567F24023710BD700EC2B7B /* IdentifiedController.swift */,
+				30DCC7D72374FEC300585780 /* PastPhotosController.swift */,
+				30DCC7D92375043A00585780 /* CustomDataSource.swift */,
+				30DCC7DB237505EF00585780 /* AsyncFetcher.swift */,
+				30DCC7DD2375063B00585780 /* AsyncFetcherOperation.swift */,
+				30DCC7DF2375066D00585780 /* Cell.swift */,
+				30DCC7E12375069E00585780 /* DisplayData.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,14 +187,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DCC7D82374FEC300585780 /* PastPhotosController.swift in Sources */,
 				88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */,
 				6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */,
 				3084161F2373A3790036A6C7 /* ShoeSleuthModel.mlmodel in Sources */,
 				6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */,
+				30DCC7E02375066D00585780 /* Cell.swift in Sources */,
 				308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				30DCC7DE2375063B00585780 /* AsyncFetcherOperation.swift in Sources */,
 				88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */,
 				6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */,
 				308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */,
+				30DCC7DA2375043A00585780 /* CustomDataSource.swift in Sources */,
+				30DCC7E22375069E00585780 /* DisplayData.swift in Sources */,
+				30DCC7DC237505EF00585780 /* AsyncFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

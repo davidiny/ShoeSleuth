@@ -132,7 +132,7 @@
                             <viewLayoutGuide key="frameLayoutGuide" id="RXa-Hs-XRl"/>
                         </scrollView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DER-g1-zFC">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Photos" id="DER-g1-zFC">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xku-Dt-lyS">
@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="876" y="752"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Past Photos Controller-->
         <scene sceneID="TVL-Mg-s5Q">
             <objects>
-                <collectionViewController id="V4h-iL-qHh" sceneMemberID="viewController">
+                <collectionViewController id="V4h-iL-qHh" customClass="PastPhotosController" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1rO-30-3M5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
                             <viewLayoutGuide key="frameLayoutGuide" id="F2k-OW-xmr"/>
                         </scrollView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d7p-sS-IoC">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="d7p-sS-IoC">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C1A-wF-RTs">
@@ -473,7 +473,7 @@
                                     <barButtonItem title="Item" image="image 3gallery" width="103" id="znD-Qe-ou9">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
-                                            <segue destination="Alx-Il-sL6" kind="show" id="Kxi-xa-GeQ"/>
+                                            <segue destination="stK-It-iom" kind="show" id="Ix3-9l-6Rw"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -571,6 +571,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfL-da-yJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="752"/>
+        </scene>
+        <!--Past Photos Controller-->
+        <scene sceneID="OM3-gE-bcI">
+            <objects>
+                <viewController id="stK-It-iom" customClass="PastPhotosController" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="az7-Bb-JL5"/>
+                        <viewControllerLayoutGuide type="bottom" id="ig7-bn-5rD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wE2-L6-bWx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-fe-oZi">
+                                <rect key="frame" x="20" y="224" width="374" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g2r-3o-OFi">
+                                    <size key="itemSize" width="374" height="123"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="C7q-fN-TE9" customClass="Cell" customModule="ShoeSleuth">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="374" height="123"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vq7-fe-oZi" firstAttribute="leading" secondItem="wE2-L6-bWx" secondAttribute="leadingMargin" id="8O2-9K-0tn"/>
+                            <constraint firstItem="Vq7-fe-oZi" firstAttribute="trailing" secondItem="wE2-L6-bWx" secondAttribute="trailingMargin" id="IrB-um-srm"/>
+                            <constraint firstItem="Vq7-fe-oZi" firstAttribute="height" secondItem="wE2-L6-bWx" secondAttribute="height" multiplier="0.5" id="nPR-y5-4zb"/>
+                            <constraint firstItem="Vq7-fe-oZi" firstAttribute="centerY" secondItem="wE2-L6-bWx" secondAttribute="centerY" id="yHN-1x-qqi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gjB-WV-c08"/>
+                    <connections>
+                        <outlet property="collectionsView" destination="Vq7-fe-oZi" id="VfK-pl-2iB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22N-NY-GUK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563.768115942029" y="750.66964285714278"/>
         </scene>
     </scenes>
     <resources>

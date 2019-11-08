@@ -1,9 +1,40 @@
-//
-//  Cell.swift
-//  VisionSample
-//
-//  Created by David Inyangson on 11/7/19.
-//  Copyright © 2019 MRM Brand Ltd. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
 
-import Foundation
+Abstract:
+The `UICollectionViewCell` used to represent data in the collection view.
+*/
+
+import UIKit
+
+final class Cell: UICollectionViewCell {
+    // MARK: Properties
+
+    static let reuseIdentifier = "Cell"
+
+    /// The `UUID` for the data this cell is presenting.
+    var representedId: UUID?
+
+    // MARK: UICollectionViewCell
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.red.cgColor
+    }
+
+    // MARK: Convenience
+
+    /**
+     Configures the cell for display based on the model.
+     
+     - Parameters:
+         - data: An optional `DisplayData` object to display.
+     
+     - Tag: Cell_Config
+    */
+    func configure(with data: DisplayData?) {
+        backgroundColor = data?.color
+    }
+}
