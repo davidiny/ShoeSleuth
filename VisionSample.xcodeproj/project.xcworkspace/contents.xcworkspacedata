@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:VisionSample.xcodeproj">
+      location = "group:/Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/ImageView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/pngtest1.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "72982948-1F87-416A-8D76-073B03C71527"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisionSample/StarredImageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "StarredImageViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - 6650760dce3a53cd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.imageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - bfa173d1212587f9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.imageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - baa487ed32fbccc8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - bf5eb2a6c71cf66e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - d2e3a8ff3a8c0dbf"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.init(frame: __C.CGRect) -&gt; ShoeSleuth.StarredImageViewCell"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4861EF81-B505-442D-989E-2B9F7C1E4ED8 - c5744323b83ec016"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoeSleuth.StarredImageViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ShoeSleuth.StarredImageViewCell&gt;"
+                  moduleName = "ShoeSleuth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/much2money/Documents/iOS/classProject/ShoeSleuth/VisionSample/StarredImageViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2054461-FDFA-41F0-A619-1A7EB078ECC2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VisionSample/StarredImageViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "StarredImageViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
