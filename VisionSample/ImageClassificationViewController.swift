@@ -24,10 +24,15 @@ class ImageClassificationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     classificationLabel.isHidden = true
+    favoriteButton.isHidden = true
+    favoriteButton.backgroundColor = UIColor.white
+
+
     //     favoriteButton.isHidden = true
     
     //maybe automatically run save method when the screen appears
   }
+
   
   // MARK: - Image Classification
   
@@ -144,7 +149,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     let image = info[UIImagePickerControllerOriginalImage] as! UIImage
     imageView.image = image
     classificationLabel.isHidden = false
-    //        favoriteButton.isHidden = false
+    favoriteButton.isHidden = false
     save()
     updateClassifications(for: image)
   }
@@ -180,6 +185,12 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   }
   
   @IBAction func favorite() {
+    if favoriteButton.backgroundColor == UIColor.white {
+        favoriteButton.backgroundColor = UIColor.blue
+    }
+    else if favoriteButton.backgroundColor == UIColor.blue {
+        favoriteButton.backgroundColor = UIColor.white
+    }
     print("Favorite button")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
