@@ -43,6 +43,7 @@ depends-top-level:
 - !private "UIAlertController"
 - !private "UIApplication"
 - "UIButton"
+- !private "UIColor"
 - "UIImage"
 - !private "UIImagePNGRepresentation"
 - "UIImagePickerController"
@@ -72,6 +73,7 @@ depends-member:
 - !private ["SK", "joined"]
 - !private ["SK", "map"]
 - !private ["SK", "prefix"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "image"]
 - !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -89,6 +91,7 @@ depends-member:
 - !private ["s7CVarArgP", "UIAlertAction"]
 - !private ["s7CVarArgP", "UIAlertController"]
 - !private ["s7CVarArgP", "UIApplication"]
+- !private ["s7CVarArgP", "UIColor"]
 - !private ["s7CVarArgP", "UIImage"]
 - !private ["s7CVarArgP", "UIImagePNGRepresentation"]
 - !private ["s7CVarArgP", "UIImagePickerController"]
@@ -99,6 +102,8 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addAction"]
 - !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "blue"]
 - !private ["s7CVarArgP", "classificationLabel"]
 - !private ["s7CVarArgP", "classificationRequest"]
 - !private ["s7CVarArgP", "confidence"]
@@ -106,6 +111,7 @@ depends-member:
 - !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "entity"]
 - ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "favoriteButton"]
 - !private ["s7CVarArgP", "favorited"]
 - !private ["s7CVarArgP", "fetch"]
 - !private ["s7CVarArgP", "global"]
@@ -148,6 +154,7 @@ depends-member:
 - !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "viewContext"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "white"]
 - !private ["Sl", "init"]
 - !private ["Sl", "isEmpty"]
 - !private ["Sl", "joined"]
@@ -171,6 +178,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImage"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImagePNGRepresentation"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImagePickerController"]
@@ -181,6 +189,8 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addAction"]
 - !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "blue"]
 - !private ["s28CustomDebugStringConvertibleP", "classificationLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "classificationRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "confidence"]
@@ -188,6 +198,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "entity"]
 - ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "favoriteButton"]
 - !private ["s28CustomDebugStringConvertibleP", "favorited"]
 - !private ["s28CustomDebugStringConvertibleP", "fetch"]
 - !private ["s28CustomDebugStringConvertibleP", "global"]
@@ -231,6 +242,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s17CustomReflectableP", "image"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
@@ -252,6 +265,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
 - !private ["s23CustomStringConvertibleP", "UIAlertController"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
 - !private ["s23CustomStringConvertibleP", "UIImagePNGRepresentation"]
 - !private ["s23CustomStringConvertibleP", "UIImagePickerController"]
@@ -264,6 +278,8 @@ depends-member:
 - ["s23CustomStringConvertibleP", "appendInterpolation"]
 - ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "blue"]
 - !private ["s23CustomStringConvertibleP", "classificationLabel"]
 - !private ["s23CustomStringConvertibleP", "classificationRequest"]
 - !private ["s23CustomStringConvertibleP", "confidence"]
@@ -271,6 +287,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "entity"]
 - ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "favoriteButton"]
 - !private ["s23CustomStringConvertibleP", "favorited"]
 - !private ["s23CustomStringConvertibleP", "fetch"]
 - !private ["s23CustomStringConvertibleP", "global"]
@@ -314,10 +331,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "white"]
 - !private ["10Foundation12DataProtocolP", "isEmpty"]
 - !private ["10Foundation12DataProtocolP", "joined"]
 - !private ["10Foundation12DataProtocolP", "map"]
 - !private ["10Foundation12DataProtocolP", "prefix"]
+- !private ["Se", "backgroundColor"]
 - !private ["Se", "image"]
 - !private ["Se", "init"]
 - !private ["Se", "isEmpty"]
@@ -335,6 +354,7 @@ depends-member:
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "global"]
 - !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "backgroundColor"]
 - !private ["SE", "image"]
 - !private ["SE", "init"]
 - !private ["SE", "isEmpty"]
@@ -355,6 +375,7 @@ depends-member:
 - !private ["SQ", "UIAlertAction"]
 - !private ["SQ", "UIAlertController"]
 - !private ["SQ", "UIApplication"]
+- !private ["SQ", "UIColor"]
 - !private ["SQ", "UIImage"]
 - !private ["SQ", "UIImagePNGRepresentation"]
 - !private ["SQ", "UIImagePickerController"]
@@ -365,6 +386,8 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "addAction"]
 - !private ["SQ", "async"]
+- !private ["SQ", "backgroundColor"]
+- !private ["SQ", "blue"]
 - !private ["SQ", "camera"]
 - !private ["SQ", "cancel"]
 - ["SQ", "centerCrop"]
@@ -376,6 +399,7 @@ depends-member:
 - !private ["SQ", "dismiss"]
 - !private ["SQ", "entity"]
 - ["SQ", "fatalError"]
+- !private ["SQ", "favoriteButton"]
 - !private ["SQ", "favorited"]
 - !private ["SQ", "fetch"]
 - !private ["SQ", "global"]
@@ -421,6 +445,7 @@ depends-member:
 - !private ["SQ", "value"]
 - !private ["SQ", "viewContext"]
 - !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "white"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "joined"]
@@ -428,6 +453,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "prefix"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "image"]
 - !private ["s23ExpressibleByNilLiteralP", "isHidden"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
@@ -451,6 +477,7 @@ depends-member:
 - !private ["SH", "UIAlertAction"]
 - !private ["SH", "UIAlertController"]
 - !private ["SH", "UIApplication"]
+- !private ["SH", "UIColor"]
 - !private ["SH", "UIImage"]
 - !private ["SH", "UIImagePNGRepresentation"]
 - !private ["SH", "UIImagePickerController"]
@@ -461,6 +488,8 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "addAction"]
 - !private ["SH", "async"]
+- !private ["SH", "backgroundColor"]
+- !private ["SH", "blue"]
 - !private ["SH", "camera"]
 - !private ["SH", "cancel"]
 - ["SH", "centerCrop"]
@@ -472,6 +501,7 @@ depends-member:
 - !private ["SH", "dismiss"]
 - !private ["SH", "entity"]
 - ["SH", "fatalError"]
+- !private ["SH", "favoriteButton"]
 - !private ["SH", "favorited"]
 - !private ["SH", "fetch"]
 - !private ["SH", "global"]
@@ -517,6 +547,7 @@ depends-member:
 - !private ["SH", "value"]
 - !private ["SH", "viewContext"]
 - !private ["SH", "viewDidLoad"]
+- !private ["SH", "white"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "$__lazy_storage_$_classificationRequest"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "AppDelegate"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "Bool"]
@@ -536,6 +567,7 @@ depends-member:
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIAlertController"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIApplication"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIButton"]
+- !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIColor"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImage"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImagePNGRepresentation"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImagePickerController"]
@@ -592,6 +624,7 @@ depends-member:
 - !private ["So8NSCodingP", "UIAlertAction"]
 - !private ["So8NSCodingP", "UIAlertController"]
 - !private ["So8NSCodingP", "UIApplication"]
+- !private ["So8NSCodingP", "UIColor"]
 - !private ["So8NSCodingP", "UIImage"]
 - !private ["So8NSCodingP", "UIImagePNGRepresentation"]
 - !private ["So8NSCodingP", "UIImagePickerController"]
@@ -601,6 +634,8 @@ depends-member:
 - !private ["So8NSCodingP", "VNImageRequestHandler"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addAction"]
+- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "blue"]
 - !private ["So8NSCodingP", "classificationLabel"]
 - !private ["So8NSCodingP", "classificationRequest"]
 - !private ["So8NSCodingP", "confidence"]
@@ -608,6 +643,7 @@ depends-member:
 - !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "entity"]
 - ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "favoriteButton"]
 - !private ["So8NSCodingP", "favorited"]
 - !private ["So8NSCodingP", "fetch"]
 - !private ["So8NSCodingP", "identifier"]
@@ -636,6 +672,8 @@ depends-member:
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "updateClassifications"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "white"]
+- !private ["So9NSCopyingP", "blue"]
 - !private ["So9NSCopyingP", "confidence"]
 - !private ["So9NSCopyingP", "entity"]
 - !private ["So9NSCopyingP", "identifier"]
@@ -643,6 +681,7 @@ depends-member:
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "results"]
 - !private ["So9NSCopyingP", "returnsObjectsAsFaults"]
+- !private ["So9NSCopyingP", "white"]
 - !private ["So19NSEntityDescriptionC", "entity"]
 - !private ["So26NSExtensionRequestHandlingP", "CGImagePropertyOrientation"]
 - !private ["So26NSExtensionRequestHandlingP", "CIImage"]
@@ -656,6 +695,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIApplication"]
+- !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImagePNGRepresentation"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImagePickerController"]
@@ -670,6 +710,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "delegate"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - ["So26NSExtensionRequestHandlingP", "fatalError"]
+- !private ["So26NSExtensionRequestHandlingP", "favoriteButton"]
 - ["So26NSExtensionRequestHandlingP", "imagePickerController"]
 - ["So26NSExtensionRequestHandlingP", "imagePickerControllerDidCancel"]
 - !private ["So26NSExtensionRequestHandlingP", "imageView"]
@@ -694,10 +735,14 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "setValue"]
 - !private ["So20NSFetchRequestResultP", "value"]
+- !private ["So21NSItemProviderReadingP", "blue"]
 - !private ["So21NSItemProviderReadingP", "imageOrientation"]
 - !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "white"]
+- !private ["So21NSItemProviderWritingP", "blue"]
 - !private ["So21NSItemProviderWritingP", "imageOrientation"]
 - !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "white"]
 - !private ["So9NSLockingP", "fetch"]
 - !private ["So9NSLockingP", "save"]
 - !private ["So15NSManagedObjectC", "init"]
@@ -724,6 +769,7 @@ depends-member:
 - !private ["So8NSObjectC", "UIAlertController"]
 - !private ["So8NSObjectC", "UIApplication"]
 - ["So8NSObjectC", "UIButton"]
+- !private ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UIImage"]
 - !private ["So8NSObjectC", "UIImagePNGRepresentation"]
 - ["So8NSObjectC", "UIImagePickerController"]
@@ -738,6 +784,8 @@ depends-member:
 - ["So8NSObjectC", "VNRequest"]
 - !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "blue"]
 - ["So8NSObjectC", "cameraButton"]
 - ["So8NSObjectC", "classificationLabel"]
 - ["So8NSObjectC", "classificationRequest"]
@@ -787,6 +835,7 @@ depends-member:
 - !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectP", "CGImagePropertyOrientation"]
 - !private ["So8NSObjectP", "CIImage"]
 - !private ["So8NSObjectP", "DispatchQueue"]
@@ -799,6 +848,7 @@ depends-member:
 - !private ["So8NSObjectP", "UIAlertAction"]
 - !private ["So8NSObjectP", "UIAlertController"]
 - !private ["So8NSObjectP", "UIApplication"]
+- !private ["So8NSObjectP", "UIColor"]
 - !private ["So8NSObjectP", "UIImage"]
 - !private ["So8NSObjectP", "UIImagePNGRepresentation"]
 - !private ["So8NSObjectP", "UIImagePickerController"]
@@ -809,6 +859,8 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "blue"]
 - !private ["So8NSObjectP", "classificationLabel"]
 - !private ["So8NSObjectP", "classificationRequest"]
 - !private ["So8NSObjectP", "confidence"]
@@ -816,6 +868,7 @@ depends-member:
 - !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "entity"]
 - ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "favoriteButton"]
 - !private ["So8NSObjectP", "favorited"]
 - !private ["So8NSObjectP", "fetch"]
 - !private ["So8NSObjectP", "global"]
@@ -854,19 +907,23 @@ depends-member:
 - !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "viewContext"]
 - !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "white"]
 - !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So24NSPersistentStoreRequestC", "init"]
 - !private ["So24NSPersistentStoreRequestC", "returnsObjectsAsFaults"]
+- !private ["So14NSSecureCodingP", "blue"]
 - !private ["So14NSSecureCodingP", "confidence"]
 - !private ["So14NSSecureCodingP", "identifier"]
 - !private ["So14NSSecureCodingP", "imageOrientation"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "white"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "global"]
 - !private ["So9OS_objectC", "main"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "setValue"]
 - !private ["7Combine16ObservableObjectP", "value"]
+- !private ["Sq", "backgroundColor"]
 - !private ["Sq", "image"]
 - !private ["Sq", "isHidden"]
 - !private ["Sq", "text"]
@@ -909,7 +966,10 @@ depends-member:
 - ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isHidden"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "imageOrientation"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
@@ -918,6 +978,7 @@ depends-member:
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "image"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "text"]
@@ -933,6 +994,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIAlertAction"]
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - !private ["So21UIAppearanceContainerP", "UIApplication"]
+- !private ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
 - !private ["So21UIAppearanceContainerP", "UIImagePNGRepresentation"]
 - !private ["So21UIAppearanceContainerP", "UIImagePickerController"]
@@ -942,11 +1004,13 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "VNImageRequestHandler"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addAction"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "classificationLabel"]
 - !private ["So21UIAppearanceContainerP", "classificationRequest"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "favoriteButton"]
 - !private ["So21UIAppearanceContainerP", "image"]
 - ["So21UIAppearanceContainerP", "imagePickerController"]
 - ["So21UIAppearanceContainerP", "imagePickerControllerDidCancel"]
@@ -971,6 +1035,10 @@ depends-member:
 - !private ["So13UIApplicationC", "delegate"]
 - !private ["So13UIApplicationC", "shared"]
 - !private ["So21UIApplicationDelegateP", "persistentContainer"]
+- !private ["So8UIButtonC", "backgroundColor"]
+- !private ["So8UIButtonC", "isHidden"]
+- !private ["So7UIColorC", "blue"]
+- !private ["So7UIColorC", "white"]
 - !private ["So18UIContentContainerP", "CGImagePropertyOrientation"]
 - !private ["So18UIContentContainerP", "CIImage"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
@@ -983,6 +1051,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIAlertAction"]
 - !private ["So18UIContentContainerP", "UIAlertController"]
 - !private ["So18UIContentContainerP", "UIApplication"]
+- !private ["So18UIContentContainerP", "UIColor"]
 - !private ["So18UIContentContainerP", "UIImage"]
 - !private ["So18UIContentContainerP", "UIImagePNGRepresentation"]
 - !private ["So18UIContentContainerP", "UIImagePickerController"]
@@ -997,6 +1066,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "delegate"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - ["So18UIContentContainerP", "fatalError"]
+- !private ["So18UIContentContainerP", "favoriteButton"]
 - ["So18UIContentContainerP", "imagePickerController"]
 - ["So18UIContentContainerP", "imagePickerControllerDidCancel"]
 - !private ["So18UIContentContainerP", "imageView"]
@@ -1017,9 +1087,13 @@ depends-member:
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "isHidden"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "backgroundColor"]
+- !private ["So9UIControlC", "isHidden"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "image"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "image"]
 - !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "text"]
@@ -1035,6 +1109,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - !private ["So18UIFocusEnvironmentP", "UIApplication"]
+- !private ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
 - !private ["So18UIFocusEnvironmentP", "UIImagePNGRepresentation"]
 - !private ["So18UIFocusEnvironmentP", "UIImagePickerController"]
@@ -1044,11 +1119,13 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "VNImageRequestHandler"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addAction"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "classificationLabel"]
 - !private ["So18UIFocusEnvironmentP", "classificationRequest"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "favoriteButton"]
 - !private ["So18UIFocusEnvironmentP", "image"]
 - ["So18UIFocusEnvironmentP", "imagePickerController"]
 - ["So18UIFocusEnvironmentP", "imagePickerControllerDidCancel"]
@@ -1070,9 +1147,11 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "updateClassifications"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "image"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "image"]
 - !private ["So20UIFocusItemContainerP", "isHidden"]
 - !private ["So20UIFocusItemContainerP", "text"]
@@ -1095,6 +1174,7 @@ depends-member:
 - !private ["So31UIImagePickerControllerDelegateP", "UIAlertAction"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIAlertController"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIApplication"]
+- !private ["So31UIImagePickerControllerDelegateP", "UIColor"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImage"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImagePNGRepresentation"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImagePickerController"]
@@ -1106,6 +1186,7 @@ depends-member:
 - !private ["So31UIImagePickerControllerDelegateP", "classificationLabel"]
 - !private ["So31UIImagePickerControllerDelegateP", "classificationRequest"]
 - ["So31UIImagePickerControllerDelegateP", "fatalError"]
+- !private ["So31UIImagePickerControllerDelegateP", "favoriteButton"]
 - ["So31UIImagePickerControllerDelegateP", "imagePickerController"]
 - ["So31UIImagePickerControllerDelegateP", "imagePickerControllerDidCancel"]
 - !private ["So31UIImagePickerControllerDelegateP", "imageView"]
@@ -1124,6 +1205,7 @@ depends-member:
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["So7UILabelC", "isHidden"]
 - !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", "backgroundColor"]
 - !private ["So24UILargeContentViewerItemP", "image"]
 - !private ["So24UILargeContentViewerItemP", "isHidden"]
 - !private ["So24UILargeContentViewerItemP", "text"]
@@ -1144,6 +1226,7 @@ depends-member:
 - !private ["So30UINavigationControllerDelegateP", "UIAlertAction"]
 - !private ["So30UINavigationControllerDelegateP", "UIAlertController"]
 - !private ["So30UINavigationControllerDelegateP", "UIApplication"]
+- !private ["So30UINavigationControllerDelegateP", "UIColor"]
 - !private ["So30UINavigationControllerDelegateP", "UIImage"]
 - !private ["So30UINavigationControllerDelegateP", "UIImagePNGRepresentation"]
 - !private ["So30UINavigationControllerDelegateP", "UIImagePickerController"]
@@ -1155,6 +1238,7 @@ depends-member:
 - !private ["So30UINavigationControllerDelegateP", "classificationLabel"]
 - !private ["So30UINavigationControllerDelegateP", "classificationRequest"]
 - ["So30UINavigationControllerDelegateP", "fatalError"]
+- !private ["So30UINavigationControllerDelegateP", "favoriteButton"]
 - ["So30UINavigationControllerDelegateP", "imagePickerController"]
 - ["So30UINavigationControllerDelegateP", "imagePickerControllerDidCancel"]
 - !private ["So30UINavigationControllerDelegateP", "imageView"]
@@ -1180,6 +1264,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImagePNGRepresentation"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImagePickerController"]
@@ -1189,11 +1274,13 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "VNImageRequestHandler"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addAction"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "classificationLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "classificationRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "favoriteButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "image"]
 - ["So30UIPasteConfigurationSupportingP", "imagePickerController"]
 - ["So30UIPasteConfigurationSupportingP", "imagePickerControllerDidCancel"]
@@ -1236,6 +1323,7 @@ depends-member:
 - !private ["So11UIResponderC", "UIAlertController"]
 - !private ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIButton"]
+- !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UIImage"]
 - !private ["So11UIResponderC", "UIImagePNGRepresentation"]
 - ["So11UIResponderC", "UIImagePickerController"]
@@ -1249,6 +1337,7 @@ depends-member:
 - !private ["So11UIResponderC", "VNImageRequestHandler"]
 - ["So11UIResponderC", "VNRequest"]
 - !private ["So11UIResponderC", "addAction"]
+- !private ["So11UIResponderC", "backgroundColor"]
 - ["So11UIResponderC", "cameraButton"]
 - ["So11UIResponderC", "classificationLabel"]
 - ["So11UIResponderC", "classificationRequest"]
@@ -1293,6 +1382,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
+- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImagePNGRepresentation"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImagePickerController"]
@@ -1302,11 +1392,13 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "VNImageRequestHandler"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addAction"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "classificationLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "classificationRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "favoriteButton"]
 - !private ["So30UIResponderStandardEditActionsP", "image"]
 - ["So30UIResponderStandardEditActionsP", "imagePickerController"]
 - ["So30UIResponderStandardEditActionsP", "imagePickerControllerDidCancel"]
@@ -1331,7 +1423,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "updateClassifications"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "backgroundColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "isHidden"]
 - !private ["So16UIStateRestoringP", "CGImagePropertyOrientation"]
 - !private ["So16UIStateRestoringP", "CIImage"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
@@ -1344,6 +1438,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIAlertAction"]
 - !private ["So16UIStateRestoringP", "UIAlertController"]
 - !private ["So16UIStateRestoringP", "UIApplication"]
+- !private ["So16UIStateRestoringP", "UIColor"]
 - !private ["So16UIStateRestoringP", "UIImage"]
 - !private ["So16UIStateRestoringP", "UIImagePNGRepresentation"]
 - !private ["So16UIStateRestoringP", "UIImagePickerController"]
@@ -1358,6 +1453,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - ["So16UIStateRestoringP", "fatalError"]
+- !private ["So16UIStateRestoringP", "favoriteButton"]
 - ["So16UIStateRestoringP", "imagePickerController"]
 - ["So16UIStateRestoringP", "imagePickerControllerDidCancel"]
 - !private ["So16UIStateRestoringP", "imageView"]
@@ -1388,6 +1484,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIAlertAction"]
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - !private ["So18UITraitEnvironmentP", "UIApplication"]
+- !private ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
 - !private ["So18UITraitEnvironmentP", "UIImagePNGRepresentation"]
 - !private ["So18UITraitEnvironmentP", "UIImagePickerController"]
@@ -1397,11 +1494,13 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "VNImageRequestHandler"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addAction"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "classificationLabel"]
 - !private ["So18UITraitEnvironmentP", "classificationRequest"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "favoriteButton"]
 - !private ["So18UITraitEnvironmentP", "image"]
 - ["So18UITraitEnvironmentP", "imagePickerController"]
 - ["So18UITraitEnvironmentP", "imagePickerControllerDidCancel"]
@@ -1435,6 +1534,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
 - !private ["So23UIUserActivityRestoringP", "UIImagePNGRepresentation"]
 - !private ["So23UIUserActivityRestoringP", "UIImagePickerController"]
@@ -1444,11 +1544,13 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "VNImageRequestHandler"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addAction"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "classificationLabel"]
 - !private ["So23UIUserActivityRestoringP", "classificationRequest"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
 - !private ["So23UIUserActivityRestoringP", "dismiss"]
 - ["So23UIUserActivityRestoringP", "fatalError"]
+- !private ["So23UIUserActivityRestoringP", "favoriteButton"]
 - !private ["So23UIUserActivityRestoringP", "image"]
 - ["So23UIUserActivityRestoringP", "imagePickerController"]
 - ["So23UIUserActivityRestoringP", "imagePickerControllerDidCancel"]
@@ -1472,6 +1574,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "updateClassifications"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "image"]
 - !private ["So6UIViewC", "isHidden"]
 - !private ["So6UIViewC", "text"]
@@ -1494,6 +1597,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "UIAlertController"]
 - !private ["So16UIViewControllerC", "UIApplication"]
 - ["So16UIViewControllerC", "UIButton"]
+- !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UIImage"]
 - !private ["So16UIViewControllerC", "UIImagePNGRepresentation"]
 - ["So16UIViewControllerC", "UIImagePickerController"]
@@ -1564,6 +1668,8 @@ depends-member:
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "blue"]
+- !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s26_ExpressibleByImageLiteralP", "imageOrientation"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "init"]
@@ -1586,6 +1692,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePNGRepresentation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePickerController"]
@@ -1596,6 +1703,8 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classificationLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classificationRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "confidence"]
@@ -1603,6 +1712,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "entity"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "favoriteButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "favorited"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fetch"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
@@ -1641,6 +1751,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGImagePropertyOrientation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CIImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
@@ -1653,6 +1764,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePNGRepresentation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePickerController"]
@@ -1663,6 +1775,8 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAction"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "blue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "classificationLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "classificationRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "confidence"]
@@ -1670,6 +1784,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "entity"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "favoriteButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "favorited"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fetch"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "global"]
@@ -1708,6 +1823,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
@@ -1716,6 +1833,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "prefix"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isHidden"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
@@ -1799,8 +1917,11 @@ depends-nominal:
 - "So21UIAppearanceContainerP"
 - !private "So13UIApplicationC"
 - !private "So21UIApplicationDelegateP"
+- !private "So8UIButtonC"
+- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
@@ -1839,6 +1960,7 @@ depends-nominal:
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -1860,11 +1982,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Vision.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreLocation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/AVFoundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreAudio.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Photos.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
@@ -1881,11 +2005,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Photos.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
@@ -1915,6 +2041,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVDepthData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCameraCalibrationData.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAdjustmentData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/data.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMMetadata.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSMetadata.h"
@@ -1999,6 +2126,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/ImageIO.framework/Headers/CGImageSource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/source.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLResource.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetResource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/resource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFocusGuide.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILayoutGuide.h"
@@ -2030,6 +2158,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescriptionBridge.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSOrderedCollectionChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLAuthenticationChallenge.h"
@@ -2150,6 +2279,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/SecCertificate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextPasteDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManagerDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSCoreDataCoreSpotlightDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/i386/thread_state.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/machine/thread_state.h"
@@ -2180,6 +2310,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/i386/fp_reg.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mig.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLHeading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActivityItemsConfigurationReading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibLoading.h"
@@ -2257,6 +2388,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/block.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/clock.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CADisplayLink.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLPlacemark.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLTask.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetDownloadTask.h"
@@ -2369,8 +2501,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryToken.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/netinet/in.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLErrorDomain.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILexicon.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLCircularRegion.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/vm_region.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/quaternion.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.h"
@@ -2399,6 +2535,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUserNotification.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPAuthentication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSInvocation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.h"
@@ -2444,6 +2582,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransaction.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryTransaction.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMediaSelection.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITraitCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSXPCConnection.h"
@@ -2526,6 +2665,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/errno.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/errno.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_fd_zero.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhoto.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/objc-auto.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MTAudioProcessingTap.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLHeap.h"
@@ -2586,6 +2726,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLGeocoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSByteOrder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/libkern/i386/OSByteOrder.h"
@@ -2603,9 +2744,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBlockBuffer.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBuffer.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioBuffer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetResourceManager.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHImageManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetDownloadStorageManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLCaptureManager.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSMigrationManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUndoManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStatusBarManager.h"
@@ -2616,6 +2760,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSLinguisticTagger.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFocusDebugger.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCloudIdentifier.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextChecker.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDatePicker.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNRequestHandler.h"
@@ -2754,6 +2899,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIColor.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGError.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHError.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNError.h"
@@ -2837,6 +2984,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PhotosTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/i386/types.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/types.h"
@@ -2915,6 +3063,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/UIKitOverlayShims.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/NSDictionaryShims.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterBuiltins.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager+CLVisitExtensions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/NSString+UserNotifications.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibDeclarations.h"
@@ -2928,6 +3077,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneActivationConditions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneDefinitions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneOptions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHFetchOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLPredictionOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentCloudKitContainerOptions.h"
@@ -2938,6 +3088,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/ConditionalMacros.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/AssertMacros.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/AvailabilityMacros.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mach_traps.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/ifaddrs.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMetadataIdentifiers.h"
@@ -3071,6 +3222,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioUnitEffect.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIVibrancyEffect.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFObject.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/NSObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMetadataObject.h"
@@ -3079,6 +3231,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/HeapObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/object.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/os/object.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHProject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/select.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_select.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/task_inspect.h"
@@ -3100,6 +3253,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_seek_set.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/processor_set.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureSessionPreset.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSDataAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageAsset.h"
@@ -3115,8 +3269,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioOutputUnit.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mach_init.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/vm_inherit.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLVisit.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreResult.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSTextCheckingResult.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHFetchResult.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_s_ifmt.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVOutputSettingsAssistant.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGradient.h"
@@ -3154,6 +3310,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSLayoutConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArrayConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLDictionaryConstraint.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconIdentityConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/SwiftStdint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/stdint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioConnectionPoint.h"
@@ -3186,6 +3343,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNGenerateAttentionBasedSaliencyImageRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNGenerateObjectnessBasedSaliencyImageRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNClassifyImageRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetCollectionChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHProjectChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCollectionListChangeRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryChangeRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNTrackRectangleRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreRequest.h"
@@ -3194,6 +3356,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNTrackingRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSFetchRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetCreationRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNImageRegistrationRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNDetectHorizonRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderRequest.h"
@@ -3223,6 +3386,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionViewLayout.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionViewFlowLayout.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureInput.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHContentEditingInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetWriterInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureDepthDataOutput.h"
@@ -3232,6 +3396,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureStillImageOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureFileOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureOutput.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHContentEditingOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVPlayerItemOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCapturePhotoOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetReaderOutput.h"
@@ -3247,6 +3412,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIOpenURLContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLUpdateContext.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhotoEditingContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSExtensionContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBitmapContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSManagedObjectContext.h"
@@ -3319,6 +3485,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFDictionary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLLibrary.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHPhotoLibrary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/monetary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/xlocale/_monetary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderSearchQuery.h"
@@ -3330,6 +3497,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/geometry.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Availability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLAvailability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLESAvailability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/os/availability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_posix_availability.h"
@@ -3364,6 +3532,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Modules/module.modulemap"
@@ -3373,6 +3542,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Modules/module.modulemap"
@@ -3390,11 +3560,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"

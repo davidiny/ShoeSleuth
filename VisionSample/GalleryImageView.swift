@@ -19,6 +19,7 @@ class GalleryImageView: UICollectionViewController {
       super.viewDidLoad()
 //      self.registerClass(GalleryImageViewCell.self)
       getImages()
+
       print(":^) Gallery image loaded")
     }
     

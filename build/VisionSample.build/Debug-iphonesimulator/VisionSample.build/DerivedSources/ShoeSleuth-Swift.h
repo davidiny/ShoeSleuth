@@ -230,13 +230,15 @@ SWIFT_CLASS("_TtC10ShoeSleuth12GalleryImage")
 @end
 
 @class UICollectionView;
+@class UICollectionViewCell;
 @class UICollectionViewLayout;
 @class NSBundle;
 
-SWIFT_CLASS("_TtC10ShoeSleuth27GalleryPhotosViewController")
-@interface GalleryPhotosViewController : UICollectionViewController
+SWIFT_CLASS("_TtC10ShoeSleuth16GalleryImageView")
+@interface GalleryImageView : UICollectionViewController
 - (void)viewDidLoad;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -244,9 +246,10 @@ SWIFT_CLASS("_TtC10ShoeSleuth27GalleryPhotosViewController")
 
 @class UIImageView;
 
-SWIFT_CLASS("_TtC10ShoeSleuth26GallerycCollectionViewCell")
-@interface GallerycCollectionViewCell : UICollectionViewCell
-@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified galleryImage;
+SWIFT_CLASS("_TtC10ShoeSleuth20GalleryImageViewCell")
+@interface GalleryImageViewCell : UICollectionViewCell
+@property (nonatomic, strong) IBOutlet UIImageView * _Nullable imageView;
+- (void)prepareForReuse;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

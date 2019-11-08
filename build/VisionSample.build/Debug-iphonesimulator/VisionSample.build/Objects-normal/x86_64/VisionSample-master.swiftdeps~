@@ -1,0 +1,16 @@
+version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+options: "82d6ba83ddc7ce5199bdd87d7530aa43"
+build_time: [1573236418, 961100000]
+inputs:
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/Controllers/ViewController.swift": [1573152939, 462661904]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/Models/GalleryImage.swift": [1573172815, 948595772]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/GalleryImageViewCell.swift": [1573236404, 14816874]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/GalleryImageView.swift": [1573236404, 12357315]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/CGImagePropertyOrientation+UIImageOrientation.swift": [1573152939, 460547106]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/AppDelegate.swift": [1573236404, 2302560]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/Controllers/IdentifiedController.swift": [1573168755, 210716150]
+  "/Users/lizw/Downloads/ShoeSleuth-master/VisionSample/ImageClassificationViewController.swift": [1573236404, 16506009]
+  "/Users/lizw/Downloads/ShoeSleuth-master/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreMLGenerated/ShoeSleuthModel/ShoeSleuthModel.swift": [1573236418, 864854180]
+  "/Users/lizw/Downloads/ShoeSleuth-master/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataClass.swift": [1573236417, 986161871]
+  "/Users/lizw/Downloads/ShoeSleuth-master/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataProperties.swift": [1573236417, 990948460]
+  "/Users/lizw/Downloads/ShoeSleuth-master/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Images+CoreDataModel.swift": [1573236417, 980781619]
