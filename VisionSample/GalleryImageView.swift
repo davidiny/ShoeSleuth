@@ -19,6 +19,7 @@ class GalleryImageView: UICollectionViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       getImages()
+      print(":^) Gallery image loaded")
     }
     
     private lazy var thumbnailSize: CGSize = {
@@ -28,6 +29,7 @@ class GalleryImageView: UICollectionViewController {
     }()
     
     func getImages() -> Void {
+        print("Getting images")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
@@ -43,11 +45,13 @@ class GalleryImageView: UICollectionViewController {
     }
     
     func loadImage(_ data: NSManagedObject){
+        print("loading images")
         let newImage = GalleryImage()
         newImage.name = data.value(forKey: "name") as? String
         newImage.favorited = (data.value(forKey: "favorited") as! Bool)
         newImage.photo = UIImage(data:(data.value(forKey: "photo") as! NSData) as Data, scale:1.0)
         photoGallery.append(newImage)
+        print("count: ", photoGallery.count)
     }
     
     // MARK: UICollectionView
