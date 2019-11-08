@@ -183,6 +183,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import AVFoundation;
 @import CoreData;
+@import CoreGraphics;
 @import CoreMedia;
 @import Foundation;
 @import ObjectiveC;
@@ -228,10 +229,30 @@ SWIFT_CLASS("_TtC10ShoeSleuth12GalleryImage")
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
 @end
 
+@class UICollectionView;
+@class UICollectionViewLayout;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC10ShoeSleuth27GalleryPhotosViewController")
+@interface GalleryPhotosViewController : UICollectionViewController
+- (void)viewDidLoad;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIImageView;
+
+SWIFT_CLASS("_TtC10ShoeSleuth26GallerycCollectionViewCell")
+@interface GallerycCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified galleryImage;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UILabel;
 @class UIButton;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC10ShoeSleuth20IdentifiedController")
 @interface IdentifiedController : UIViewController
