@@ -17,7 +17,7 @@
 		30ABF2082376095500FB1443 /* StarredImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABF2072376095500FB1443 /* StarredImageViewCell.swift */; };
 		30DDEBF22375CAF700798D44 /* GalleryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDEBF12375CAF700798D44 /* GalleryImageView.swift */; };
 		30DDEBF42375CB1B00798D44 /* GalleryImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDEBF32375CB1B00798D44 /* GalleryImageViewCell.swift */; };
-		3C057765238DA53B0074847D /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3C057764238DA53B0074847D /* ShoeSleuthModel.mlmodel */; };
+		30DE0BCA238DE38200243E94 /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30DE0BC9238DE38200243E94 /* ShoeSleuthModel.mlmodel */; };
 		6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */; };
 		6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24023710BD700EC2B7B /* IdentifiedController.swift */; };
 		6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
@@ -49,7 +49,7 @@
 		30ABF2072376095500FB1443 /* StarredImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredImageViewCell.swift; sourceTree = "<group>"; };
 		30DDEBF12375CAF700798D44 /* GalleryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageView.swift; sourceTree = "<group>"; };
 		30DDEBF32375CB1B00798D44 /* GalleryImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageViewCell.swift; sourceTree = "<group>"; };
-		3C057764238DA53B0074847D /* ShoeSleuthModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ShoeSleuthModel.mlmodel; path = ../../../Desktop/ShoeSleuthModel.mlmodel; sourceTree = "<group>"; };
+		30DE0BC9238DE38200243E94 /* ShoeSleuthModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ShoeSleuthModel.mlmodel; path = ../../../ShoeSleuth/VisionSample/ShoeSleuthModel.mlmodel; sourceTree = "<group>"; };
 		6567F2382370F0C800EC2B7B /* Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Images.xcdatamodel; sourceTree = "<group>"; };
 		6567F24023710BD700EC2B7B /* IdentifiedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedController.swift; sourceTree = "<group>"; };
 		6567F24523710FBF00EC2B7B /* GalleryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 		88C6A9C11EF863CC00CC4360 /* VisionSample */ = {
 			isa = PBXGroup;
 			children = (
+				30DE0BC9238DE38200243E94 /* ShoeSleuthModel.mlmodel */,
 				308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */,
-				3C057764238DA53B0074847D /* ShoeSleuthModel.mlmodel */,
 				6567F24423710F9F00EC2B7B /* Controllers */,
 				6567F24323710F9800EC2B7B /* Models */,
 				88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */,
@@ -262,7 +262,6 @@
 				6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */,
 				30DDEBF42375CB1B00798D44 /* GalleryImageViewCell.swift in Sources */,
 				30ABF2082376095500FB1443 /* StarredImageViewCell.swift in Sources */,
-				3C057765238DA53B0074847D /* ShoeSleuthModel.mlmodel in Sources */,
 				3060127D23761CE500372D4A /* ImageView.swift in Sources */,
 				3060126B237611C900372D4A /* StarredImageView.swift in Sources */,
 				30DDEBF22375CAF700798D44 /* GalleryImageView.swift in Sources */,
@@ -270,6 +269,7 @@
 				308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */,
 				6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */,
+				30DE0BCA238DE38200243E94 /* ShoeSleuthModel.mlmodel in Sources */,
 				308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,14 +471,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GTYPFN5M63;
+				DEVELOPMENT_TEAM = DDBFATNM35;
 				INFOPLIST_FILE = VisionSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WarrenG.VisionSample1234;
+				PRODUCT_BUNDLE_IDENTIFIER = DavidI.VisionSample1234;
 				PRODUCT_NAME = ShoeSleuth;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,14 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GTYPFN5M63;
+				DEVELOPMENT_TEAM = DDBFATNM35;
 				INFOPLIST_FILE = VisionSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WarrenG.VisionSample1234;
+				PRODUCT_BUNDLE_IDENTIFIER = DavidI.VisionSample1234;
 				PRODUCT_NAME = ShoeSleuth;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

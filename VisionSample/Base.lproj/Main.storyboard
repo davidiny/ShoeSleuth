@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4jq-G2-NlW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4jq-G2-NlW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -504,12 +504,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-Jd-3Tw">
+                                <rect key="frame" x="10" y="433" width="404" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Found a cool shoe, but don’t know what it is? Press the capture button below to find out what it is.  And if we’re not sure, we’’ll give you our best guesses too.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Book"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHC-Fv-PMc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-bj-cVj">
-                                <rect key="frame" x="0.0" y="404" width="422" height="131"/>
+                                <rect key="frame" x="78" y="379" width="203" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -523,22 +544,38 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-1H-XA2">
-                                <rect key="frame" x="33" y="462" width="50" height="51"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.20000000000000001" y="0.0" width="1" height="1"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                <state key="normal" title="Button" image="image 2staricon"/>
-                                <connections>
-                                    <action selector="favorite" destination="ryN-Sx-EFj" eventType="touchUpInside" id="msH-CL-Ste"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SoH-Sr-0ah">
                                 <rect key="frame" x="131" y="688" width="201" height="57"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="image 1camera"/>
                                 <connections>
                                     <action selector="takePicture" destination="ryN-Sx-EFj" eventType="touchUpInside" id="M6p-98-GAd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nike" translatesAutoresizingMaskIntoConstraints="NO" id="Bx4-Kt-nSi">
+                                <rect key="frame" x="306" y="447" width="108" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="underarmour" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-MP-mMk">
+                                <rect key="frame" x="306" y="447" width="108" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adidas" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-yi-dsU">
+                                <rect key="frame" x="316" y="457" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 17" translatesAutoresizingMaskIntoConstraints="NO" id="hUV-hO-lhg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-zB-BLp">
+                                <rect key="frame" x="18" y="498" width="30" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="favorite" destination="ryN-Sx-EFj" eventType="touchUpInside" id="ist-7p-5y6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -549,8 +586,13 @@
                     <navigationItem key="navigationItem" id="BUU-pQ-uIU"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="AdidasImage" destination="pzL-yi-dsU" id="QwU-gl-tFz"/>
+                        <outlet property="HelpLabel" destination="Cf4-Jd-3Tw" id="J4f-hI-kIg"/>
+                        <outlet property="HomePhoto" destination="hUV-hO-lhg" id="uk9-qk-tdX"/>
+                        <outlet property="NikeImage" destination="Bx4-Kt-nSi" id="gNC-e2-A6p"/>
+                        <outlet property="UnderArmourImage" destination="e9H-MP-mMk" id="F5Q-mZ-hHZ"/>
                         <outlet property="classificationLabel" destination="mU1-bj-cVj" id="lgX-Ac-3oE"/>
-                        <outlet property="favoriteButton" destination="dPc-1H-XA2" id="Vkn-7l-dSN"/>
+                        <outlet property="favoriteButton" destination="RW2-zB-BLp" id="N8z-8s-2QZ"/>
                         <outlet property="imageView" destination="OHC-Fv-PMc" id="k9I-76-OwO"/>
                     </connections>
                 </viewController>
@@ -638,12 +680,16 @@
     </scenes>
     <resources>
         <image name="Group 12" width="1536" height="1526"/>
+        <image name="Group 17" width="325" height="397"/>
+        <image name="Nike" width="117" height="117"/>
+        <image name="adidas" width="300" height="300"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="image 1camera" width="49" height="49"/>
         <image name="image 2staricon" width="40" height="40"/>
         <image name="image 3gallery" width="47" height="47"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="underarmour" width="2700" height="1685"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SmF-t4-vl1"/>

@@ -19,13 +19,26 @@ class ImageClassificationViewController: UIViewController {
   @IBOutlet weak var cameraButton: UIButton!
   @IBOutlet weak var classificationLabel: UILabel!
   @IBOutlet weak var favoriteButton: UIButton!
+  @IBOutlet weak var NikeImage: UIImageView!
+  @IBOutlet weak var UnderArmourImage: UIImageView!
+  @IBOutlet weak var AdidasImage: UIImageView!
+  @IBOutlet weak var HelpLabel: UILabel!
+  @IBOutlet weak var HomePhoto: UIImageView!
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    NikeImage.isHidden = true
+    UnderArmourImage.isHidden = true
+    AdidasImage.isHidden = true
     classificationLabel.isHidden = true
     favoriteButton.isHidden = true
     favoriteButton.backgroundColor = UIColor.white
+    let saveButton = UIImage(named: "emptyStar")
+    let savedButton = UIImage(named: "filledStar")
+    favoriteButton.setImage(saveButton, for: .normal)
+    favoriteButton.setImage(savedButton, for: .selected)
+    
 
 
     //     favoriteButton.isHidden = true
@@ -58,7 +71,7 @@ class ImageClassificationViewController: UIViewController {
   
   /// - Tag: PerformRequests
   func updateClassifications(for image: UIImage) {
-    classificationLabel.text = "Classifying..."
+    classificationLabel.text = "Predicting..."
     
     let orientation = CGImagePropertyOrientation(image.imageOrientation)
     guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
@@ -96,11 +109,50 @@ class ImageClassificationViewController: UIViewController {
         
         // Display top classifications ranked by confidence in the UI.
         let topClassifications = classifications.prefix(2)
+        let shoeModel = topClassifications.map { classification in
+          return String(classification.identifier)
+        }
         let descriptions = topClassifications.map { classification in
           // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-          return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+          return [Double(classification.confidence)]
         }
-        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+        if shoeModel[0] == "Nike" {
+          self.NikeImage.isHidden = false
+          self.AdidasImage.isHidden = true
+          self.UnderArmourImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are Nike Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be Nike shoes"
+          }
+        }
+        if shoeModel[0] == "Adidas" {
+          self.AdidasImage.isHidden = false
+          self.NikeImage.isHidden = true
+          self.UnderArmourImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are Adidas Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be Adidas shoes"
+          }
+        }
+        if shoeModel[0] == "UnderArmour" {
+          self.UnderArmourImage.isHidden = false
+          self.NikeImage.isHidden = true
+          self.AdidasImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are UnderArmour Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be UnderArmour shoes"
+          }
+        }
+//        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
       }
     }
   }
@@ -108,6 +160,8 @@ class ImageClassificationViewController: UIViewController {
   // MARK: - Photo Actions
   
   @IBAction func takePicture() {
+    self.HelpLabel.isHidden = true
+    self.HomePhoto.isHidden = true
     // Show options for the source picker only if the camera is available.
     guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
       presentPhotoPicker(sourceType: .photoLibrary)
@@ -185,12 +239,13 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   }
   
   @IBAction func favorite() {
-    if favoriteButton.backgroundColor == UIColor.white {
-        favoriteButton.backgroundColor = UIColor.blue
-    }
-    else if favoriteButton.backgroundColor == UIColor.blue {
-        favoriteButton.backgroundColor = UIColor.white
-    }
+//    if favoriteButton.backgroundColor == UIColor.white {
+//        favoriteButton.backgroundColor = UIColor.blue
+//    }
+//    else if favoriteButton.backgroundColor == UIColor.blue {
+//        favoriteButton.backgroundColor = UIColor.white
+//    }
+    favoriteButton.isSelected.toggle()
     print("Favorite button")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
