@@ -160,12 +160,6 @@
                             <rect key="frame" x="0.0" y="-44" width="414" height="813"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daF-eN-d45">
-                                    <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <items/>
-                                </tabBar>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starred Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-uE-PMj">
                                     <rect key="frame" x="38" y="65" width="166" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,17 +197,8 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Starred" image="star.fill" catalog="system" selectedImage="star.fill" id="SQN-Q0-H6k"/>
                     <toolbarItems>
-                        <barButtonItem title="Item" image="image 2staricon" width="103" id="nRN-Ao-Y45">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                         <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="MBM-c4-K9u"/>
-                        <barButtonItem title="Item" image="image 1camera" width="103" id="MwK-1P-oYY">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                         <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="o4t-XE-xjh"/>
-                        <barButtonItem title="Item" image="image 3gallery" width="103" id="JJf-48-ROt">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="lsj-NX-3Pn"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -240,12 +225,6 @@
                             <rect key="frame" x="0.0" y="-44" width="414" height="813"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JyQ-Wf-X9o">
-                                    <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <items/>
-                                </tabBar>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Past Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-Bv-WsE">
                                     <rect key="frame" x="38" y="65" width="148" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -269,12 +248,13 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-7O-JDW">
                                             <rect key="frame" x="-95" y="-59" width="240" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="lnb-7O-JDW" id="V0v-1J-RUH"/>
+                                    <segue destination="G4m-g0-c2H" kind="show" identifier="shoeImage" id="7QC-UR-OuZ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -285,23 +265,11 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Pictures" image="photo.fill" catalog="system" selectedImage="photo.fill" id="YNb-HU-8tj"/>
                     <toolbarItems>
-                        <barButtonItem title="Item" image="image 2staricon" width="103" id="LBw-gF-3bC">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                         <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="Zdy-rg-M0u"/>
-                        <barButtonItem title="Item" image="image 1camera" width="103" id="Ccf-dj-tSh">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                         <barButtonItem width="28" style="plain" systemItem="fixedSpace" id="kyB-jm-cIJ"/>
-                        <barButtonItem title="Item" image="image 3gallery" width="103" id="oDX-ZC-FdA">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="DNH-9p-cmB"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="G4m-g0-c2H" kind="show" identifier="shoeImage" id="pKE-Tw-fbW"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqI-3i-99l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,7 +460,7 @@
             </objects>
             <point key="canvasLocation" x="876" y="-845"/>
         </scene>
-        <!--Camera-->
+        <!--Home-->
         <scene sceneID="VTe-18-ekO">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="ryN-Sx-EFj" customClass="ImageClassificationViewController" customModule="ShoeSleuth" customModuleProvider="target" sceneMemberID="viewController">
@@ -500,7 +468,7 @@
                         <viewControllerLayoutGuide type="top" id="RDq-lY-GfA"/>
                         <viewControllerLayoutGuide type="bottom" id="2Tf-aF-HJR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bYJ-nT-F6r">
+                    <view key="view" contentMode="scaleToFill" id="bYJ-nT-F6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -526,11 +494,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHC-Fv-PMc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-bj-cVj">
-                                <rect key="frame" x="78" y="379" width="203" height="247"/>
+                                <rect key="frame" x="78" y="392" width="203" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -553,15 +521,15 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nike" translatesAutoresizingMaskIntoConstraints="NO" id="Bx4-Kt-nSi">
-                                <rect key="frame" x="306" y="447" width="108" height="111"/>
+                                <rect key="frame" x="258" y="444" width="108" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="underarmour" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-MP-mMk">
-                                <rect key="frame" x="306" y="447" width="108" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="258" y="444" width="108" height="111"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adidas" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-yi-dsU">
-                                <rect key="frame" x="316" y="457" width="0.0" height="0.0"/>
+                                <rect key="frame" x="258" y="444" width="108" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 17" translatesAutoresizingMaskIntoConstraints="NO" id="hUV-hO-lhg">
@@ -569,7 +537,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-zB-BLp">
-                                <rect key="frame" x="18" y="498" width="30" height="34"/>
+                                <rect key="frame" x="10" y="461" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
@@ -581,7 +549,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="camera.fill" catalog="system" selectedImage="camera.fill" id="Prf-xw-hdb"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="Prf-xw-hdb"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BUU-pQ-uIU"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -683,7 +651,8 @@
         <image name="Group 17" width="325" height="397"/>
         <image name="Nike" width="117" height="117"/>
         <image name="adidas" width="300" height="300"/>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="image 1camera" width="49" height="49"/>
         <image name="image 2staricon" width="40" height="40"/>
         <image name="image 3gallery" width="47" height="47"/>

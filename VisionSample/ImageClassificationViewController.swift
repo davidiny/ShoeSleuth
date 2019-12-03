@@ -160,8 +160,6 @@ class ImageClassificationViewController: UIViewController {
   // MARK: - Photo Actions
   
   @IBAction func takePicture() {
-    self.HelpLabel.isHidden = true
-    self.HomePhoto.isHidden = true
     // Show options for the source picker only if the camera is available.
     guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
       presentPhotoPicker(sourceType: .photoLibrary)
@@ -184,6 +182,8 @@ class ImageClassificationViewController: UIViewController {
   }
   
   func presentPhotoPicker(sourceType: UIImagePickerControllerSourceType) {
+    self.HelpLabel.isHidden = true
+    self.HomePhoto.isHidden = true
     let picker = UIImagePickerController()
     picker.delegate = self
     picker.sourceType = sourceType
