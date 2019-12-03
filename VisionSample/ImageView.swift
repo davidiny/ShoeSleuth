@@ -14,10 +14,15 @@ class ImageView: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classificationLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var logoImage: UIImageView!
     
         override func viewDidLoad() {
           super.viewDidLoad()
           print("AAAAAAAAAAAAAAAAAAAAA")
+          classificationLabel.text = self.label
+          imageView.image = self.shoe
+          logoImage.image = self.logo
+          
         }
     
     var detailItem: GalleryImage? {
@@ -26,16 +31,36 @@ class ImageView: UIViewController {
             self.configureView()
         }
     }
+  var label: String = ""
+  var shoe: UIImage = UIImage(named: "pngtest1")!
+  var logo: UIImage = UIImage(named: "pngtest1")!
     
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: GalleryImage = self.detailItem {
-            if let name = self.classificationLabel {
-                name.text = detail.name
-            }
-            if let picture = self.imageView {
-                picture.image = detail.photo
-            }
+//          print(self.detailItem!.name)
+          print("We got something")
+          self.label = (String(detail.name!))
+          self.shoe = (detail.photo!)
+          if self.label == "We're Pretty Sure These are Nike Shoes" || self.label == "These Might Be Nike shoes" {
+            self.logo = UIImage(named: "Nike")!
+          }
+          if self.label == "We're Pretty Sure These are Adidas Shoes" || self.label == "These Might Be Adidas shoes" {
+            self.logo = UIImage(named: "adidas")!
+          }
+          if self.label == "We're Pretty Sure These are UnderArmour Shoes" || self.label == "These Might Be UnderArmour shoes" {
+            self.logo = UIImage(named: "underarmour")!
+          }
+//          classificationLabel.text = name
+//          imageView.image = detail.photo
+//            if let name = self.classificationLabel {
+//              print("set the name")
+//                name.text = detail.name
+//            }
+//            if let picture = self.imageView {
+//              print("set the picture")
+//                picture.image = detail.photo
+//            }
         }
     }
     

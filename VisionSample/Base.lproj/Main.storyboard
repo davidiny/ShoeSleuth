@@ -88,8 +88,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
                             </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-lo-5wa">
-                                <rect key="frame" x="166" y="422" width="42" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="99" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-lo-5wa">
+                                <rect key="frame" x="128" y="422" width="120" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -114,6 +114,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeL-Oe-OBg">
+                                <rect key="frame" x="267" y="457" width="108" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
@@ -133,14 +137,15 @@
                     <navigationItem key="navigationItem" id="kNA-Zj-lms"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="classificationLabel" destination="xcH-lo-5wa" id="QPb-Om-c3o"/>
-                        <outlet property="imageView" destination="AAH-Sb-o9m" id="efv-G0-uYd"/>
+                        <outlet property="classificationLabel" destination="xcH-lo-5wa" id="Ykp-SH-wcK"/>
+                        <outlet property="imageView" destination="AAH-Sb-o9m" id="hU4-bw-NUl"/>
+                        <outlet property="logoImage" destination="UeL-Oe-OBg" id="Deo-uS-BDk"/>
                     </connections>
                 </viewController>
                 <tabBarItem systemItem="favorites" id="bdg-J2-CYN"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nv-OU-cNR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935" y="751"/>
+            <point key="canvasLocation" x="2934.7826086956525" y="750.66964285714278"/>
         </scene>
         <!--Starred-->
         <scene sceneID="nCI-MI-41u">

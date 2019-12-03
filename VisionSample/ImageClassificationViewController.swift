@@ -155,6 +155,7 @@ class ImageClassificationViewController: UIViewController {
 //        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
       }
     }
+    save()
   }
   
   // MARK: - Photo Actions
@@ -204,7 +205,6 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     imageView.image = image
     classificationLabel.isHidden = false
     favoriteButton.isHidden = false
-    save()
     updateClassifications(for: image)
   }
   
