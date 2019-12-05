@@ -22,6 +22,11 @@ class ImageView: UIViewController {
           classificationLabel.text = self.label
           imageView.image = self.shoe
           logoImage.image = self.logo
+          let saveButton = UIImage(named: "emptyStar")
+          let savedButton = UIImage(named: "filledStar")
+//          favoriteButton.backgroundColor = UIColor.white
+          favoriteButton.setImage(saveButton, for: .normal)
+          favoriteButton.setImage(savedButton, for: .selected)
           
         }
     
@@ -70,13 +75,14 @@ class ImageView: UIViewController {
     }
     
     @IBAction func favorite() {
-      if favoriteButton.backgroundColor == UIColor.white {
-          favoriteButton.backgroundColor = UIColor.blue
-      }
-      else if favoriteButton.backgroundColor == UIColor.blue {
-          favoriteButton.backgroundColor = UIColor.white
-      }
+//      if favoriteButton.backgroundColor == UIColor.white {
+//          favoriteButton.backgroundColor = UIColor.blue
+//      }
+//      else if favoriteButton.backgroundColor == UIColor.blue {
+//          favoriteButton.backgroundColor = UIColor.white
+//      }
       print("Favorite button")
+      favoriteButton.isSelected.toggle()
       let appDelegate = UIApplication.shared.delegate as! AppDelegate
       let context = appDelegate.persistentContainer.viewContext
       let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")

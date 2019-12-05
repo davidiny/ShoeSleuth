@@ -72,10 +72,10 @@ class ImageClassificationViewController: UIViewController {
   /// - Tag: PerformRequests
   func updateClassifications(for image: UIImage) {
     classificationLabel.text = "Predicting..."
-    
+
     let orientation = CGImagePropertyOrientation(image.imageOrientation)
     guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
-    
+
     DispatchQueue.global(qos: .userInitiated).async {
       let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
       do {
@@ -217,6 +217,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     //image.photo = imageView.image
     let shoeImage = imageView.image
     image.photo = shoeImage?.fixOrientation()
+
     print("Saving")
     saveShoe(image: image)
   }
@@ -312,6 +313,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     }
   }
   
+
+  
   
   /*
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -329,6 +332,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
    }
    }*/
 }
+
 extension UIImage {
     func fixOrientation() -> UIImage {
         if self.imageOrientation == UIImageOrientation.up {
@@ -344,3 +348,4 @@ extension UIImage {
         }
     }
 }
+
