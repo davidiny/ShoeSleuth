@@ -10,18 +10,14 @@ import UIKit
 import CoreData
 import Photos
 
-class StarredImageView: UICollectionViewController {
+class StarredImageView: UICollectionViewController, UICollectionViewDelegateFlowLayout{
 
     var photoGallery : [GalleryImage] = []
     private lazy var imageManager = PHCachingImageManager()
     
     override func viewDidLoad() {
       super.viewDidLoad()
-      print("something happened")
-      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-//      self.registerClass(GalleryImageViewCell.self)
       getImages()
-
       print(":^) Gallery image loaded")
     }
     
@@ -84,21 +80,35 @@ class StarredImageView: UICollectionViewController {
       return cell
     }
 
-/*
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      let asset = photoGallery[indexPath.item].photo
-      if let cell = collectionView.cellForItem(at: indexPath) as? GalleryImageViewCell {
-        cell.flash()
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+          let yourWidth = collectionView.bounds.width/3.0
+          let yourHeight = yourWidth
+
+          return CGSize(width: yourWidth, height: yourHeight)
       }
-      imageManager.requestImage(for: asset, targetSize: view.frame.size, contentMode: .aspectFill, options: nil, resultHandler: { [weak self] image, info in
-        guard let image = image, let info = info else { return }
-          if let isThumbnail = info[PHImageResultIsDegradedKey as NSString] as?
-              Bool, !isThumbnail {
-              self?.selectedPhotosSubject.onNext(image)
-          }
-        
-      })
-    }
- */
+      
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+          return UIEdgeInsets.zero
+      }
+
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+          return 0
+      }
+
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+          return 0
+      }
     
+      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "shoeImage" {
+            print("ifosdjgoirgdfkselwogiufjeioghjkfsleiwfghfjeiqoghjiwef")
+              if let cell = sender as?
+                StarredImageViewCell, let indexPath = self.collectionView!.indexPath(for: cell) {
+                print("kms kms kms kmsksmksmksmskmskmsks")
+                  let galleryImage = photoGallery[indexPath.row]
+                  (segue.destination as! ImageView).detailItem = galleryImage
+              }
+        }
+    }
+
 }
