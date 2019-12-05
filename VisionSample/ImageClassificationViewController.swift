@@ -153,10 +153,11 @@ class ImageClassificationViewController: UIViewController {
           }
         }
         print("shoe model: " + shoeModel[0])
+        self.save()
 //        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
       }
     }
-    save()
+
   }
   
   // MARK: - Photo Actions
