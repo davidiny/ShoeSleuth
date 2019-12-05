@@ -72,10 +72,10 @@ class ImageClassificationViewController: UIViewController {
   /// - Tag: PerformRequests
   func updateClassifications(for image: UIImage) {
     classificationLabel.text = "Predicting..."
-    
+
     let orientation = CGImagePropertyOrientation(image.imageOrientation)
     guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
-    
+
     DispatchQueue.global(qos: .userInitiated).async {
       let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
       do {
@@ -212,6 +212,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     let image = GalleryImage()
     image.name = classificationLabel.text
     image.photo = imageView.image
+    let finalImage = image.photo?.rotate(radians: .pi/2)
+    image.photo = finalImage// Rotate 90 degrees
     print("Saving")
     saveShoe(image: image)
   }
@@ -294,6 +296,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     }
   }
   
+
+  
   
   /*
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -310,4 +314,28 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
    segEnd?.shoeLabel = self.classificationLabel
    }
    }*/
+}
+
+extension UIImage {
+    func rotate(radians: Float) -> UIImage? {
+        var newSize = CGRect(origin: CGPoint.zero, size: self.size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).size
+        // Trim off the extremely small float value to prevent core graphics from rounding it up
+        newSize.width = floor(newSize.width)
+        newSize.height = floor(newSize.height)
+
+        UIGraphicsBeginImageContextWithOptions(newSize, false, self.scale)
+        let context = UIGraphicsGetCurrentContext()!
+
+        // Move origin to middle
+        context.translateBy(x: newSize.width/2, y: newSize.height/2)
+        // Rotate around middle
+        context.rotate(by: CGFloat(radians))
+        // Draw the image at its center
+        self.draw(in: CGRect(x: -self.size.width/2, y: -self.size.height/2, width: self.size.width, height: self.size.height))
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage
+    }
 }
