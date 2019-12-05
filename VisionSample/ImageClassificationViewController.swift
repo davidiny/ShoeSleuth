@@ -213,7 +213,10 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     if (classificationLabel.text != "Predicting...") {
         image.name = classificationLabel.text
     }
-    image.photo = rotateImage(imageView.image ?? <#default value#>)
+    //image.photo = rotateImage(imageView.image ?? <#default value#>)
+    //image.photo = imageView.image
+    let shoeImage = imageView.image
+    image.photo = shoeImage?.fixOrientation()
     print("Saving")
     saveShoe(image: image)
   }
@@ -240,6 +243,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     }
   }
     
+    /*
     func rotateImage(_ image: UIImage) -> UIImage? {
         if (image.imageOrientation == UIImage.Orientation.up ) {
             return image
@@ -250,6 +254,7 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         UIGraphicsEndImageContext()
         return copy
     }
+ */
   
   @IBAction func favorite() {
 //    if favoriteButton.backgroundColor == UIColor.white {
@@ -323,4 +328,19 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
    segEnd?.shoeLabel = self.classificationLabel
    }
    }*/
+}
+extension UIImage {
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == UIImageOrientation.up {
+            return self
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        if let normalizedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return normalizedImage
+        } else {
+            return self
+        }
+    }
 }
