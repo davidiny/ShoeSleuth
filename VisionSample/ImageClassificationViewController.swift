@@ -214,8 +214,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         image.name = classificationLabel.text
     }
     image.photo = imageView.image
-    let finalImage = image.photo?.rotate(radians: .pi/2)
-    image.photo = finalImage// Rotate 90 degrees
+//    let finalImage = image.photo?.rotate(radians: .pi/6)
+//    image.photo = finalImage// Rotate 90 degrees
     print("Saving")
     saveShoe(image: image)
   }
