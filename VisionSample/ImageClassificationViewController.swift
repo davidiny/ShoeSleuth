@@ -214,8 +214,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
         image.name = classificationLabel.text
     }
     image.photo = imageView.image
-//    let finalImage = image.photo?.rotate(radians: .pi/6)
-//    image.photo = finalImage// Rotate 90 degrees
+
+    image.photo = rotateImage(imageView.image ?? <#default value#>)
     print("Saving")
     saveShoe(image: image)
   }
@@ -241,6 +241,17 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
       print("Failed saving")
     }
   }
+    
+    func rotateImage(_ image: UIImage) -> UIImage? {
+        if (image.imageOrientation == UIImage.Orientation.up ) {
+            return image
+        }
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
+        let copy = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return copy
+    }
   
   @IBAction func favorite() {
 //    if favoriteButton.backgroundColor == UIColor.white {
