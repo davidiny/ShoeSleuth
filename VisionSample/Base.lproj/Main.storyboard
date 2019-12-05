@@ -193,7 +193,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="3TF-Us-TOd" id="rel-tH-qsG"/>
-                                    <segue destination="G4m-g0-c2H" kind="show" id="j9r-zM-5Uj"/>
+                                    <segue destination="G4m-g0-c2H" kind="show" identifier="shoeImage" id="j9r-zM-5Uj"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
