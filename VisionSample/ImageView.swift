@@ -90,9 +90,12 @@ class ImageView: UIViewController {
          }
          }*/
         for data in result as! [NSManagedObject] {
+            print("Did you reach here?")
           var image =  UIImage(contentsOfFile: "Group_!2")
-            if self.shoe != nil{
-                image = self.shoe
+            print("Did you crash here?")
+            if imageView.image != nil{
+                print("Have you crashed yet?")
+                image = imageView.image
           }
 
           if (data.value(forKey: "photo") as? Data == UIImagePNGRepresentation(image!))  { // check if image is same
