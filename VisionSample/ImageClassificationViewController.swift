@@ -210,7 +210,9 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   
   func save() {
     let image = GalleryImage()
-    image.name = classificationLabel.text
+    if (classificationLabel.text != "Predicting...") {
+        image.name = classificationLabel.text
+    }
     image.photo = imageView.image
     let finalImage = image.photo?.rotate(radians: .pi/2)
     image.photo = finalImage// Rotate 90 degrees
