@@ -210,7 +210,9 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   
   func save() {
     let image = GalleryImage()
-    image.name = classificationLabel.text
+    if (classificationLabel.text != "Predicting...") {
+        image.name = classificationLabel.text
+    }
     image.photo = imageView.image
     print("Saving")
     saveShoe(image: image)
