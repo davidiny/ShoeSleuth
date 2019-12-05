@@ -142,4 +142,5 @@ class GalleryImageView: UICollectionViewController, UICollectionViewDelegateFlow
     }
  */
   }
+    
 }

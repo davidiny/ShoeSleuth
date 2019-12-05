@@ -91,8 +91,8 @@ class ImageView: UIViewController {
          }*/
         for data in result as! [NSManagedObject] {
           var image =  UIImage(contentsOfFile: "Group_!2")
-          if self.imageView.image != nil{
-            image = self.imageView.image!
+            if self.shoe != nil{
+                image = self.shoe
           }
 
           if (data.value(forKey: "photo") as? Data == UIImagePNGRepresentation(image!))  { // check if image is same
@@ -123,6 +123,7 @@ class ImageView: UIViewController {
         print("Failed")
       }
     }
+      
     
     
 }
