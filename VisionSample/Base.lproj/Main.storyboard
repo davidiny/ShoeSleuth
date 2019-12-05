@@ -138,6 +138,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="classificationLabel" destination="xcH-lo-5wa" id="Ykp-SH-wcK"/>
+                        <outlet property="favoriteButton" destination="dRC-Nn-KDM" id="Ez4-Gn-w7b"/>
                         <outlet property="imageView" destination="AAH-Sb-o9m" id="hU4-bw-NUl"/>
                         <outlet property="logoImage" destination="UeL-Oe-OBg" id="Deo-uS-BDk"/>
                     </connections>
