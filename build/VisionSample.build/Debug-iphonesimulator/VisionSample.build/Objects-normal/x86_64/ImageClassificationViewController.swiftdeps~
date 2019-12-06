@@ -5,7 +5,14 @@ provides-nominal:
 - "10ShoeSleuth33ImageClassificationViewControllerC"
 provides-member:
 - ["10ShoeSleuth33ImageClassificationViewControllerC", ""]
+- ["So7UIImageC", ""]
+- ["So7UIImageC", "fixOrientation"]
 provides-dynamic-lookup:
+- "AdidasImage"
+- "HelpLabel"
+- "HomePhoto"
+- "NikeImage"
+- "UnderArmourImage"
 - "cameraButton"
 - "classificationLabel"
 - "favorite"
@@ -16,17 +23,19 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - !private "!="
-- !private "+"
 - !private "=="
+- !private ">"
 - !private "AppDelegate"
 - "AssignmentPrecedence"
 - !private "Bool"
 - !private "BooleanLiteralType"
 - !private "CGImagePropertyOrientation"
+- !private "CGRect"
 - !private "CIImage"
 - "CastingPrecedence"
 - !private "Data"
 - !private "DispatchQueue"
+- !private "Double"
 - "Error"
 - "FloatLiteralType"
 - "GalleryImage"
@@ -43,7 +52,12 @@ depends-top-level:
 - !private "UIAlertController"
 - !private "UIApplication"
 - "UIButton"
+- !private "UIColor"
+- !private "UIGraphicsBeginImageContextWithOptions"
+- !private "UIGraphicsEndImageContext"
+- !private "UIGraphicsGetImageFromCurrentImageContext"
 - "UIImage"
+- !private "UIImageOrientation"
 - !private "UIImagePNGRepresentation"
 - "UIImagePickerController"
 - "UIImagePickerControllerDelegate"
@@ -62,52 +76,77 @@ depends-top-level:
 - "fatalError"
 - !private "print"
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
 - !private ["10ShoeSleuth11AppDelegateC", "persistentContainer"]
 - !private ["Sa", "isEmpty"]
-- !private ["Sa", "joined"]
 - !private ["Sa", "prefix"]
+- !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "map"]
 - !private ["SK", "init"]
 - !private ["SK", "isEmpty"]
-- !private ["SK", "joined"]
 - !private ["SK", "map"]
 - !private ["SK", "prefix"]
+- !private ["SK", "subscript"]
+- !private ["SB", "init"]
+- !private ["Sb", "toggle"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "image"]
 - !private ["So15CALayerDelegateP", "isHidden"]
+- !private ["So15CALayerDelegateP", "isSelected"]
+- !private ["So15CALayerDelegateP", "setImage"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So26CGImagePropertyOrientationV", "init"]
+- !private ["So6CGRectV", "init"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
 - !private ["So7CIImageC", "init"]
+- !private ["s7CVarArgP", "AdidasImage"]
 - !private ["s7CVarArgP", "CGImagePropertyOrientation"]
+- !private ["s7CVarArgP", "CGRect"]
 - !private ["s7CVarArgP", "CIImage"]
 - !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "Double"]
 - !private ["s7CVarArgP", "GalleryImage"]
+- !private ["s7CVarArgP", "HelpLabel"]
+- !private ["s7CVarArgP", "HomePhoto"]
 - !private ["s7CVarArgP", "NSEntityDescription"]
 - !private ["s7CVarArgP", "NSFetchRequest"]
 - !private ["s7CVarArgP", "NSManagedObject"]
+- !private ["s7CVarArgP", "NikeImage"]
 - ["s7CVarArgP", "ShoeSleuthModel"]
 - !private ["s7CVarArgP", "String"]
 - !private ["s7CVarArgP", "UIAlertAction"]
 - !private ["s7CVarArgP", "UIAlertController"]
 - !private ["s7CVarArgP", "UIApplication"]
+- !private ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["s7CVarArgP", "UIGraphicsEndImageContext"]
+- !private ["s7CVarArgP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["s7CVarArgP", "UIImage"]
+- !private ["s7CVarArgP", "UIImageOrientation"]
 - !private ["s7CVarArgP", "UIImagePNGRepresentation"]
 - !private ["s7CVarArgP", "UIImagePickerController"]
 - !private ["s7CVarArgP", "UIImagePickerControllerOriginalImage"]
+- !private ["s7CVarArgP", "UnderArmourImage"]
 - ["s7CVarArgP", "VNCoreMLModel"]
 - ["s7CVarArgP", "VNCoreMLRequest"]
 - !private ["s7CVarArgP", "VNImageRequestHandler"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addAction"]
 - !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "classificationLabel"]
 - !private ["s7CVarArgP", "classificationRequest"]
 - !private ["s7CVarArgP", "confidence"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "draw"]
 - !private ["s7CVarArgP", "entity"]
 - ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "favoriteButton"]
 - !private ["s7CVarArgP", "favorited"]
 - !private ["s7CVarArgP", "fetch"]
+- !private ["s7CVarArgP", "fixOrientation"]
 - !private ["s7CVarArgP", "global"]
 - !private ["s7CVarArgP", "identifier"]
 - !private ["s7CVarArgP", "image"]
@@ -120,8 +159,8 @@ depends-member:
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isHidden"]
+- !private ["s7CVarArgP", "isSelected"]
 - !private ["s7CVarArgP", "isSourceTypeAvailable"]
-- !private ["s7CVarArgP", "joined"]
 - !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "name"]
 - ["s7CVarArgP", "navigationController"]
@@ -139,58 +178,79 @@ depends-member:
 - !private ["s7CVarArgP", "returnsObjectsAsFaults"]
 - !private ["s7CVarArgP", "save"]
 - !private ["s7CVarArgP", "saveShoe"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "setImage"]
 - !private ["s7CVarArgP", "setValue"]
 - !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "size"]
 - !private ["s7CVarArgP", "sourceType"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "toggle"]
 - !private ["s7CVarArgP", "updateClassifications"]
 - !private ["s7CVarArgP", "value"]
 - !private ["s7CVarArgP", "viewContext"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "white"]
 - !private ["Sl", "init"]
 - !private ["Sl", "isEmpty"]
-- !private ["Sl", "joined"]
 - !private ["Sl", "map"]
 - !private ["Sl", "prefix"]
 - !private ["Sl", "subscript"]
 - !private ["SL", "init"]
 - !private ["10Foundation15ContiguousBytesP", "isEmpty"]
-- !private ["10Foundation15ContiguousBytesP", "joined"]
 - !private ["10Foundation15ContiguousBytesP", "map"]
 - !private ["10Foundation15ContiguousBytesP", "prefix"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "AdidasImage"]
 - !private ["s28CustomDebugStringConvertibleP", "CGImagePropertyOrientation"]
+- !private ["s28CustomDebugStringConvertibleP", "CGRect"]
 - !private ["s28CustomDebugStringConvertibleP", "CIImage"]
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
 - !private ["s28CustomDebugStringConvertibleP", "GalleryImage"]
+- !private ["s28CustomDebugStringConvertibleP", "HelpLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "HomePhoto"]
 - !private ["s28CustomDebugStringConvertibleP", "NSEntityDescription"]
 - !private ["s28CustomDebugStringConvertibleP", "NSFetchRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "NSManagedObject"]
+- !private ["s28CustomDebugStringConvertibleP", "NikeImage"]
 - ["s28CustomDebugStringConvertibleP", "ShoeSleuthModel"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
 - !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "UIGraphicsEndImageContext"]
+- !private ["s28CustomDebugStringConvertibleP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImage"]
+- !private ["s28CustomDebugStringConvertibleP", "UIImageOrientation"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImagePNGRepresentation"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImagePickerController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImagePickerControllerOriginalImage"]
+- !private ["s28CustomDebugStringConvertibleP", "UnderArmourImage"]
 - ["s28CustomDebugStringConvertibleP", "VNCoreMLModel"]
 - ["s28CustomDebugStringConvertibleP", "VNCoreMLRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "VNImageRequestHandler"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addAction"]
 - !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "classificationLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "classificationRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "confidence"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "draw"]
 - !private ["s28CustomDebugStringConvertibleP", "entity"]
 - ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "favoriteButton"]
 - !private ["s28CustomDebugStringConvertibleP", "favorited"]
 - !private ["s28CustomDebugStringConvertibleP", "fetch"]
+- !private ["s28CustomDebugStringConvertibleP", "fixOrientation"]
 - !private ["s28CustomDebugStringConvertibleP", "global"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - ["s28CustomDebugStringConvertibleP", "imageCropAndScaleOption"]
@@ -202,8 +262,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
+- !private ["s28CustomDebugStringConvertibleP", "isSelected"]
 - !private ["s28CustomDebugStringConvertibleP", "isSourceTypeAvailable"]
-- !private ["s28CustomDebugStringConvertibleP", "joined"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "map"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
@@ -222,8 +282,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "returnsObjectsAsFaults"]
 - !private ["s28CustomDebugStringConvertibleP", "save"]
 - !private ["s28CustomDebugStringConvertibleP", "saveShoe"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "setImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setValue"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
 - !private ["s28CustomDebugStringConvertibleP", "sourceType"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
@@ -231,31 +294,50 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s17CustomReflectableP", "backgroundColor"]
+- !private ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "image"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "isHidden"]
-- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "isSelected"]
 - !private ["s17CustomReflectableP", "map"]
 - !private ["s17CustomReflectableP", "prefix"]
+- !private ["s17CustomReflectableP", "setImage"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "text"]
+- !private ["s17CustomReflectableP", "toggle"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s23CustomStringConvertibleP", "AdidasImage"]
 - !private ["s23CustomStringConvertibleP", "CGImagePropertyOrientation"]
+- !private ["s23CustomStringConvertibleP", "CGRect"]
 - !private ["s23CustomStringConvertibleP", "CIImage"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "Double"]
 - !private ["s23CustomStringConvertibleP", "GalleryImage"]
+- !private ["s23CustomStringConvertibleP", "HelpLabel"]
+- !private ["s23CustomStringConvertibleP", "HomePhoto"]
 - !private ["s23CustomStringConvertibleP", "NSEntityDescription"]
 - !private ["s23CustomStringConvertibleP", "NSFetchRequest"]
 - !private ["s23CustomStringConvertibleP", "NSManagedObject"]
+- !private ["s23CustomStringConvertibleP", "NikeImage"]
 - ["s23CustomStringConvertibleP", "ShoeSleuthModel"]
 - !private ["s23CustomStringConvertibleP", "String"]
 - !private ["s23CustomStringConvertibleP", "UIAlertAction"]
 - !private ["s23CustomStringConvertibleP", "UIAlertController"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
+- !private ["s23CustomStringConvertibleP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["s23CustomStringConvertibleP", "UIGraphicsEndImageContext"]
+- !private ["s23CustomStringConvertibleP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
+- !private ["s23CustomStringConvertibleP", "UIImageOrientation"]
 - !private ["s23CustomStringConvertibleP", "UIImagePNGRepresentation"]
 - !private ["s23CustomStringConvertibleP", "UIImagePickerController"]
 - !private ["s23CustomStringConvertibleP", "UIImagePickerControllerOriginalImage"]
+- !private ["s23CustomStringConvertibleP", "UnderArmourImage"]
 - ["s23CustomStringConvertibleP", "VNCoreMLModel"]
 - ["s23CustomStringConvertibleP", "VNCoreMLRequest"]
 - !private ["s23CustomStringConvertibleP", "VNImageRequestHandler"]
@@ -264,15 +346,19 @@ depends-member:
 - ["s23CustomStringConvertibleP", "appendInterpolation"]
 - ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "classificationLabel"]
 - !private ["s23CustomStringConvertibleP", "classificationRequest"]
 - !private ["s23CustomStringConvertibleP", "confidence"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "draw"]
 - !private ["s23CustomStringConvertibleP", "entity"]
 - ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "favoriteButton"]
 - !private ["s23CustomStringConvertibleP", "favorited"]
 - !private ["s23CustomStringConvertibleP", "fetch"]
+- !private ["s23CustomStringConvertibleP", "fixOrientation"]
 - !private ["s23CustomStringConvertibleP", "global"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - !private ["s23CustomStringConvertibleP", "image"]
@@ -285,8 +371,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
+- !private ["s23CustomStringConvertibleP", "isSelected"]
 - !private ["s23CustomStringConvertibleP", "isSourceTypeAvailable"]
-- !private ["s23CustomStringConvertibleP", "joined"]
 - !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "map"]
 - !private ["s23CustomStringConvertibleP", "name"]
@@ -305,27 +391,37 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "returnsObjectsAsFaults"]
 - !private ["s23CustomStringConvertibleP", "save"]
 - !private ["s23CustomStringConvertibleP", "saveShoe"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "setImage"]
 - !private ["s23CustomStringConvertibleP", "setValue"]
 - !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "size"]
 - !private ["s23CustomStringConvertibleP", "sourceType"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "toggle"]
 - !private ["s23CustomStringConvertibleP", "updateClassifications"]
 - !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "white"]
 - !private ["10Foundation12DataProtocolP", "isEmpty"]
-- !private ["10Foundation12DataProtocolP", "joined"]
 - !private ["10Foundation12DataProtocolP", "map"]
 - !private ["10Foundation12DataProtocolP", "prefix"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "backgroundColor"]
+- !private ["Se", "height"]
 - !private ["Se", "image"]
 - !private ["Se", "init"]
 - !private ["Se", "isEmpty"]
 - !private ["Se", "isHidden"]
-- !private ["Se", "joined"]
+- !private ["Se", "isSelected"]
 - !private ["Se", "prefix"]
+- !private ["Se", "setImage"]
 - !private ["Se", "subscript"]
 - !private ["Se", "text"]
+- !private ["Se", "toggle"]
+- !private ["Se", "width"]
 - ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
@@ -335,36 +431,55 @@ depends-member:
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "global"]
 - !private ["So17OS_dispatch_queueC", "main"]
+- !private ["Sd", "init"]
+- !private ["SE", "backgroundColor"]
+- !private ["SE", "height"]
 - !private ["SE", "image"]
 - !private ["SE", "init"]
 - !private ["SE", "isEmpty"]
 - !private ["SE", "isHidden"]
-- !private ["SE", "joined"]
+- !private ["SE", "isSelected"]
 - !private ["SE", "prefix"]
+- !private ["SE", "setImage"]
 - !private ["SE", "subscript"]
 - !private ["SE", "text"]
+- !private ["SE", "toggle"]
+- !private ["SE", "width"]
+- !private ["SQ", "AdidasImage"]
 - !private ["SQ", "CGImagePropertyOrientation"]
+- !private ["SQ", "CGRect"]
 - !private ["SQ", "CIImage"]
 - !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "Double"]
 - !private ["SQ", "GalleryImage"]
+- !private ["SQ", "HelpLabel"]
+- !private ["SQ", "HomePhoto"]
 - !private ["SQ", "NSEntityDescription"]
 - !private ["SQ", "NSFetchRequest"]
 - !private ["SQ", "NSManagedObject"]
+- !private ["SQ", "NikeImage"]
 - ["SQ", "ShoeSleuthModel"]
 - !private ["SQ", "String"]
 - !private ["SQ", "UIAlertAction"]
 - !private ["SQ", "UIAlertController"]
 - !private ["SQ", "UIApplication"]
+- !private ["SQ", "UIColor"]
+- !private ["SQ", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["SQ", "UIGraphicsEndImageContext"]
+- !private ["SQ", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["SQ", "UIImage"]
+- !private ["SQ", "UIImageOrientation"]
 - !private ["SQ", "UIImagePNGRepresentation"]
 - !private ["SQ", "UIImagePickerController"]
 - !private ["SQ", "UIImagePickerControllerOriginalImage"]
+- !private ["SQ", "UnderArmourImage"]
 - ["SQ", "VNCoreMLModel"]
 - ["SQ", "VNCoreMLRequest"]
 - !private ["SQ", "VNImageRequestHandler"]
 - ["SQ", ""]
 - !private ["SQ", "addAction"]
 - !private ["SQ", "async"]
+- !private ["SQ", "backgroundColor"]
 - !private ["SQ", "camera"]
 - !private ["SQ", "cancel"]
 - ["SQ", "centerCrop"]
@@ -374,11 +489,15 @@ depends-member:
 - !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "dismiss"]
+- !private ["SQ", "draw"]
 - !private ["SQ", "entity"]
 - ["SQ", "fatalError"]
+- !private ["SQ", "favoriteButton"]
 - !private ["SQ", "favorited"]
 - !private ["SQ", "fetch"]
+- !private ["SQ", "fixOrientation"]
 - !private ["SQ", "global"]
+- !private ["SQ", "height"]
 - !private ["SQ", "identifier"]
 - !private ["SQ", "image"]
 - ["SQ", "imageCropAndScaleOption"]
@@ -390,14 +509,15 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "isHidden"]
+- !private ["SQ", "isSelected"]
 - !private ["SQ", "isSourceTypeAvailable"]
-- !private ["SQ", "joined"]
 - !private ["SQ", "main"]
 - !private ["SQ", "map"]
 - !private ["SQ", "name"]
 - ["SQ", "navigationController"]
 - ["SQ", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["SQ", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["SQ", "normal"]
 - !private ["SQ", "perform"]
 - !private ["SQ", "persistentContainer"]
 - !private ["SQ", "photo"]
@@ -411,56 +531,86 @@ depends-member:
 - !private ["SQ", "returnsObjectsAsFaults"]
 - !private ["SQ", "save"]
 - !private ["SQ", "saveShoe"]
+- !private ["SQ", "scale"]
+- !private ["SQ", "selected"]
+- !private ["SQ", "setImage"]
 - !private ["SQ", "setValue"]
 - !private ["SQ", "shared"]
+- !private ["SQ", "size"]
 - !private ["SQ", "sourceType"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "text"]
+- !private ["SQ", "toggle"]
+- !private ["SQ", "up"]
 - !private ["SQ", "updateClassifications"]
 - !private ["SQ", "userInitiated"]
 - !private ["SQ", "value"]
 - !private ["SQ", "viewContext"]
 - !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "white"]
+- !private ["SQ", "width"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
-- !private ["s25ExpressibleByArrayLiteralP", "joined"]
 - !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "prefix"]
+- !private ["s25ExpressibleByArrayLiteralP", "selected"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "toggle"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "image"]
 - !private ["s23ExpressibleByNilLiteralP", "isHidden"]
+- !private ["s23ExpressibleByNilLiteralP", "isSelected"]
+- !private ["s23ExpressibleByNilLiteralP", "setImage"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SF", "init"]
 - !private ["10ShoeSleuth12GalleryImageC", "deinit"]
 - !private ["10ShoeSleuth12GalleryImageC", "favorited"]
 - !private ["10ShoeSleuth12GalleryImageC", "init"]
 - !private ["10ShoeSleuth12GalleryImageC", "name"]
 - !private ["10ShoeSleuth12GalleryImageC", "photo"]
+- !private ["SH", "AdidasImage"]
 - !private ["SH", "CGImagePropertyOrientation"]
+- !private ["SH", "CGRect"]
 - !private ["SH", "CIImage"]
 - !private ["SH", "DispatchQueue"]
+- !private ["SH", "Double"]
 - !private ["SH", "GalleryImage"]
+- !private ["SH", "HelpLabel"]
+- !private ["SH", "HomePhoto"]
 - !private ["SH", "NSEntityDescription"]
 - !private ["SH", "NSFetchRequest"]
 - !private ["SH", "NSManagedObject"]
+- !private ["SH", "NikeImage"]
 - ["SH", "ShoeSleuthModel"]
 - !private ["SH", "String"]
 - !private ["SH", "UIAlertAction"]
 - !private ["SH", "UIAlertController"]
 - !private ["SH", "UIApplication"]
+- !private ["SH", "UIColor"]
+- !private ["SH", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["SH", "UIGraphicsEndImageContext"]
+- !private ["SH", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["SH", "UIImage"]
+- !private ["SH", "UIImageOrientation"]
 - !private ["SH", "UIImagePNGRepresentation"]
 - !private ["SH", "UIImagePickerController"]
 - !private ["SH", "UIImagePickerControllerOriginalImage"]
+- !private ["SH", "UnderArmourImage"]
 - ["SH", "VNCoreMLModel"]
 - ["SH", "VNCoreMLRequest"]
 - !private ["SH", "VNImageRequestHandler"]
 - ["SH", ""]
 - !private ["SH", "addAction"]
 - !private ["SH", "async"]
+- !private ["SH", "backgroundColor"]
 - !private ["SH", "camera"]
 - !private ["SH", "cancel"]
 - ["SH", "centerCrop"]
@@ -470,10 +620,13 @@ depends-member:
 - !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "dismiss"]
+- !private ["SH", "draw"]
 - !private ["SH", "entity"]
 - ["SH", "fatalError"]
+- !private ["SH", "favoriteButton"]
 - !private ["SH", "favorited"]
 - !private ["SH", "fetch"]
+- !private ["SH", "fixOrientation"]
 - !private ["SH", "global"]
 - !private ["SH", "identifier"]
 - !private ["SH", "image"]
@@ -486,8 +639,8 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "isHidden"]
+- !private ["SH", "isSelected"]
 - !private ["SH", "isSourceTypeAvailable"]
-- !private ["SH", "joined"]
 - !private ["SH", "main"]
 - !private ["SH", "map"]
 - !private ["SH", "name"]
@@ -507,35 +660,47 @@ depends-member:
 - !private ["SH", "returnsObjectsAsFaults"]
 - !private ["SH", "save"]
 - !private ["SH", "saveShoe"]
+- !private ["SH", "scale"]
+- !private ["SH", "setImage"]
 - !private ["SH", "setValue"]
 - !private ["SH", "shared"]
+- !private ["SH", "size"]
 - !private ["SH", "sourceType"]
 - !private ["SH", "subscript"]
 - !private ["SH", "text"]
+- !private ["SH", "toggle"]
+- !private ["SH", "up"]
 - !private ["SH", "updateClassifications"]
 - !private ["SH", "userInitiated"]
 - !private ["SH", "value"]
 - !private ["SH", "viewContext"]
 - !private ["SH", "viewDidLoad"]
+- !private ["SH", "white"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "$__lazy_storage_$_classificationRequest"]
+- ["10ShoeSleuth33ImageClassificationViewControllerC", "AdidasImage"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "AppDelegate"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "Bool"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "CGImagePropertyOrientation"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "CIImage"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "Data"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "DispatchQueue"]
+- !private ["10ShoeSleuth33ImageClassificationViewControllerC", "Double"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "Error"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "GalleryImage"]
+- ["10ShoeSleuth33ImageClassificationViewControllerC", "HelpLabel"]
+- ["10ShoeSleuth33ImageClassificationViewControllerC", "HomePhoto"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "NSEntityDescription"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "NSFetchRequest"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "NSFetchRequestResult"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "NSManagedObject"]
+- ["10ShoeSleuth33ImageClassificationViewControllerC", "NikeImage"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "ShoeSleuthModel"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "String"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIAlertAction"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIAlertController"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIApplication"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIButton"]
+- !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIColor"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImage"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImagePNGRepresentation"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImagePickerController"]
@@ -543,6 +708,7 @@ depends-member:
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImagePickerControllerSourceType"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UIImageView"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "UILabel"]
+- ["10ShoeSleuth33ImageClassificationViewControllerC", "UnderArmourImage"]
 - !private ["10ShoeSleuth33ImageClassificationViewControllerC", "VNClassificationObservation"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "VNCoreMLModel"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "VNCoreMLRequest"]
@@ -572,44 +738,61 @@ depends-member:
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "updateClassifications"]
 - ["10ShoeSleuth33ImageClassificationViewControllerC", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "toggle"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["SM", "isEmpty"]
-- !private ["SM", "joined"]
 - !private ["SM", "map"]
 - !private ["SM", "prefix"]
+- !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
-- !private ["10Foundation19MutableDataProtocolP", "joined"]
 - !private ["10Foundation19MutableDataProtocolP", "prefix"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "AdidasImage"]
 - !private ["So8NSCodingP", "CGImagePropertyOrientation"]
+- !private ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "CIImage"]
 - !private ["So8NSCodingP", "DispatchQueue"]
+- !private ["So8NSCodingP", "Double"]
 - !private ["So8NSCodingP", "GalleryImage"]
+- !private ["So8NSCodingP", "HelpLabel"]
+- !private ["So8NSCodingP", "HomePhoto"]
 - !private ["So8NSCodingP", "NSEntityDescription"]
 - !private ["So8NSCodingP", "NSFetchRequest"]
 - !private ["So8NSCodingP", "NSManagedObject"]
+- !private ["So8NSCodingP", "NikeImage"]
 - ["So8NSCodingP", "ShoeSleuthModel"]
 - !private ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIAlertAction"]
 - !private ["So8NSCodingP", "UIAlertController"]
 - !private ["So8NSCodingP", "UIApplication"]
+- !private ["So8NSCodingP", "UIColor"]
+- !private ["So8NSCodingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So8NSCodingP", "UIGraphicsEndImageContext"]
+- !private ["So8NSCodingP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So8NSCodingP", "UIImage"]
+- !private ["So8NSCodingP", "UIImageOrientation"]
 - !private ["So8NSCodingP", "UIImagePNGRepresentation"]
 - !private ["So8NSCodingP", "UIImagePickerController"]
 - !private ["So8NSCodingP", "UIImagePickerControllerOriginalImage"]
+- !private ["So8NSCodingP", "UnderArmourImage"]
 - ["So8NSCodingP", "VNCoreMLModel"]
 - ["So8NSCodingP", "VNCoreMLRequest"]
 - !private ["So8NSCodingP", "VNImageRequestHandler"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addAction"]
+- !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "classificationLabel"]
 - !private ["So8NSCodingP", "classificationRequest"]
 - !private ["So8NSCodingP", "confidence"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "draw"]
 - !private ["So8NSCodingP", "entity"]
 - ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "favoriteButton"]
 - !private ["So8NSCodingP", "favorited"]
 - !private ["So8NSCodingP", "fetch"]
+- !private ["So8NSCodingP", "fixOrientation"]
 - !private ["So8NSCodingP", "identifier"]
 - !private ["So8NSCodingP", "image"]
 - !private ["So8NSCodingP", "imageOrientation"]
@@ -619,6 +802,7 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
+- !private ["So8NSCodingP", "isSelected"]
 - !private ["So8NSCodingP", "isSourceTypeAvailable"]
 - !private ["So8NSCodingP", "name"]
 - ["So8NSCodingP", "navigationController"]
@@ -632,10 +816,14 @@ depends-member:
 - !private ["So8NSCodingP", "returnsObjectsAsFaults"]
 - !private ["So8NSCodingP", "save"]
 - !private ["So8NSCodingP", "saveShoe"]
+- !private ["So8NSCodingP", "scale"]
+- !private ["So8NSCodingP", "setImage"]
+- !private ["So8NSCodingP", "size"]
 - !private ["So8NSCodingP", "sourceType"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "updateClassifications"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "white"]
 - !private ["So9NSCopyingP", "confidence"]
 - !private ["So9NSCopyingP", "entity"]
 - !private ["So9NSCopyingP", "identifier"]
@@ -643,23 +831,31 @@ depends-member:
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "results"]
 - !private ["So9NSCopyingP", "returnsObjectsAsFaults"]
+- !private ["So9NSCopyingP", "white"]
 - !private ["So19NSEntityDescriptionC", "entity"]
+- !private ["So26NSExtensionRequestHandlingP", "AdidasImage"]
 - !private ["So26NSExtensionRequestHandlingP", "CGImagePropertyOrientation"]
 - !private ["So26NSExtensionRequestHandlingP", "CIImage"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
+- !private ["So26NSExtensionRequestHandlingP", "Double"]
 - !private ["So26NSExtensionRequestHandlingP", "GalleryImage"]
+- !private ["So26NSExtensionRequestHandlingP", "HelpLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "HomePhoto"]
 - !private ["So26NSExtensionRequestHandlingP", "NSEntityDescription"]
 - !private ["So26NSExtensionRequestHandlingP", "NSFetchRequest"]
 - !private ["So26NSExtensionRequestHandlingP", "NSManagedObject"]
+- !private ["So26NSExtensionRequestHandlingP", "NikeImage"]
 - ["So26NSExtensionRequestHandlingP", "ShoeSleuthModel"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIApplication"]
+- !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImagePNGRepresentation"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImagePickerController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImagePickerControllerOriginalImage"]
+- !private ["So26NSExtensionRequestHandlingP", "UnderArmourImage"]
 - ["So26NSExtensionRequestHandlingP", "VNCoreMLModel"]
 - ["So26NSExtensionRequestHandlingP", "VNCoreMLRequest"]
 - !private ["So26NSExtensionRequestHandlingP", "VNImageRequestHandler"]
@@ -670,6 +866,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "delegate"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - ["So26NSExtensionRequestHandlingP", "fatalError"]
+- !private ["So26NSExtensionRequestHandlingP", "favoriteButton"]
 - ["So26NSExtensionRequestHandlingP", "imagePickerController"]
 - ["So26NSExtensionRequestHandlingP", "imagePickerControllerDidCancel"]
 - !private ["So26NSExtensionRequestHandlingP", "imageView"]
@@ -694,10 +891,30 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "setValue"]
 - !private ["So20NSFetchRequestResultP", "value"]
+- !private ["So21NSItemProviderReadingP", "CGRect"]
+- !private ["So21NSItemProviderReadingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So21NSItemProviderReadingP", "UIGraphicsEndImageContext"]
+- !private ["So21NSItemProviderReadingP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["So21NSItemProviderReadingP", "UIImageOrientation"]
+- !private ["So21NSItemProviderReadingP", "draw"]
+- !private ["So21NSItemProviderReadingP", "fixOrientation"]
 - !private ["So21NSItemProviderReadingP", "imageOrientation"]
 - !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "scale"]
+- !private ["So21NSItemProviderReadingP", "size"]
+- !private ["So21NSItemProviderReadingP", "white"]
+- !private ["So21NSItemProviderWritingP", "CGRect"]
+- !private ["So21NSItemProviderWritingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So21NSItemProviderWritingP", "UIGraphicsEndImageContext"]
+- !private ["So21NSItemProviderWritingP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["So21NSItemProviderWritingP", "UIImageOrientation"]
+- !private ["So21NSItemProviderWritingP", "draw"]
+- !private ["So21NSItemProviderWritingP", "fixOrientation"]
 - !private ["So21NSItemProviderWritingP", "imageOrientation"]
 - !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "scale"]
+- !private ["So21NSItemProviderWritingP", "size"]
+- !private ["So21NSItemProviderWritingP", "white"]
 - !private ["So9NSLockingP", "fetch"]
 - !private ["So9NSLockingP", "save"]
 - !private ["So15NSManagedObjectC", "init"]
@@ -706,31 +923,43 @@ depends-member:
 - !private ["So22NSManagedObjectContextC", "fetch"]
 - !private ["So22NSManagedObjectContextC", "save"]
 - ["So8NSObjectC", "$__lazy_storage_$_classificationRequest"]
+- ["So8NSObjectC", "AdidasImage"]
 - !private ["So8NSObjectC", "AppDelegate"]
 - !private ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGImagePropertyOrientation"]
+- !private ["So8NSObjectC", "CGRect"]
 - !private ["So8NSObjectC", "CIImage"]
 - !private ["So8NSObjectC", "Data"]
 - !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Error"]
 - ["So8NSObjectC", "GalleryImage"]
+- ["So8NSObjectC", "HelpLabel"]
+- ["So8NSObjectC", "HomePhoto"]
 - !private ["So8NSObjectC", "NSEntityDescription"]
 - !private ["So8NSObjectC", "NSFetchRequest"]
 - !private ["So8NSObjectC", "NSFetchRequestResult"]
 - !private ["So8NSObjectC", "NSManagedObject"]
+- ["So8NSObjectC", "NikeImage"]
 - ["So8NSObjectC", "ShoeSleuthModel"]
 - ["So8NSObjectC", "String"]
 - !private ["So8NSObjectC", "UIAlertAction"]
 - !private ["So8NSObjectC", "UIAlertController"]
 - !private ["So8NSObjectC", "UIApplication"]
 - ["So8NSObjectC", "UIButton"]
+- !private ["So8NSObjectC", "UIColor"]
+- !private ["So8NSObjectC", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So8NSObjectC", "UIGraphicsEndImageContext"]
+- !private ["So8NSObjectC", "UIGraphicsGetImageFromCurrentImageContext"]
 - ["So8NSObjectC", "UIImage"]
+- !private ["So8NSObjectC", "UIImageOrientation"]
 - !private ["So8NSObjectC", "UIImagePNGRepresentation"]
 - ["So8NSObjectC", "UIImagePickerController"]
 - !private ["So8NSObjectC", "UIImagePickerControllerOriginalImage"]
 - ["So8NSObjectC", "UIImagePickerControllerSourceType"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UnderArmourImage"]
 - !private ["So8NSObjectC", "VNClassificationObservation"]
 - ["So8NSObjectC", "VNCoreMLModel"]
 - ["So8NSObjectC", "VNCoreMLRequest"]
@@ -738,18 +967,21 @@ depends-member:
 - ["So8NSObjectC", "VNRequest"]
 - !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "backgroundColor"]
 - ["So8NSObjectC", "cameraButton"]
 - ["So8NSObjectC", "classificationLabel"]
 - ["So8NSObjectC", "classificationRequest"]
 - !private ["So8NSObjectC", "confidence"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "draw"]
 - !private ["So8NSObjectC", "entity"]
 - ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "favorite"]
 - ["So8NSObjectC", "favoriteButton"]
 - !private ["So8NSObjectC", "favorited"]
 - !private ["So8NSObjectC", "fetch"]
+- ["So8NSObjectC", "fixOrientation"]
 - !private ["So8NSObjectC", "global"]
 - !private ["So8NSObjectC", "identifier"]
 - !private ["So8NSObjectC", "image"]
@@ -761,6 +993,7 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
+- !private ["So8NSObjectC", "isSelected"]
 - !private ["So8NSObjectC", "isSourceTypeAvailable"]
 - !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "name"]
@@ -778,8 +1011,11 @@ depends-member:
 - !private ["So8NSObjectC", "returnsObjectsAsFaults"]
 - ["So8NSObjectC", "save"]
 - ["So8NSObjectC", "saveShoe"]
+- !private ["So8NSObjectC", "scale"]
+- !private ["So8NSObjectC", "setImage"]
 - !private ["So8NSObjectC", "setValue"]
 - !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "size"]
 - !private ["So8NSObjectC", "sourceType"]
 - ["So8NSObjectC", "takePicture"]
 - !private ["So8NSObjectC", "text"]
@@ -787,37 +1023,54 @@ depends-member:
 - !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "white"]
+- !private ["So8NSObjectP", "AdidasImage"]
 - !private ["So8NSObjectP", "CGImagePropertyOrientation"]
+- !private ["So8NSObjectP", "CGRect"]
 - !private ["So8NSObjectP", "CIImage"]
 - !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "Double"]
 - !private ["So8NSObjectP", "GalleryImage"]
+- !private ["So8NSObjectP", "HelpLabel"]
+- !private ["So8NSObjectP", "HomePhoto"]
 - !private ["So8NSObjectP", "NSEntityDescription"]
 - !private ["So8NSObjectP", "NSFetchRequest"]
 - !private ["So8NSObjectP", "NSManagedObject"]
+- !private ["So8NSObjectP", "NikeImage"]
 - ["So8NSObjectP", "ShoeSleuthModel"]
 - !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UIAlertAction"]
 - !private ["So8NSObjectP", "UIAlertController"]
 - !private ["So8NSObjectP", "UIApplication"]
+- !private ["So8NSObjectP", "UIColor"]
+- !private ["So8NSObjectP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So8NSObjectP", "UIGraphicsEndImageContext"]
+- !private ["So8NSObjectP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So8NSObjectP", "UIImage"]
+- !private ["So8NSObjectP", "UIImageOrientation"]
 - !private ["So8NSObjectP", "UIImagePNGRepresentation"]
 - !private ["So8NSObjectP", "UIImagePickerController"]
 - !private ["So8NSObjectP", "UIImagePickerControllerOriginalImage"]
+- !private ["So8NSObjectP", "UnderArmourImage"]
 - ["So8NSObjectP", "VNCoreMLModel"]
 - ["So8NSObjectP", "VNCoreMLRequest"]
 - !private ["So8NSObjectP", "VNImageRequestHandler"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "classificationLabel"]
 - !private ["So8NSObjectP", "classificationRequest"]
 - !private ["So8NSObjectP", "confidence"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "draw"]
 - !private ["So8NSObjectP", "entity"]
 - ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "favoriteButton"]
 - !private ["So8NSObjectP", "favorited"]
 - !private ["So8NSObjectP", "fetch"]
+- !private ["So8NSObjectP", "fixOrientation"]
 - !private ["So8NSObjectP", "global"]
 - !private ["So8NSObjectP", "identifier"]
 - !private ["So8NSObjectP", "image"]
@@ -829,6 +1082,7 @@ depends-member:
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
+- !private ["So8NSObjectP", "isSelected"]
 - !private ["So8NSObjectP", "isSourceTypeAvailable"]
 - !private ["So8NSObjectP", "main"]
 - !private ["So8NSObjectP", "name"]
@@ -846,59 +1100,89 @@ depends-member:
 - !private ["So8NSObjectP", "returnsObjectsAsFaults"]
 - !private ["So8NSObjectP", "save"]
 - !private ["So8NSObjectP", "saveShoe"]
+- !private ["So8NSObjectP", "scale"]
+- !private ["So8NSObjectP", "setImage"]
 - !private ["So8NSObjectP", "setValue"]
 - !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "size"]
 - !private ["So8NSObjectP", "sourceType"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "updateClassifications"]
 - !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "viewContext"]
 - !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "white"]
 - !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So24NSPersistentStoreRequestC", "init"]
 - !private ["So24NSPersistentStoreRequestC", "returnsObjectsAsFaults"]
+- !private ["So14NSSecureCodingP", "CGRect"]
+- !private ["So14NSSecureCodingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So14NSSecureCodingP", "UIGraphicsEndImageContext"]
+- !private ["So14NSSecureCodingP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["So14NSSecureCodingP", "UIImageOrientation"]
 - !private ["So14NSSecureCodingP", "confidence"]
+- !private ["So14NSSecureCodingP", "draw"]
+- !private ["So14NSSecureCodingP", "fixOrientation"]
 - !private ["So14NSSecureCodingP", "identifier"]
 - !private ["So14NSSecureCodingP", "imageOrientation"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "scale"]
+- !private ["So14NSSecureCodingP", "size"]
+- !private ["So14NSSecureCodingP", "white"]
+- !private ["Sj", "init"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "global"]
 - !private ["So9OS_objectC", "main"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "setValue"]
 - !private ["7Combine16ObservableObjectP", "value"]
+- !private ["s9OptionSetP", "normal"]
+- !private ["s9OptionSetP", "selected"]
+- !private ["Sq", "backgroundColor"]
 - !private ["Sq", "image"]
 - !private ["Sq", "isHidden"]
+- !private ["Sq", "isSelected"]
+- !private ["Sq", "setImage"]
 - !private ["Sq", "text"]
+- !private ["So18UIImageOrientationV", "up"]
 - !private ["8Dispatch0A3QoSV0B6SClassO", "userInitiated"]
 - !private ["Sk", "isEmpty"]
-- !private ["Sk", "joined"]
 - !private ["Sk", "map"]
 - !private ["Sk", "prefix"]
+- !private ["Sk", "subscript"]
 - !private ["Sm", "init"]
 - !private ["Sm", "isEmpty"]
-- !private ["Sm", "joined"]
 - !private ["Sm", "map"]
 - !private ["Sm", "prefix"]
+- !private ["Sm", "subscript"]
 - !private ["SY", "camera"]
 - !private ["SY", "cancel"]
 - ["SY", "centerCrop"]
 - !private ["SY", "default"]
 - !private ["SY", "init"]
+- !private ["SY", "normal"]
 - !private ["SY", "photoLibrary"]
+- !private ["SY", "selected"]
+- !private ["SY", "up"]
+- !private ["s10SIMDScalarP", "init"]
 - !private ["7Combine9SchedulerP", "async"]
 - !private ["7Combine9SchedulerP", "global"]
 - !private ["7Combine9SchedulerP", "main"]
 - !private ["ST", "init"]
 - !private ["ST", "isEmpty"]
-- !private ["ST", "joined"]
 - !private ["ST", "map"]
 - !private ["ST", "prefix"]
 - !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "normal"]
+- !private ["s10SetAlgebraP", "selected"]
 - ["10ShoeSleuth0aB5ModelC", "init"]
 - ["10ShoeSleuth0aB5ModelC", "model"]
+- !private ["s13SignedNumericP", "init"]
 - !private ["So33UIImagePickerControllerSourceTypeV", "camera"]
 - !private ["So33UIImagePickerControllerSourceTypeV", "photoLibrary"]
+- !private ["So14UIControlStateV", "normal"]
+- !private ["So14UIControlStateV", "selected"]
+- !private ["Sx", "init"]
 - !private ["SS", "init"]
 - ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -909,44 +1193,72 @@ depends-member:
 - ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isHidden"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isSelected"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setImage"]
+- !private ["So29UIAccessibilityIdentificationP", "CGRect"]
+- !private ["So29UIAccessibilityIdentificationP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So29UIAccessibilityIdentificationP", "UIGraphicsEndImageContext"]
+- !private ["So29UIAccessibilityIdentificationP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["So29UIAccessibilityIdentificationP", "UIImageOrientation"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
+- !private ["So29UIAccessibilityIdentificationP", "draw"]
+- !private ["So29UIAccessibilityIdentificationP", "fixOrientation"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "imageOrientation"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
+- !private ["So29UIAccessibilityIdentificationP", "isSelected"]
+- !private ["So29UIAccessibilityIdentificationP", "scale"]
+- !private ["So29UIAccessibilityIdentificationP", "setImage"]
+- !private ["So29UIAccessibilityIdentificationP", "size"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "image"]
 - !private ["So12UIAppearanceP", "isHidden"]
+- !private ["So12UIAppearanceP", "isSelected"]
+- !private ["So12UIAppearanceP", "setImage"]
 - !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "AdidasImage"]
 - !private ["So21UIAppearanceContainerP", "CGImagePropertyOrientation"]
 - !private ["So21UIAppearanceContainerP", "CIImage"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
+- !private ["So21UIAppearanceContainerP", "Double"]
 - !private ["So21UIAppearanceContainerP", "GalleryImage"]
+- !private ["So21UIAppearanceContainerP", "HelpLabel"]
+- !private ["So21UIAppearanceContainerP", "HomePhoto"]
 - !private ["So21UIAppearanceContainerP", "NSEntityDescription"]
 - !private ["So21UIAppearanceContainerP", "NSFetchRequest"]
 - !private ["So21UIAppearanceContainerP", "NSManagedObject"]
+- !private ["So21UIAppearanceContainerP", "NikeImage"]
 - ["So21UIAppearanceContainerP", "ShoeSleuthModel"]
 - !private ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIAlertAction"]
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - !private ["So21UIAppearanceContainerP", "UIApplication"]
+- !private ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
 - !private ["So21UIAppearanceContainerP", "UIImagePNGRepresentation"]
 - !private ["So21UIAppearanceContainerP", "UIImagePickerController"]
 - !private ["So21UIAppearanceContainerP", "UIImagePickerControllerOriginalImage"]
+- !private ["So21UIAppearanceContainerP", "UnderArmourImage"]
 - ["So21UIAppearanceContainerP", "VNCoreMLModel"]
 - ["So21UIAppearanceContainerP", "VNCoreMLRequest"]
 - !private ["So21UIAppearanceContainerP", "VNImageRequestHandler"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addAction"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "classificationLabel"]
 - !private ["So21UIAppearanceContainerP", "classificationRequest"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "favoriteButton"]
 - !private ["So21UIAppearanceContainerP", "image"]
 - ["So21UIAppearanceContainerP", "imagePickerController"]
 - ["So21UIAppearanceContainerP", "imagePickerControllerDidCancel"]
@@ -954,6 +1266,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
+- !private ["So21UIAppearanceContainerP", "isSelected"]
 - !private ["So21UIAppearanceContainerP", "isSourceTypeAvailable"]
 - ["So21UIAppearanceContainerP", "navigationController"]
 - ["So21UIAppearanceContainerP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -964,6 +1277,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "processClassifications"]
 - !private ["So21UIAppearanceContainerP", "save"]
 - !private ["So21UIAppearanceContainerP", "saveShoe"]
+- !private ["So21UIAppearanceContainerP", "setImage"]
 - !private ["So21UIAppearanceContainerP", "sourceType"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "updateClassifications"]
@@ -971,22 +1285,34 @@ depends-member:
 - !private ["So13UIApplicationC", "delegate"]
 - !private ["So13UIApplicationC", "shared"]
 - !private ["So21UIApplicationDelegateP", "persistentContainer"]
+- !private ["So8UIButtonC", "backgroundColor"]
+- !private ["So8UIButtonC", "isHidden"]
+- !private ["So8UIButtonC", "isSelected"]
+- !private ["So8UIButtonC", "setImage"]
+- !private ["So7UIColorC", "white"]
+- !private ["So18UIContentContainerP", "AdidasImage"]
 - !private ["So18UIContentContainerP", "CGImagePropertyOrientation"]
 - !private ["So18UIContentContainerP", "CIImage"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
+- !private ["So18UIContentContainerP", "Double"]
 - !private ["So18UIContentContainerP", "GalleryImage"]
+- !private ["So18UIContentContainerP", "HelpLabel"]
+- !private ["So18UIContentContainerP", "HomePhoto"]
 - !private ["So18UIContentContainerP", "NSEntityDescription"]
 - !private ["So18UIContentContainerP", "NSFetchRequest"]
 - !private ["So18UIContentContainerP", "NSManagedObject"]
+- !private ["So18UIContentContainerP", "NikeImage"]
 - ["So18UIContentContainerP", "ShoeSleuthModel"]
 - !private ["So18UIContentContainerP", "String"]
 - !private ["So18UIContentContainerP", "UIAlertAction"]
 - !private ["So18UIContentContainerP", "UIAlertController"]
 - !private ["So18UIContentContainerP", "UIApplication"]
+- !private ["So18UIContentContainerP", "UIColor"]
 - !private ["So18UIContentContainerP", "UIImage"]
 - !private ["So18UIContentContainerP", "UIImagePNGRepresentation"]
 - !private ["So18UIContentContainerP", "UIImagePickerController"]
 - !private ["So18UIContentContainerP", "UIImagePickerControllerOriginalImage"]
+- !private ["So18UIContentContainerP", "UnderArmourImage"]
 - ["So18UIContentContainerP", "VNCoreMLModel"]
 - ["So18UIContentContainerP", "VNCoreMLRequest"]
 - !private ["So18UIContentContainerP", "VNImageRequestHandler"]
@@ -997,6 +1323,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "delegate"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - ["So18UIContentContainerP", "fatalError"]
+- !private ["So18UIContentContainerP", "favoriteButton"]
 - ["So18UIContentContainerP", "imagePickerController"]
 - ["So18UIContentContainerP", "imagePickerControllerDidCancel"]
 - !private ["So18UIContentContainerP", "imageView"]
@@ -1017,38 +1344,57 @@ depends-member:
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "isHidden"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "backgroundColor"]
+- !private ["So9UIControlC", "isHidden"]
+- !private ["So9UIControlC", "isSelected"]
+- !private ["So9UIControlC", "setImage"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "image"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
+- !private ["So17UICoordinateSpaceP", "isSelected"]
+- !private ["So17UICoordinateSpaceP", "setImage"]
 - !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "image"]
 - !private ["So13UIDynamicItemP", "isHidden"]
+- !private ["So13UIDynamicItemP", "isSelected"]
+- !private ["So13UIDynamicItemP", "setImage"]
 - !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "AdidasImage"]
 - !private ["So18UIFocusEnvironmentP", "CGImagePropertyOrientation"]
 - !private ["So18UIFocusEnvironmentP", "CIImage"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
+- !private ["So18UIFocusEnvironmentP", "Double"]
 - !private ["So18UIFocusEnvironmentP", "GalleryImage"]
+- !private ["So18UIFocusEnvironmentP", "HelpLabel"]
+- !private ["So18UIFocusEnvironmentP", "HomePhoto"]
 - !private ["So18UIFocusEnvironmentP", "NSEntityDescription"]
 - !private ["So18UIFocusEnvironmentP", "NSFetchRequest"]
 - !private ["So18UIFocusEnvironmentP", "NSManagedObject"]
+- !private ["So18UIFocusEnvironmentP", "NikeImage"]
 - ["So18UIFocusEnvironmentP", "ShoeSleuthModel"]
 - !private ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - !private ["So18UIFocusEnvironmentP", "UIApplication"]
+- !private ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
 - !private ["So18UIFocusEnvironmentP", "UIImagePNGRepresentation"]
 - !private ["So18UIFocusEnvironmentP", "UIImagePickerController"]
 - !private ["So18UIFocusEnvironmentP", "UIImagePickerControllerOriginalImage"]
+- !private ["So18UIFocusEnvironmentP", "UnderArmourImage"]
 - ["So18UIFocusEnvironmentP", "VNCoreMLModel"]
 - ["So18UIFocusEnvironmentP", "VNCoreMLRequest"]
 - !private ["So18UIFocusEnvironmentP", "VNImageRequestHandler"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addAction"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "classificationLabel"]
 - !private ["So18UIFocusEnvironmentP", "classificationRequest"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "favoriteButton"]
 - !private ["So18UIFocusEnvironmentP", "image"]
 - ["So18UIFocusEnvironmentP", "imagePickerController"]
 - ["So18UIFocusEnvironmentP", "imagePickerControllerDidCancel"]
@@ -1056,6 +1402,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
+- !private ["So18UIFocusEnvironmentP", "isSelected"]
 - !private ["So18UIFocusEnvironmentP", "isSourceTypeAvailable"]
 - ["So18UIFocusEnvironmentP", "navigationController"]
 - ["So18UIFocusEnvironmentP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1066,39 +1413,63 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "processClassifications"]
 - !private ["So18UIFocusEnvironmentP", "save"]
 - !private ["So18UIFocusEnvironmentP", "saveShoe"]
+- !private ["So18UIFocusEnvironmentP", "setImage"]
 - !private ["So18UIFocusEnvironmentP", "sourceType"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "updateClassifications"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "image"]
 - !private ["So11UIFocusItemP", "isHidden"]
+- !private ["So11UIFocusItemP", "isSelected"]
+- !private ["So11UIFocusItemP", "setImage"]
 - !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "image"]
 - !private ["So20UIFocusItemContainerP", "isHidden"]
+- !private ["So20UIFocusItemContainerP", "isSelected"]
+- !private ["So20UIFocusItemContainerP", "setImage"]
 - !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So7UIImageC", "CGRect"]
+- !private ["So7UIImageC", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So7UIImageC", "UIGraphicsEndImageContext"]
+- !private ["So7UIImageC", "UIGraphicsGetImageFromCurrentImageContext"]
+- ["So7UIImageC", "UIImage"]
+- !private ["So7UIImageC", "UIImageOrientation"]
+- !private ["So7UIImageC", "draw"]
+- ["So7UIImageC", "fixOrientation"]
 - !private ["So7UIImageC", "imageOrientation"]
 - !private ["So7UIImageC", "init"]
+- !private ["So7UIImageC", "scale"]
+- !private ["So7UIImageC", "size"]
 - !private ["So23UIImagePickerControllerC", "delegate"]
 - !private ["So23UIImagePickerControllerC", "dismiss"]
 - !private ["So23UIImagePickerControllerC", "init"]
 - !private ["So23UIImagePickerControllerC", "isSourceTypeAvailable"]
 - !private ["So23UIImagePickerControllerC", "sourceType"]
+- !private ["So31UIImagePickerControllerDelegateP", "AdidasImage"]
 - !private ["So31UIImagePickerControllerDelegateP", "CGImagePropertyOrientation"]
 - !private ["So31UIImagePickerControllerDelegateP", "CIImage"]
 - !private ["So31UIImagePickerControllerDelegateP", "DispatchQueue"]
+- !private ["So31UIImagePickerControllerDelegateP", "Double"]
 - !private ["So31UIImagePickerControllerDelegateP", "GalleryImage"]
+- !private ["So31UIImagePickerControllerDelegateP", "HelpLabel"]
+- !private ["So31UIImagePickerControllerDelegateP", "HomePhoto"]
 - !private ["So31UIImagePickerControllerDelegateP", "NSEntityDescription"]
 - !private ["So31UIImagePickerControllerDelegateP", "NSFetchRequest"]
 - !private ["So31UIImagePickerControllerDelegateP", "NSManagedObject"]
+- !private ["So31UIImagePickerControllerDelegateP", "NikeImage"]
 - ["So31UIImagePickerControllerDelegateP", "ShoeSleuthModel"]
 - !private ["So31UIImagePickerControllerDelegateP", "String"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIAlertAction"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIAlertController"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIApplication"]
+- !private ["So31UIImagePickerControllerDelegateP", "UIColor"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImage"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImagePNGRepresentation"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImagePickerController"]
 - !private ["So31UIImagePickerControllerDelegateP", "UIImagePickerControllerOriginalImage"]
+- !private ["So31UIImagePickerControllerDelegateP", "UnderArmourImage"]
 - ["So31UIImagePickerControllerDelegateP", "VNCoreMLModel"]
 - ["So31UIImagePickerControllerDelegateP", "VNCoreMLRequest"]
 - !private ["So31UIImagePickerControllerDelegateP", "VNImageRequestHandler"]
@@ -1106,6 +1477,7 @@ depends-member:
 - !private ["So31UIImagePickerControllerDelegateP", "classificationLabel"]
 - !private ["So31UIImagePickerControllerDelegateP", "classificationRequest"]
 - ["So31UIImagePickerControllerDelegateP", "fatalError"]
+- !private ["So31UIImagePickerControllerDelegateP", "favoriteButton"]
 - ["So31UIImagePickerControllerDelegateP", "imagePickerController"]
 - ["So31UIImagePickerControllerDelegateP", "imagePickerControllerDidCancel"]
 - !private ["So31UIImagePickerControllerDelegateP", "imageView"]
@@ -1120,34 +1492,54 @@ depends-member:
 - !private ["So31UIImagePickerControllerDelegateP", "saveShoe"]
 - !private ["So31UIImagePickerControllerDelegateP", "updateClassifications"]
 - !private ["So11UIImageViewC", "image"]
+- !private ["So11UIImageViewC", "isHidden"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "CGRect"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "UIGraphicsEndImageContext"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "UIImageOrientation"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "draw"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "fixOrientation"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "imageOrientation"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "scale"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "size"]
 - !private ["So7UILabelC", "isHidden"]
 - !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", "backgroundColor"]
 - !private ["So24UILargeContentViewerItemP", "image"]
 - !private ["So24UILargeContentViewerItemP", "isHidden"]
+- !private ["So24UILargeContentViewerItemP", "isSelected"]
+- !private ["So24UILargeContentViewerItemP", "setImage"]
 - !private ["So24UILargeContentViewerItemP", "text"]
 - !private ["So22UINavigationControllerC", "delegate"]
 - !private ["So22UINavigationControllerC", "dismiss"]
 - !private ["So22UINavigationControllerC", "init"]
 - !private ["So22UINavigationControllerC", "isSourceTypeAvailable"]
 - !private ["So22UINavigationControllerC", "sourceType"]
+- !private ["So30UINavigationControllerDelegateP", "AdidasImage"]
 - !private ["So30UINavigationControllerDelegateP", "CGImagePropertyOrientation"]
 - !private ["So30UINavigationControllerDelegateP", "CIImage"]
 - !private ["So30UINavigationControllerDelegateP", "DispatchQueue"]
+- !private ["So30UINavigationControllerDelegateP", "Double"]
 - !private ["So30UINavigationControllerDelegateP", "GalleryImage"]
+- !private ["So30UINavigationControllerDelegateP", "HelpLabel"]
+- !private ["So30UINavigationControllerDelegateP", "HomePhoto"]
 - !private ["So30UINavigationControllerDelegateP", "NSEntityDescription"]
 - !private ["So30UINavigationControllerDelegateP", "NSFetchRequest"]
 - !private ["So30UINavigationControllerDelegateP", "NSManagedObject"]
+- !private ["So30UINavigationControllerDelegateP", "NikeImage"]
 - ["So30UINavigationControllerDelegateP", "ShoeSleuthModel"]
 - !private ["So30UINavigationControllerDelegateP", "String"]
 - !private ["So30UINavigationControllerDelegateP", "UIAlertAction"]
 - !private ["So30UINavigationControllerDelegateP", "UIAlertController"]
 - !private ["So30UINavigationControllerDelegateP", "UIApplication"]
+- !private ["So30UINavigationControllerDelegateP", "UIColor"]
 - !private ["So30UINavigationControllerDelegateP", "UIImage"]
 - !private ["So30UINavigationControllerDelegateP", "UIImagePNGRepresentation"]
 - !private ["So30UINavigationControllerDelegateP", "UIImagePickerController"]
 - !private ["So30UINavigationControllerDelegateP", "UIImagePickerControllerOriginalImage"]
+- !private ["So30UINavigationControllerDelegateP", "UnderArmourImage"]
 - ["So30UINavigationControllerDelegateP", "VNCoreMLModel"]
 - ["So30UINavigationControllerDelegateP", "VNCoreMLRequest"]
 - !private ["So30UINavigationControllerDelegateP", "VNImageRequestHandler"]
@@ -1155,6 +1547,7 @@ depends-member:
 - !private ["So30UINavigationControllerDelegateP", "classificationLabel"]
 - !private ["So30UINavigationControllerDelegateP", "classificationRequest"]
 - ["So30UINavigationControllerDelegateP", "fatalError"]
+- !private ["So30UINavigationControllerDelegateP", "favoriteButton"]
 - ["So30UINavigationControllerDelegateP", "imagePickerController"]
 - ["So30UINavigationControllerDelegateP", "imagePickerControllerDidCancel"]
 - !private ["So30UINavigationControllerDelegateP", "imageView"]
@@ -1168,32 +1561,41 @@ depends-member:
 - !private ["So30UINavigationControllerDelegateP", "save"]
 - !private ["So30UINavigationControllerDelegateP", "saveShoe"]
 - !private ["So30UINavigationControllerDelegateP", "updateClassifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "AdidasImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGImagePropertyOrientation"]
 - !private ["So30UIPasteConfigurationSupportingP", "CIImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
+- !private ["So30UIPasteConfigurationSupportingP", "Double"]
 - !private ["So30UIPasteConfigurationSupportingP", "GalleryImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "HelpLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "HomePhoto"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSEntityDescription"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSFetchRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSManagedObject"]
+- !private ["So30UIPasteConfigurationSupportingP", "NikeImage"]
 - ["So30UIPasteConfigurationSupportingP", "ShoeSleuthModel"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImagePNGRepresentation"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImagePickerController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImagePickerControllerOriginalImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "UnderArmourImage"]
 - ["So30UIPasteConfigurationSupportingP", "VNCoreMLModel"]
 - ["So30UIPasteConfigurationSupportingP", "VNCoreMLRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "VNImageRequestHandler"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addAction"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "classificationLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "classificationRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "favoriteButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "image"]
 - ["So30UIPasteConfigurationSupportingP", "imagePickerController"]
 - ["So30UIPasteConfigurationSupportingP", "imagePickerControllerDidCancel"]
@@ -1201,6 +1603,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
+- !private ["So30UIPasteConfigurationSupportingP", "isSelected"]
 - !private ["So30UIPasteConfigurationSupportingP", "isSourceTypeAvailable"]
 - ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - ["So30UIPasteConfigurationSupportingP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1212,30 +1615,37 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "processClassifications"]
 - !private ["So30UIPasteConfigurationSupportingP", "save"]
 - !private ["So30UIPasteConfigurationSupportingP", "saveShoe"]
+- !private ["So30UIPasteConfigurationSupportingP", "setImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
 - !private ["So30UIPasteConfigurationSupportingP", "sourceType"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "updateClassifications"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So11UIResponderC", "$__lazy_storage_$_classificationRequest"]
+- ["So11UIResponderC", "AdidasImage"]
 - !private ["So11UIResponderC", "AppDelegate"]
 - !private ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CGImagePropertyOrientation"]
 - !private ["So11UIResponderC", "CIImage"]
 - !private ["So11UIResponderC", "Data"]
 - !private ["So11UIResponderC", "DispatchQueue"]
+- !private ["So11UIResponderC", "Double"]
 - ["So11UIResponderC", "Error"]
 - ["So11UIResponderC", "GalleryImage"]
+- ["So11UIResponderC", "HelpLabel"]
+- ["So11UIResponderC", "HomePhoto"]
 - !private ["So11UIResponderC", "NSEntityDescription"]
 - !private ["So11UIResponderC", "NSFetchRequest"]
 - !private ["So11UIResponderC", "NSFetchRequestResult"]
 - !private ["So11UIResponderC", "NSManagedObject"]
+- ["So11UIResponderC", "NikeImage"]
 - ["So11UIResponderC", "ShoeSleuthModel"]
 - ["So11UIResponderC", "String"]
 - !private ["So11UIResponderC", "UIAlertAction"]
 - !private ["So11UIResponderC", "UIAlertController"]
 - !private ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIButton"]
+- !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UIImage"]
 - !private ["So11UIResponderC", "UIImagePNGRepresentation"]
 - ["So11UIResponderC", "UIImagePickerController"]
@@ -1243,12 +1653,14 @@ depends-member:
 - ["So11UIResponderC", "UIImagePickerControllerSourceType"]
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UnderArmourImage"]
 - !private ["So11UIResponderC", "VNClassificationObservation"]
 - ["So11UIResponderC", "VNCoreMLModel"]
 - ["So11UIResponderC", "VNCoreMLRequest"]
 - !private ["So11UIResponderC", "VNImageRequestHandler"]
 - ["So11UIResponderC", "VNRequest"]
 - !private ["So11UIResponderC", "addAction"]
+- !private ["So11UIResponderC", "backgroundColor"]
 - ["So11UIResponderC", "cameraButton"]
 - ["So11UIResponderC", "classificationLabel"]
 - ["So11UIResponderC", "classificationRequest"]
@@ -1264,6 +1676,7 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
+- !private ["So11UIResponderC", "isSelected"]
 - !private ["So11UIResponderC", "isSourceTypeAvailable"]
 - ["So11UIResponderC", "navigationController"]
 - ["So11UIResponderC", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1275,38 +1688,48 @@ depends-member:
 - ["So11UIResponderC", "processClassifications"]
 - ["So11UIResponderC", "save"]
 - ["So11UIResponderC", "saveShoe"]
+- !private ["So11UIResponderC", "setImage"]
 - !private ["So11UIResponderC", "shared"]
 - !private ["So11UIResponderC", "sourceType"]
 - ["So11UIResponderC", "takePicture"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "updateClassifications"]
 - ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "AdidasImage"]
 - !private ["So30UIResponderStandardEditActionsP", "CGImagePropertyOrientation"]
 - !private ["So30UIResponderStandardEditActionsP", "CIImage"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
+- !private ["So30UIResponderStandardEditActionsP", "Double"]
 - !private ["So30UIResponderStandardEditActionsP", "GalleryImage"]
+- !private ["So30UIResponderStandardEditActionsP", "HelpLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "HomePhoto"]
 - !private ["So30UIResponderStandardEditActionsP", "NSEntityDescription"]
 - !private ["So30UIResponderStandardEditActionsP", "NSFetchRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "NSManagedObject"]
+- !private ["So30UIResponderStandardEditActionsP", "NikeImage"]
 - ["So30UIResponderStandardEditActionsP", "ShoeSleuthModel"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
+- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImagePNGRepresentation"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImagePickerController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImagePickerControllerOriginalImage"]
+- !private ["So30UIResponderStandardEditActionsP", "UnderArmourImage"]
 - ["So30UIResponderStandardEditActionsP", "VNCoreMLModel"]
 - ["So30UIResponderStandardEditActionsP", "VNCoreMLRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "VNImageRequestHandler"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addAction"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "classificationLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "classificationRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "favoriteButton"]
 - !private ["So30UIResponderStandardEditActionsP", "image"]
 - ["So30UIResponderStandardEditActionsP", "imagePickerController"]
 - ["So30UIResponderStandardEditActionsP", "imagePickerControllerDidCancel"]
@@ -1314,6 +1737,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
+- !private ["So30UIResponderStandardEditActionsP", "isSelected"]
 - !private ["So30UIResponderStandardEditActionsP", "isSourceTypeAvailable"]
 - ["So30UIResponderStandardEditActionsP", "navigationController"]
 - ["So30UIResponderStandardEditActionsP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1325,29 +1749,41 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "processClassifications"]
 - !private ["So30UIResponderStandardEditActionsP", "save"]
 - !private ["So30UIResponderStandardEditActionsP", "saveShoe"]
+- !private ["So30UIResponderStandardEditActionsP", "setImage"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
 - !private ["So30UIResponderStandardEditActionsP", "sourceType"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "updateClassifications"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "backgroundColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "isHidden"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "isSelected"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "setImage"]
+- !private ["So16UIStateRestoringP", "AdidasImage"]
 - !private ["So16UIStateRestoringP", "CGImagePropertyOrientation"]
 - !private ["So16UIStateRestoringP", "CIImage"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
+- !private ["So16UIStateRestoringP", "Double"]
 - !private ["So16UIStateRestoringP", "GalleryImage"]
+- !private ["So16UIStateRestoringP", "HelpLabel"]
+- !private ["So16UIStateRestoringP", "HomePhoto"]
 - !private ["So16UIStateRestoringP", "NSEntityDescription"]
 - !private ["So16UIStateRestoringP", "NSFetchRequest"]
 - !private ["So16UIStateRestoringP", "NSManagedObject"]
+- !private ["So16UIStateRestoringP", "NikeImage"]
 - ["So16UIStateRestoringP", "ShoeSleuthModel"]
 - !private ["So16UIStateRestoringP", "String"]
 - !private ["So16UIStateRestoringP", "UIAlertAction"]
 - !private ["So16UIStateRestoringP", "UIAlertController"]
 - !private ["So16UIStateRestoringP", "UIApplication"]
+- !private ["So16UIStateRestoringP", "UIColor"]
 - !private ["So16UIStateRestoringP", "UIImage"]
 - !private ["So16UIStateRestoringP", "UIImagePNGRepresentation"]
 - !private ["So16UIStateRestoringP", "UIImagePickerController"]
 - !private ["So16UIStateRestoringP", "UIImagePickerControllerOriginalImage"]
+- !private ["So16UIStateRestoringP", "UnderArmourImage"]
 - ["So16UIStateRestoringP", "VNCoreMLModel"]
 - ["So16UIStateRestoringP", "VNCoreMLRequest"]
 - !private ["So16UIStateRestoringP", "VNImageRequestHandler"]
@@ -1358,6 +1794,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - ["So16UIStateRestoringP", "fatalError"]
+- !private ["So16UIStateRestoringP", "favoriteButton"]
 - ["So16UIStateRestoringP", "imagePickerController"]
 - ["So16UIStateRestoringP", "imagePickerControllerDidCancel"]
 - !private ["So16UIStateRestoringP", "imageView"]
@@ -1376,32 +1813,41 @@ depends-member:
 - !private ["So16UIStateRestoringP", "sourceType"]
 - !private ["So16UIStateRestoringP", "updateClassifications"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "AdidasImage"]
 - !private ["So18UITraitEnvironmentP", "CGImagePropertyOrientation"]
 - !private ["So18UITraitEnvironmentP", "CIImage"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
+- !private ["So18UITraitEnvironmentP", "Double"]
 - !private ["So18UITraitEnvironmentP", "GalleryImage"]
+- !private ["So18UITraitEnvironmentP", "HelpLabel"]
+- !private ["So18UITraitEnvironmentP", "HomePhoto"]
 - !private ["So18UITraitEnvironmentP", "NSEntityDescription"]
 - !private ["So18UITraitEnvironmentP", "NSFetchRequest"]
 - !private ["So18UITraitEnvironmentP", "NSManagedObject"]
+- !private ["So18UITraitEnvironmentP", "NikeImage"]
 - ["So18UITraitEnvironmentP", "ShoeSleuthModel"]
 - !private ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIAlertAction"]
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - !private ["So18UITraitEnvironmentP", "UIApplication"]
+- !private ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
 - !private ["So18UITraitEnvironmentP", "UIImagePNGRepresentation"]
 - !private ["So18UITraitEnvironmentP", "UIImagePickerController"]
 - !private ["So18UITraitEnvironmentP", "UIImagePickerControllerOriginalImage"]
+- !private ["So18UITraitEnvironmentP", "UnderArmourImage"]
 - ["So18UITraitEnvironmentP", "VNCoreMLModel"]
 - ["So18UITraitEnvironmentP", "VNCoreMLRequest"]
 - !private ["So18UITraitEnvironmentP", "VNImageRequestHandler"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addAction"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "classificationLabel"]
 - !private ["So18UITraitEnvironmentP", "classificationRequest"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "favoriteButton"]
 - !private ["So18UITraitEnvironmentP", "image"]
 - ["So18UITraitEnvironmentP", "imagePickerController"]
 - ["So18UITraitEnvironmentP", "imagePickerControllerDidCancel"]
@@ -1409,6 +1855,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
+- !private ["So18UITraitEnvironmentP", "isSelected"]
 - !private ["So18UITraitEnvironmentP", "isSourceTypeAvailable"]
 - ["So18UITraitEnvironmentP", "navigationController"]
 - ["So18UITraitEnvironmentP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1419,36 +1866,46 @@ depends-member:
 - ["So18UITraitEnvironmentP", "processClassifications"]
 - !private ["So18UITraitEnvironmentP", "save"]
 - !private ["So18UITraitEnvironmentP", "saveShoe"]
+- !private ["So18UITraitEnvironmentP", "setImage"]
 - !private ["So18UITraitEnvironmentP", "sourceType"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "updateClassifications"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "AdidasImage"]
 - !private ["So23UIUserActivityRestoringP", "CGImagePropertyOrientation"]
 - !private ["So23UIUserActivityRestoringP", "CIImage"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
+- !private ["So23UIUserActivityRestoringP", "Double"]
 - !private ["So23UIUserActivityRestoringP", "GalleryImage"]
+- !private ["So23UIUserActivityRestoringP", "HelpLabel"]
+- !private ["So23UIUserActivityRestoringP", "HomePhoto"]
 - !private ["So23UIUserActivityRestoringP", "NSEntityDescription"]
 - !private ["So23UIUserActivityRestoringP", "NSFetchRequest"]
 - !private ["So23UIUserActivityRestoringP", "NSManagedObject"]
+- !private ["So23UIUserActivityRestoringP", "NikeImage"]
 - ["So23UIUserActivityRestoringP", "ShoeSleuthModel"]
 - !private ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
 - !private ["So23UIUserActivityRestoringP", "UIImagePNGRepresentation"]
 - !private ["So23UIUserActivityRestoringP", "UIImagePickerController"]
 - !private ["So23UIUserActivityRestoringP", "UIImagePickerControllerOriginalImage"]
+- !private ["So23UIUserActivityRestoringP", "UnderArmourImage"]
 - ["So23UIUserActivityRestoringP", "VNCoreMLModel"]
 - ["So23UIUserActivityRestoringP", "VNCoreMLRequest"]
 - !private ["So23UIUserActivityRestoringP", "VNImageRequestHandler"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addAction"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "classificationLabel"]
 - !private ["So23UIUserActivityRestoringP", "classificationRequest"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
 - !private ["So23UIUserActivityRestoringP", "dismiss"]
 - ["So23UIUserActivityRestoringP", "fatalError"]
+- !private ["So23UIUserActivityRestoringP", "favoriteButton"]
 - !private ["So23UIUserActivityRestoringP", "image"]
 - ["So23UIUserActivityRestoringP", "imagePickerController"]
 - ["So23UIUserActivityRestoringP", "imagePickerControllerDidCancel"]
@@ -1456,6 +1913,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
+- !private ["So23UIUserActivityRestoringP", "isSelected"]
 - !private ["So23UIUserActivityRestoringP", "isSourceTypeAvailable"]
 - ["So23UIUserActivityRestoringP", "navigationController"]
 - ["So23UIUserActivityRestoringP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -1467,33 +1925,43 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "processClassifications"]
 - !private ["So23UIUserActivityRestoringP", "save"]
 - !private ["So23UIUserActivityRestoringP", "saveShoe"]
+- !private ["So23UIUserActivityRestoringP", "setImage"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
 - !private ["So23UIUserActivityRestoringP", "sourceType"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "updateClassifications"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "image"]
 - !private ["So6UIViewC", "isHidden"]
+- !private ["So6UIViewC", "isSelected"]
+- !private ["So6UIViewC", "setImage"]
 - !private ["So6UIViewC", "text"]
 - ["So16UIViewControllerC", "$__lazy_storage_$_classificationRequest"]
+- ["So16UIViewControllerC", "AdidasImage"]
 - !private ["So16UIViewControllerC", "AppDelegate"]
 - !private ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CGImagePropertyOrientation"]
 - !private ["So16UIViewControllerC", "CIImage"]
 - !private ["So16UIViewControllerC", "Data"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
+- !private ["So16UIViewControllerC", "Double"]
 - ["So16UIViewControllerC", "Error"]
 - ["So16UIViewControllerC", "GalleryImage"]
+- ["So16UIViewControllerC", "HelpLabel"]
+- ["So16UIViewControllerC", "HomePhoto"]
 - !private ["So16UIViewControllerC", "NSEntityDescription"]
 - !private ["So16UIViewControllerC", "NSFetchRequest"]
 - !private ["So16UIViewControllerC", "NSFetchRequestResult"]
 - !private ["So16UIViewControllerC", "NSManagedObject"]
+- ["So16UIViewControllerC", "NikeImage"]
 - ["So16UIViewControllerC", "ShoeSleuthModel"]
 - ["So16UIViewControllerC", "String"]
 - !private ["So16UIViewControllerC", "UIAlertAction"]
 - !private ["So16UIViewControllerC", "UIAlertController"]
 - !private ["So16UIViewControllerC", "UIApplication"]
 - ["So16UIViewControllerC", "UIButton"]
+- !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UIImage"]
 - !private ["So16UIViewControllerC", "UIImagePNGRepresentation"]
 - ["So16UIViewControllerC", "UIImagePickerController"]
@@ -1501,6 +1969,7 @@ depends-member:
 - ["So16UIViewControllerC", "UIImagePickerControllerSourceType"]
 - ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UnderArmourImage"]
 - !private ["So16UIViewControllerC", "VNClassificationObservation"]
 - ["So16UIViewControllerC", "VNCoreMLModel"]
 - ["So16UIViewControllerC", "VNCoreMLRequest"]
@@ -1553,58 +2022,92 @@ depends-member:
 - !private ["So26VNRequestRevisionProvidingP", "confidence"]
 - !private ["So26VNRequestRevisionProvidingP", "identifier"]
 - !private ["s14_ArrayProtocolP", "isEmpty"]
-- !private ["s14_ArrayProtocolP", "joined"]
 - !private ["s14_ArrayProtocolP", "map"]
 - !private ["s14_ArrayProtocolP", "prefix"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "toggle"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
-- !private ["s24_DestructorSafeContainerP", "joined"]
 - !private ["s24_DestructorSafeContainerP", "map"]
 - !private ["s24_DestructorSafeContainerP", "prefix"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "toggle"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "white"]
+- !private ["s26_ExpressibleByImageLiteralP", "CGRect"]
+- !private ["s26_ExpressibleByImageLiteralP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["s26_ExpressibleByImageLiteralP", "UIGraphicsEndImageContext"]
+- !private ["s26_ExpressibleByImageLiteralP", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["s26_ExpressibleByImageLiteralP", "UIImageOrientation"]
+- !private ["s26_ExpressibleByImageLiteralP", "draw"]
+- !private ["s26_ExpressibleByImageLiteralP", "fixOrientation"]
 - !private ["s26_ExpressibleByImageLiteralP", "imageOrientation"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
+- !private ["s26_ExpressibleByImageLiteralP", "scale"]
+- !private ["s26_ExpressibleByImageLiteralP", "size"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
-- !private ["s19_HasContiguousBytesP", "joined"]
 - !private ["s19_HasContiguousBytesP", "prefix"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "prefix"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AdidasImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGImagePropertyOrientation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CIImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "GalleryImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HelpLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HomePhoto"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSEntityDescription"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSFetchRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSManagedObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NikeImage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ShoeSleuthModel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIGraphicsEndImageContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImageOrientation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePNGRepresentation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePickerController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePickerControllerOriginalImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UnderArmourImage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "VNCoreMLModel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "VNCoreMLRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "VNImageRequestHandler"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classificationLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "classificationRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "confidence"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "draw"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "entity"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "favoriteButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "favorited"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fetch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fixOrientation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
@@ -1616,6 +2119,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isSelected"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isSourceTypeAvailable"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
@@ -1633,45 +2137,65 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "returnsObjectsAsFaults"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "saveShoe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "size"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sourceType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateClassifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AdidasImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGImagePropertyOrientation"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGRect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CIImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "GalleryImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HelpLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HomePhoto"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSEntityDescription"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSFetchRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSManagedObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NikeImage"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ShoeSleuthModel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIGraphicsEndImageContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImageOrientation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePNGRepresentation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePickerController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePickerControllerOriginalImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UnderArmourImage"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "VNCoreMLModel"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "VNCoreMLRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "VNImageRequestHandler"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAction"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "classificationLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "classificationRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "confidence"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "draw"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "entity"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "favoriteButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "favorited"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fetch"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fixOrientation"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "global"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "identifier"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
@@ -1683,6 +2207,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHidden"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isSelected"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isSourceTypeAvailable"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
@@ -1700,32 +2225,49 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "returnsObjectsAsFaults"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "save"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "saveShoe"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scale"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setValue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "size"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sourceType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "updateClassifications"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "isHidden"]
-- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "isSelected"]
 - !private ["s21_ObjectiveCBridgeableP", "prefix"]
+- !private ["s21_ObjectiveCBridgeableP", "setImage"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s21_ObjectiveCBridgeableP", "toggle"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isHidden"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isSelected"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setImage"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "10ShoeSleuth11AppDelegateC"
 - !private "Sa"
 - !private "s10ArraySliceV"
 - !private "SK"
+- !private "SB"
+- !private "Sb"
 - !private "So15CALayerDelegateP"
 - !private "So26CGImagePropertyOrientationV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
 - !private "So7CIImageC"
 - "s7CVarArgP"
 - !private "Sl"
@@ -1740,16 +2282,21 @@ depends-nominal:
 - !private "SD"
 - !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
+- !private "Sd"
 - !private "SE"
 - "SQ"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - !private "10ShoeSleuth12GalleryImageC"
 - "SH"
 - "10ShoeSleuth33ImageClassificationViewControllerC"
@@ -1774,17 +2321,25 @@ depends-nominal:
 - !private "So21NSPersistentContainerC"
 - !private "So24NSPersistentStoreRequestC"
 - !private "So14NSSecureCodingP"
+- !private "Sj"
 - !private "So9OS_objectC"
 - !private "7Combine16ObservableObjectP"
+- !private "s9OptionSetP"
 - !private "Sq"
+- !private "So18UIImageOrientationV"
 - !private "8Dispatch0A3QoSV0B6SClassO"
 - !private "Sk"
 - !private "Sm"
 - "SY"
+- !private "s10SIMDScalarP"
 - !private "7Combine9SchedulerP"
 - !private "ST"
+- !private "s10SetAlgebraP"
 - "10ShoeSleuth0aB5ModelC"
+- !private "s13SignedNumericP"
 - !private "So33UIImagePickerControllerSourceTypeV"
+- !private "So14UIControlStateV"
+- !private "Sx"
 - !private "SS"
 - "s27StringInterpolationProtocolP"
 - !private "Sy"
@@ -1799,14 +2354,17 @@ depends-nominal:
 - "So21UIAppearanceContainerP"
 - !private "So13UIApplicationC"
 - !private "So21UIApplicationDelegateP"
+- !private "So8UIButtonC"
+- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
-- !private "So7UIImageC"
+- "So7UIImageC"
 - !private "So23UIImagePickerControllerC"
 - "So31UIImagePickerControllerDelegateP"
 - !private "So11UIImageViewC"
@@ -1834,11 +2392,17 @@ depends-nominal:
 - "So9VNRequestC"
 - !private "So26VNRequestRevisionProvidingP"
 - !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -1860,11 +2424,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Vision.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreLocation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/AVFoundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreAudio.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Photos.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
@@ -1881,11 +2447,13 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Photos.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
@@ -1915,6 +2483,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVDepthData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCameraCalibrationData.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAdjustmentData.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/data.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMMetadata.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSMetadata.h"
@@ -1999,6 +2568,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/ImageIO.framework/Headers/CGImageSource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/source.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLResource.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetResource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/resource.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFocusGuide.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILayoutGuide.h"
@@ -2030,6 +2600,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescriptionBridge.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSOrderedCollectionChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryChange.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLAuthenticationChallenge.h"
@@ -2150,6 +2721,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/SecCertificate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextPasteDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManagerDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSCoreDataCoreSpotlightDelegate.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/i386/thread_state.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/machine/thread_state.h"
@@ -2180,6 +2752,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/i386/fp_reg.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mig.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLHeading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActivityItemsConfigurationReading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibLoading.h"
@@ -2257,6 +2830,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/block.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/clock.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CADisplayLink.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLPlacemark.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLTask.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetDownloadTask.h"
@@ -2369,8 +2943,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryToken.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/netinet/in.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLErrorDomain.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILexicon.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconRegion.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLCircularRegion.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/vm_region.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/quaternion.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.h"
@@ -2399,6 +2977,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUserNotification.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPAuthentication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSInvocation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.h"
@@ -2444,6 +3024,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransaction.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryTransaction.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMediaSelection.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITraitCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontCollection.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSXPCConnection.h"
@@ -2526,6 +3107,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/errno.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/errno.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_fd_zero.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhoto.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/objc-auto.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MTAudioProcessingTap.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLHeap.h"
@@ -2586,6 +3168,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLGeocoder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSByteOrder.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/libkern/i386/OSByteOrder.h"
@@ -2603,9 +3186,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBlockBuffer.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBuffer.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioBuffer.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetResourceManager.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHImageManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetDownloadStorageManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLCaptureManager.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSMigrationManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUndoManager.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStatusBarManager.h"
@@ -2616,6 +3202,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSLinguisticTagger.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFocusDebugger.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCloudIdentifier.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextChecker.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDatePicker.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNRequestHandler.h"
@@ -2754,6 +3341,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIColor.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGError.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHError.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNError.h"
@@ -2837,6 +3426,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PhotosTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/i386/types.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/types.h"
@@ -2915,6 +3505,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/UIKitOverlayShims.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/NSDictionaryShims.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterBuiltins.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager+CLVisitExtensions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/NSString+UserNotifications.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibDeclarations.h"
@@ -2928,6 +3519,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneActivationConditions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneDefinitions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneOptions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHFetchOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLPredictionOptions.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentCloudKitContainerOptions.h"
@@ -2938,6 +3530,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/ConditionalMacros.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/AssertMacros.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/AvailabilityMacros.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mach_traps.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/ifaddrs.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMetadataIdentifiers.h"
@@ -3071,6 +3664,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioUnitEffect.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIVibrancyEffect.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFObject.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/NSObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMetadataObject.h"
@@ -3079,6 +3673,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/HeapObject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/dispatch/object.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/os/object.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHProject.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/select.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_select.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/task_inspect.h"
@@ -3100,6 +3695,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_seek_set.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/processor_set.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureSessionPreset.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSDataAsset.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageAsset.h"
@@ -3115,8 +3711,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioOutputUnit.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/mach_init.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/mach/vm_inherit.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLVisit.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreResult.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSTextCheckingResult.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHFetchResult.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_types/_s_ifmt.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVOutputSettingsAssistant.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGradient.h"
@@ -3154,6 +3752,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSLayoutConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArrayConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLDictionaryConstraint.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconIdentityConstraint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/shims/SwiftStdint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/stdint.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers/AVAudioConnectionPoint.h"
@@ -3186,6 +3785,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNGenerateAttentionBasedSaliencyImageRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNGenerateObjectnessBasedSaliencyImageRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNClassifyImageRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetCollectionChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHProjectChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetChangeRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHCollectionListChangeRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryChangeRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNTrackRectangleRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreRequest.h"
@@ -3194,6 +3798,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNTrackingRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSFetchRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHAssetCreationRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNImageRegistrationRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/VNDetectHorizonRequest.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderRequest.h"
@@ -3223,6 +3828,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionViewLayout.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionViewFlowLayout.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureInput.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHContentEditingInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetWriterInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextInput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureDepthDataOutput.h"
@@ -3232,6 +3838,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureStillImageOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureFileOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCaptureOutput.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHContentEditingOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVPlayerItemOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVCapturePhotoOutput.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVAssetReaderOutput.h"
@@ -3247,6 +3854,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIOpenURLContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLUpdateContext.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhotoEditingContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSExtensionContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBitmapContext.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSManagedObjectContext.h"
@@ -3319,6 +3927,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFDictionary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLLibrary.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/PHPhotoLibrary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/monetary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/xlocale/_monetary.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderSearchQuery.h"
@@ -3330,6 +3939,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/simd/geometry.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Availability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLAvailability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLESAvailability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/os/availability.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/sys/_posix_availability.h"
@@ -3364,6 +3974,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CFNetwork.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Modules/module.modulemap"
@@ -3373,6 +3984,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Modules/module.modulemap"
@@ -3390,14 +4002,16 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "99167043a98726eecec3af08790e8425"
+interface-hash: "20094e1cbb5f0035ecd29808c62fc8af"

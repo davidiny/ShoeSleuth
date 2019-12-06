@@ -14,7 +14,7 @@ class StarredImageViewCell: UICollectionViewCell {
   @IBOutlet var imageView: UIImageView?
     
     override func prepareForReuse() {
-      super.prepareForReuse
+      super.prepareForReuse()
     }
     
 }
