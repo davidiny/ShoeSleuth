@@ -152,10 +152,12 @@ class ImageClassificationViewController: UIViewController {
             self.classificationLabel.text = "These Might Be UnderArmour shoes"
           }
         }
+        print("shoe model: " + shoeModel[0])
+        self.save()
 //        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
       }
     }
-    save()
+
   }
   
   // MARK: - Photo Actions
@@ -211,9 +213,14 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
 
   func save() {
     let image = GalleryImage()
+    print("DID YOU GET TO THIS POITNWOEIRTHJRDOIGFJSIOTHRGJFTHJTIGLRFEG")
     if (classificationLabel.text != "Predicting...") {
         image.name = classificationLabel.text
+        print("YOOOOOOOOOO", image.name!)
     }
+//    else {
+//      image.name = "Can't classify"
+//    }
     //image.photo = rotateImage(imageView.image ?? <#default value#>)
     //image.photo = imageView.image
     let shoeImage = imageView.image

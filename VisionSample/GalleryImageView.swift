@@ -50,6 +50,7 @@ class GalleryImageView: UICollectionViewController, UICollectionViewDelegateFlow
         let newImage = GalleryImage()
         newImage.name = data.value(forKey: "name") as? String
         newImage.favorited = (data.value(forKey: "favorited") as! Bool)
+      print("the name: " , data.value(forKey: "name") as? String)
       print("photo data: ", data.value(forKey: "photo") as! NSData)
         newImage.photo = UIImage(data:(data.value(forKey: "photo") as! NSData) as Data, scale:1.0)
         print("newImage", newImage.photo!)

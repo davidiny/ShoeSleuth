@@ -478,11 +478,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2Tf-aF-HJR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bYJ-nT-F6r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-Jd-3Tw">
-                                <rect key="frame" x="10" y="433" width="404" height="246"/>
+                                <rect key="frame" x="10" y="433" width="404" height="299"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -503,11 +503,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHC-Fv-PMc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="281"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-bj-cVj">
-                                <rect key="frame" x="78" y="392" width="203" height="246"/>
+                                <rect key="frame" x="78" y="392" width="203" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
@@ -522,7 +522,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SoH-Sr-0ah">
-                                <rect key="frame" x="131" y="688" width="201" height="57"/>
+                                <rect key="frame" x="131" y="758" width="201" height="63"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="image 1camera"/>
                                 <connections>
@@ -670,7 +670,7 @@
         <image name="underarmour" width="2700" height="1685"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SmF-t4-vl1"/>
-        <segue reference="j9r-zM-5Uj"/>
+        <segue reference="so3-Ry-D3Z"/>
+        <segue reference="7QC-UR-OuZ"/>
     </inferredMetricsTieBreakers>
 </document>
