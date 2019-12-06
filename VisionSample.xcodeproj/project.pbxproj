@@ -141,8 +141,8 @@
 				6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */,
 				30DDEBF12375CAF700798D44 /* GalleryImageView.swift */,
 				30DDEBF32375CB1B00798D44 /* GalleryImageViewCell.swift */,
-				30ABF2072376095500FB1443 /* StarredImageViewCell.swift */,
 				3060126A237611C900372D4A /* StarredImageView.swift */,
+				30ABF2072376095500FB1443 /* StarredImageViewCell.swift */,
 				3060127C23761CE500372D4A /* ImageView.swift */,
 			);
 			path = VisionSample;

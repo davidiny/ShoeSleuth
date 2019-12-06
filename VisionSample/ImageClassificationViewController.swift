@@ -38,12 +38,6 @@ class ImageClassificationViewController: UIViewController {
     let savedButton = UIImage(named: "filledStar")
     favoriteButton.setImage(saveButton, for: .normal)
     favoriteButton.setImage(savedButton, for: .selected)
-    
-
-
-    //     favoriteButton.isHidden = true
-    
-    //maybe automatically run save method when the screen appears
   }
 
   
@@ -152,9 +146,7 @@ class ImageClassificationViewController: UIViewController {
             self.classificationLabel.text = "These Might Be UnderArmour shoes"
           }
         }
-        print("shoe model: " + shoeModel[0])
         self.save()
-//        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
       }
     }
 
@@ -212,16 +204,9 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   
   func save() {
     let image = GalleryImage()
-    print("DID YOU GET TO THIS POITNWOEIRTHJRDOIGFJSIOTHRGJFTHJTIGLRFEG")
     if (classificationLabel.text != "Predicting...") {
         image.name = classificationLabel.text
-        print("YOOOOOOOOOO", image.name!)
     }
-//    else {
-//      image.name = "Can't classify"
-//    }
-    //image.photo = rotateImage(imageView.image ?? <#default value#>)
-    //image.photo = imageView.image
     let shoeImage = imageView.image
     image.photo = shoeImage?.fixOrientation()
 
@@ -230,7 +215,6 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
   }
   
   func saveShoe(image: GalleryImage){
-    // Connect to the context for the container stack
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     // Specifically select the People entity to save this object to
@@ -250,27 +234,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
       print("Failed saving")
     }
   }
-    
-    /*
-    func rotateImage(_ image: UIImage) -> UIImage? {
-        if (image.imageOrientation == UIImage.Orientation.up ) {
-            return image
-        }
-        UIGraphicsBeginImageContext(image.size)
-        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
-        let copy = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return copy
-    }
- */
-  
+
   @IBAction func favorite() {
-//    if favoriteButton.backgroundColor == UIColor.white {
-//        favoriteButton.backgroundColor = UIColor.blue
-//    }
-//    else if favoriteButton.backgroundColor == UIColor.blue {
-//        favoriteButton.backgroundColor = UIColor.white
-//    }
     favoriteButton.isSelected.toggle()
     print("Favorite button")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -279,12 +244,6 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     request.returnsObjectsAsFaults = false
     do {
       let result = try context.fetch(request)
-      
-      /*for data in result as! [NSManagedObject] {
-       if (data.value(forKey: "name") as! String == shoeName.text) {
-       
-       }
-       }*/
       for data in result as! [NSManagedObject] {
         var image =  UIImage(contentsOfFile: "Group_!2")
         if self.imageView.image != nil{
@@ -303,41 +262,13 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
           }
           try context.save()
           print("Saved again")
-          //!data.value(forKey: "Favorited") as! Bool
         }
-        //                if data == context {
-        //                    /*if (data.value(forKey: "Favorited") == true ) {
-        //
-        //                    }*/
-        //                    print("Favoriting")
-        //                    data.setValue(true, forKey: "Favorited")
-        //                    //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
-        //                    try context.save()
       }
     }
     catch {
       print("Failed")
     }
   }
-  
-
-  
-  
-  /*
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   if segue.identifier == "segueName" {
-   let segueName:IdentifiedController = segue.destination as! IdentifiedController
-   segueName.shoeName = self.classificationLabel
-   }
-   }
-   */
-  
-  /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   if segue.destination is IdentifiedController {
-   let segEnd = segue.destination as? IdentifiedController
-   segEnd?.shoeLabel = self.classificationLabel
-   }
-   }*/
 }
 
 extension UIImage {

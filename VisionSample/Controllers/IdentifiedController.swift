@@ -16,14 +16,11 @@ class IdentifiedController: UIViewController {
     @IBOutlet weak var shoeName: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    //var shoeLabel:String = ""
-    
     // MARK: - General
     override func viewDidLoad() {
         super.viewDidLoad()
         //maybe automatically run save method when the screen appears
         shoeName.text = shoeName.text
-        //note: segue??
     }
     
     //look through coredata to find the autosaved image
@@ -35,15 +32,9 @@ class IdentifiedController: UIViewController {
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
-            /*for data in result as! [NSManagedObject] {
-                if (data.value(forKey: "name") as! String == shoeName.text) {
-                    
-                }
-            }*/
             for data in result as! [NSManagedObject] {
                 if data == context {
                     data.setValue(true, forKey: "Favorited")
-                    //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
                     try context.save()
                 }
             }
