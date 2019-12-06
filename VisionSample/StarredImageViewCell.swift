@@ -14,15 +14,7 @@ class StarredImageViewCell: UICollectionViewCell {
   @IBOutlet var imageView: UIImageView?
     
     override func prepareForReuse() {
-      super.prepareForReuse()
-      //imageView.image = nil
+      super.prepareForReuse
     }
     
-    /*func flash() {
-      imageView.alpha = 0
-      setNeedsDisplay()
-      UIView.animate(withDuration: 0.5, animations: { [weak self] in
-        self?.imageView.alpha = 1
-      })
-    }*/
 }

@@ -19,18 +19,25 @@ class ImageClassificationViewController: UIViewController {
   @IBOutlet weak var cameraButton: UIButton!
   @IBOutlet weak var classificationLabel: UILabel!
   @IBOutlet weak var favoriteButton: UIButton!
+  @IBOutlet weak var NikeImage: UIImageView!
+  @IBOutlet weak var UnderArmourImage: UIImageView!
+  @IBOutlet weak var AdidasImage: UIImageView!
+  @IBOutlet weak var HelpLabel: UILabel!
+  @IBOutlet weak var HomePhoto: UIImageView!
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    NikeImage.isHidden = true
+    UnderArmourImage.isHidden = true
+    AdidasImage.isHidden = true
     classificationLabel.isHidden = true
     favoriteButton.isHidden = true
     favoriteButton.backgroundColor = UIColor.white
-
-
-    //     favoriteButton.isHidden = true
-    
-    //maybe automatically run save method when the screen appears
+    let saveButton = UIImage(named: "emptyStar")
+    let savedButton = UIImage(named: "filledStar")
+    favoriteButton.setImage(saveButton, for: .normal)
+    favoriteButton.setImage(savedButton, for: .selected)
   }
 
   
@@ -58,11 +65,11 @@ class ImageClassificationViewController: UIViewController {
   
   /// - Tag: PerformRequests
   func updateClassifications(for image: UIImage) {
-    classificationLabel.text = "Classifying..."
-    
+    classificationLabel.text = "Predicting..."
+
     let orientation = CGImagePropertyOrientation(image.imageOrientation)
     guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
-    
+
     DispatchQueue.global(qos: .userInitiated).async {
       let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
       do {
@@ -96,13 +103,53 @@ class ImageClassificationViewController: UIViewController {
         
         // Display top classifications ranked by confidence in the UI.
         let topClassifications = classifications.prefix(2)
+        let shoeModel = topClassifications.map { classification in
+          return String(classification.identifier)
+        }
         let descriptions = topClassifications.map { classification in
           // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-          return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+          return [Double(classification.confidence)]
         }
-        self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+        if shoeModel[0] == "Nike" {
+          self.NikeImage.isHidden = false
+          self.AdidasImage.isHidden = true
+          self.UnderArmourImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are Nike Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be Nike shoes"
+          }
+        }
+        if shoeModel[0] == "Adidas" {
+          self.AdidasImage.isHidden = false
+          self.NikeImage.isHidden = true
+          self.UnderArmourImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are Adidas Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be Adidas shoes"
+          }
+        }
+        if shoeModel[0] == "UnderArmour" {
+          self.UnderArmourImage.isHidden = false
+          self.NikeImage.isHidden = true
+          self.AdidasImage.isHidden = true
+          let modelConfidence = Double(descriptions[0][0])
+          if modelConfidence > 0.70 {
+            self.classificationLabel.text = "We're Pretty Sure These are UnderArmour Shoes"
+          }
+          else{
+            self.classificationLabel.text = "These Might Be UnderArmour shoes"
+          }
+        }
+        self.save()
       }
     }
+
   }
   
   // MARK: - Photo Actions
@@ -130,6 +177,8 @@ class ImageClassificationViewController: UIViewController {
   }
   
   func presentPhotoPicker(sourceType: UIImagePickerControllerSourceType) {
+    self.HelpLabel.isHidden = true
+    self.HomePhoto.isHidden = true
     let picker = UIImagePickerController()
     picker.delegate = self
     picker.sourceType = sourceType
@@ -150,20 +199,22 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     imageView.image = image
     classificationLabel.isHidden = false
     favoriteButton.isHidden = false
-    save()
     updateClassifications(for: image)
   }
   
   func save() {
     let image = GalleryImage()
-    image.name = classificationLabel.text
-    image.photo = imageView.image
+    if (classificationLabel.text != "Predicting...") {
+        image.name = classificationLabel.text
+    }
+    let shoeImage = imageView.image
+    image.photo = shoeImage?.fixOrientation()
+
     print("Saving")
     saveShoe(image: image)
   }
   
   func saveShoe(image: GalleryImage){
-    // Connect to the context for the container stack
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     // Specifically select the People entity to save this object to
@@ -183,14 +234,9 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
       print("Failed saving")
     }
   }
-  
+
   @IBAction func favorite() {
-    if favoriteButton.backgroundColor == UIColor.white {
-        favoriteButton.backgroundColor = UIColor.blue
-    }
-    else if favoriteButton.backgroundColor == UIColor.blue {
-        favoriteButton.backgroundColor = UIColor.white
-    }
+    favoriteButton.isSelected.toggle()
     print("Favorite button")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
@@ -198,12 +244,6 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     request.returnsObjectsAsFaults = false
     do {
       let result = try context.fetch(request)
-      
-      /*for data in result as! [NSManagedObject] {
-       if (data.value(forKey: "name") as! String == shoeName.text) {
-       
-       }
-       }*/
       for data in result as! [NSManagedObject] {
         var image =  UIImage(contentsOfFile: "Group_!2")
         if self.imageView.image != nil{
@@ -222,37 +262,28 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
           }
           try context.save()
           print("Saved again")
-          //!data.value(forKey: "Favorited") as! Bool
         }
-        //                if data == context {
-        //                    /*if (data.value(forKey: "Favorited") == true ) {
-        //
-        //                    }*/
-        //                    print("Favoriting")
-        //                    data.setValue(true, forKey: "Favorited")
-        //                    //data.setValue(!data.value(forKey: "Favorited") as! Bool, forKey: "Favorited")
-        //                    try context.save()
       }
     }
     catch {
       print("Failed")
     }
   }
-  
-  
-  /*
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   if segue.identifier == "segueName" {
-   let segueName:IdentifiedController = segue.destination as! IdentifiedController
-   segueName.shoeName = self.classificationLabel
-   }
-   }
-   */
-  
-  /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   if segue.destination is IdentifiedController {
-   let segEnd = segue.destination as? IdentifiedController
-   segEnd?.shoeLabel = self.classificationLabel
-   }
-   }*/
 }
+
+extension UIImage {
+    func fixOrientation() -> UIImage {
+        if self.imageOrientation == UIImageOrientation.up {
+            return self
+        }
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        if let normalizedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()
+            return normalizedImage
+        } else {
+            return self
+        }
+    }
+}
+
