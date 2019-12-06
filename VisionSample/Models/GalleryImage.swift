@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+//THIS FILE NEEDS 100 PERCENT COVERAGE
 class GalleryImage: NSObject, NSCoding {
     
     // MARK: - Properties

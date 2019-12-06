@@ -196,7 +196,7 @@ class ImageClassificationViewController: UIViewController {
 
 extension ImageClassificationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   // MARK: - Handling Image Picker Selection
-  
+  //MIGHT NEEDS TESTING
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
     picker.dismiss(animated: true)
     
@@ -207,7 +207,8 @@ extension ImageClassificationViewController: UIImagePickerControllerDelegate, UI
     favoriteButton.isHidden = false
     updateClassifications(for: image)
   }
-  
+  //MIGHT NEEDS TESTING
+
   func save() {
     let image = GalleryImage()
     if (classificationLabel.text != "Predicting...") {

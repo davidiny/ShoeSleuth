@@ -32,6 +32,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
   @IBOutlet weak var resultView: UILabel!
   
   override func viewDidLoad() {
+    //DOES NOT NEED TESTING
     super.viewDidLoad()
     // get hold of the default video camera
     guard let camera = AVCaptureDevice.default(for: .video) else {
@@ -84,8 +85,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     updateThreshholdLabel()
   }
-    
+    //TEST THIS
     func updateThreshholdLabel () {
+            //TEST THIS
         self.threshholdLabel.text = "Threshold: " + String(format: "%.2f", recognitionThreshold)
     }
     

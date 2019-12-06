@@ -56,7 +56,7 @@ class IdentifiedController: UIViewController {
     @IBAction func changeFavoriteButtonColor(sender: UIButton) {
         favoriteButton.backgroundColor = UIColor.yellow
     }
-    
+    //NEEDS TESTING
     func save() {
         let image = GalleryImage()
         image.name = shoeName.text
@@ -64,7 +64,8 @@ class IdentifiedController: UIViewController {
         saveShoe(image: image)
     }
     
-    
+    //MIGHT NEEDS TESTING
+
     func saveShoe(image: GalleryImage){
         // Connect to the context for the container stack
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
