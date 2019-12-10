@@ -201,6 +201,7 @@ depends-member:
 - !private ["s7CVarArgP", "gradientLayer"]
 - !private ["s7CVarArgP", "handleClassifications"]
 - !private ["s7CVarArgP", "identifier"]
+- !private ["s7CVarArgP", "imageCropAndScaleOption"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isHidden"]
@@ -284,6 +285,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "gradientLayer"]
 - !private ["s28CustomDebugStringConvertibleP", "handleClassifications"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
+- !private ["s28CustomDebugStringConvertibleP", "imageCropAndScaleOption"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
@@ -371,6 +373,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "gradientLayer"]
 - !private ["s23CustomStringConvertibleP", "handleClassifications"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
+- !private ["s23CustomStringConvertibleP", "imageCropAndScaleOption"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
@@ -471,6 +474,7 @@ depends-member:
 - !private ["SQ", "cameraIntrinsics"]
 - ["SQ", "captureOutput"]
 - !private ["SQ", "captureQueue"]
+- !private ["SQ", "centerCrop"]
 - !private ["SQ", "cgColor"]
 - !private ["SQ", "colors"]
 - !private ["SQ", "confidence"]
@@ -484,6 +488,7 @@ depends-member:
 - !private ["SQ", "handleClassifications"]
 - !private ["SQ", "high"]
 - !private ["SQ", "identifier"]
+- !private ["SQ", "imageCropAndScaleOption"]
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isHidden"]
@@ -569,6 +574,7 @@ depends-member:
 - !private ["SH", "cameraIntrinsics"]
 - ["SH", "captureOutput"]
 - !private ["SH", "captureQueue"]
+- !private ["SH", "centerCrop"]
 - !private ["SH", "cgColor"]
 - !private ["SH", "colors"]
 - !private ["SH", "confidence"]
@@ -582,6 +588,7 @@ depends-member:
 - !private ["SH", "handleClassifications"]
 - !private ["SH", "high"]
 - !private ["SH", "identifier"]
+- !private ["SH", "imageCropAndScaleOption"]
 - ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "isHidden"]
@@ -690,6 +697,7 @@ depends-member:
 - !private ["So9NSCopyingP", "cgColor"]
 - !private ["So9NSCopyingP", "confidence"]
 - !private ["So9NSCopyingP", "identifier"]
+- !private ["So9NSCopyingP", "imageCropAndScaleOption"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "results"]
@@ -787,6 +795,7 @@ depends-member:
 - ["So8NSObjectC", "gradientLayer"]
 - ["So8NSObjectC", "handleClassifications"]
 - !private ["So8NSObjectC", "identifier"]
+- !private ["So8NSObjectC", "imageCropAndScaleOption"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
@@ -858,6 +867,7 @@ depends-member:
 - !private ["So8NSObjectP", "gradientLayer"]
 - !private ["So8NSObjectP", "handleClassifications"]
 - !private ["So8NSObjectP", "identifier"]
+- !private ["So8NSObjectP", "imageCropAndScaleOption"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
@@ -922,6 +932,7 @@ depends-member:
 - !private ["Sm", "map"]
 - !private ["Sm", "subscript"]
 - !private ["SY", "cameraIntrinsics"]
+- !private ["SY", "centerCrop"]
 - !private ["SY", "high"]
 - ["SY", "landscapeLeft"]
 - ["SY", "landscapeRight"]
@@ -937,6 +948,8 @@ depends-member:
 - !private ["ST", "joined"]
 - !private ["ST", "map"]
 - !private ["ST", "subscript"]
+- !private ["10ShoeSleuth0aB5ModelC", "init"]
+- !private ["10ShoeSleuth0aB5ModelC", "model"]
 - !private ["SS", "init"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -1465,11 +1478,19 @@ depends-member:
 - ["So16UIViewControllerC", "visionRequests"]
 - !private ["So27VNClassificationObservationC", "confidence"]
 - !private ["So27VNClassificationObservationC", "identifier"]
+- !private ["So13VNCoreMLModelC", "init"]
+- !private ["So15VNCoreMLRequestC", "imageCropAndScaleOption"]
+- !private ["So15VNCoreMLRequestC", "init"]
+- !private ["So19VNImageBasedRequestC", "imageCropAndScaleOption"]
+- !private ["So19VNImageBasedRequestC", "init"]
+- !private ["So25VNImageCropAndScaleOptionV", "centerCrop"]
 - !private ["So13VNImageOptiona", "cameraIntrinsics"]
 - !private ["So21VNImageRequestHandlerC", "init"]
 - !private ["So21VNImageRequestHandlerC", "perform"]
 - !private ["So13VNObservationC", "confidence"]
 - !private ["So13VNObservationC", "identifier"]
+- !private ["So9VNRequestC", "imageCropAndScaleOption"]
+- !private ["So9VNRequestC", "init"]
 - !private ["So9VNRequestC", "results"]
 - !private ["So26VNRequestRevisionProvidingP", "confidence"]
 - !private ["So26VNRequestRevisionProvidingP", "identifier"]
@@ -1594,6 +1615,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "gradientLayer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleClassifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "imageCropAndScaleOption"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
@@ -1662,6 +1684,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "gradientLayer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleClassifications"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "identifier"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "imageCropAndScaleOption"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHidden"]
@@ -1779,6 +1802,7 @@ depends-nominal:
 - "SY"
 - "7Combine9SchedulerP"
 - "ST"
+- !private "10ShoeSleuth0aB5ModelC"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"
@@ -1811,6 +1835,10 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So27VNClassificationObservationC"
+- !private "So13VNCoreMLModelC"
+- !private "So15VNCoreMLRequestC"
+- !private "So19VNImageBasedRequestC"
+- !private "So25VNImageCropAndScaleOptionV"
 - !private "So13VNImageOptiona"
 - !private "So21VNImageRequestHandlerC"
 - !private "So13VNObservationC"

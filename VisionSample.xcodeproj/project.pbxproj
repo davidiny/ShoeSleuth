@@ -10,7 +10,6 @@
 		300082412373B2D10095285D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C6A9C61EF863CC00CC4360 /* Main.storyboard */; };
 		3060126B237611C900372D4A /* StarredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060126A237611C900372D4A /* StarredImageView.swift */; };
 		3060127323761A3A00372D4A /* ShoeSleuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060127223761A3A00372D4A /* ShoeSleuthTests.swift */; };
-		3060127B23761BCD00372D4A /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
 		3060127D23761CE500372D4A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060127C23761CE500372D4A /* ImageView.swift */; };
 		308416212373A67B0036A6C7 /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416202373A67A0036A6C7 /* ImageClassificationViewController.swift */; };
 		308416232373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308416222373A68A0036A6C7 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
@@ -20,6 +19,7 @@
 		6567F2392370F0C800EC2B7B /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6567F2372370F0C800EC2B7B /* Images.xcdatamodeld */; };
 		6567F24123710BD700EC2B7B /* IdentifiedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24023710BD700EC2B7B /* IdentifiedController.swift */; };
 		6567F24623710FBF00EC2B7B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
+		65BD573023A044AE00671B9B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F24523710FBF00EC2B7B /* GalleryImage.swift */; };
 		65F83F7D2399EF68009E8F3D /* ShoeSleuthModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 65F83F7C2399EF68009E8F3D /* ShoeSleuthModel.mlmodel */; };
 		88C6A9C31EF863CC00CC4360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C21EF863CC00CC4360 /* AppDelegate.swift */; };
 		88C6A9C51EF863CC00CC4360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6A9C41EF863CC00CC4360 /* ViewController.swift */; };
@@ -249,8 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3060127B23761BCD00372D4A /* GalleryImage.swift in Sources */,
 				3060127323761A3A00372D4A /* ShoeSleuthTests.swift in Sources */,
+				65BD573023A044AE00671B9B /* GalleryImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +410,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

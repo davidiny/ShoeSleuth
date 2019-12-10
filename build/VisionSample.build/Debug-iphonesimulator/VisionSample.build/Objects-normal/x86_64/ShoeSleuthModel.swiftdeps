@@ -178,6 +178,7 @@ depends-member:
 - ["10ShoeSleuth0aB5ModelC", "ShoeSleuthModelInput"]
 - ["10ShoeSleuth0aB5ModelC", "ShoeSleuthModelOutput"]
 - ["10ShoeSleuth0aB5ModelC", "URL"]
+- ["10ShoeSleuth0aB5ModelC", "deinit"]
 - ["10ShoeSleuth0aB5ModelC", "init"]
 - ["10ShoeSleuth0aB5ModelC", "model"]
 - ["10ShoeSleuth0aB5ModelC", "prediction"]

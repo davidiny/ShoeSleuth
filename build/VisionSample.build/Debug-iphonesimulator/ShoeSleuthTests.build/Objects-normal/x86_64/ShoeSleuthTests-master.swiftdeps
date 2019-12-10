@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+options: "4ca2ccec9d12d577df8385744db3418b"
+build_time: [1576016763, 114310000]
+inputs:
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/ShoeSleuthTests/ShoeSleuthTests.swift": [1576016753, 138058067]
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/Models/GalleryImage.swift": [1574795417, 937590834]
