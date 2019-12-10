@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
 options: "69824b1fa817fd3ec4480fe5a0449b95"
-build_time: [1575598084, 620027000]
+build_time: [1576008643, 320319000]
 inputs:
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/Controllers/ViewController.swift": [1574795417, 935474181]
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/Models/GalleryImage.swift": [1574795417, 937590834]
@@ -11,9 +11,9 @@ inputs:
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/GalleryImageView.swift": [1575592359, 937060482]
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/CGImagePropertyOrientation+UIImageOrientation.swift": [1574795417, 934495624]
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/AppDelegate.swift": [1574795417, 908545228]
-  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/Controllers/IdentifiedController.swift": [1575591663, 485988357]
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/Controllers/IdentifiedController.swift": [1576008283, 340179927]
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/VisionSample/ImageClassificationViewController.swift": [1575597680, 46410819]
   "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreMLGenerated/ShoeSleuthModel/ShoeSleuthModel.swift": [1575598068, 664858396]
-  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataClass.swift": [1575597960, 446554721]
-  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataProperties.swift": [1575597960, 454279035]
-  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Images+CoreDataModel.swift": [1575597960, 422115531]
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataClass.swift": [1575639331, 890791941]
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Photo+CoreDataProperties.swift": [1575639331, 893863464]
+  "/Users/lizw/Downloads/shoesleuth/ShoeSleuth/build/VisionSample.build/Debug-iphonesimulator/VisionSample.build/DerivedSources/CoreDataGenerated/Images/Images+CoreDataModel.swift": [1575639331, 881809097]
