@@ -29,6 +29,7 @@ depends-top-level:
 - !private "NSFetchRequest"
 - !private "NSFetchRequestResult"
 - !private "NSManagedObject"
+- !private "ShoeSleuth"
 - "ShoeSleuthTests"
 - !private "StringLiteralType"
 - !private "UIApplication"
@@ -43,6 +44,7 @@ depends-member:
 - !private ["s7CVarArgP", "IdentifiedController"]
 - !private ["s7CVarArgP", "ImageClassificationViewController"]
 - !private ["s7CVarArgP", "NSFetchRequest"]
+- !private ["s7CVarArgP", "ShoeSleuth"]
 - !private ["s7CVarArgP", "UIApplication"]
 - !private ["s7CVarArgP", "UIImage"]
 - !private ["s7CVarArgP", "XCTAssert"]
@@ -68,6 +70,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "IdentifiedController"]
 - !private ["s28CustomDebugStringConvertibleP", "ImageClassificationViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "NSFetchRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "ShoeSleuth"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImage"]
 - !private ["s28CustomDebugStringConvertibleP", "XCTAssert"]
@@ -93,6 +96,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "IdentifiedController"]
 - !private ["s23CustomStringConvertibleP", "ImageClassificationViewController"]
 - !private ["s23CustomStringConvertibleP", "NSFetchRequest"]
+- !private ["s23CustomStringConvertibleP", "ShoeSleuth"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
 - !private ["s23CustomStringConvertibleP", "XCTAssert"]
@@ -118,6 +122,7 @@ depends-member:
 - !private ["SQ", "IdentifiedController"]
 - !private ["SQ", "ImageClassificationViewController"]
 - !private ["SQ", "NSFetchRequest"]
+- !private ["SQ", "ShoeSleuth"]
 - !private ["SQ", "UIApplication"]
 - !private ["SQ", "UIImage"]
 - !private ["SQ", "XCTAssert"]
@@ -140,14 +145,19 @@ depends-member:
 - !private ["SQ", "value"]
 - !private ["SQ", "viewContext"]
 - !private ["15ShoeSleuthTests12GalleryImageC", "deinit"]
+- !private ["10ShoeSleuth12GalleryImageC", "favorited"]
 - !private ["15ShoeSleuthTests12GalleryImageC", "favorited"]
+- !private ["10ShoeSleuth12GalleryImageC", "init"]
 - !private ["15ShoeSleuthTests12GalleryImageC", "init"]
+- !private ["10ShoeSleuth12GalleryImageC", "name"]
 - !private ["15ShoeSleuthTests12GalleryImageC", "name"]
+- !private ["10ShoeSleuth12GalleryImageC", "photo"]
 - !private ["15ShoeSleuthTests12GalleryImageC", "photo"]
 - !private ["SH", "GalleryImage"]
 - !private ["SH", "IdentifiedController"]
 - !private ["SH", "ImageClassificationViewController"]
 - !private ["SH", "NSFetchRequest"]
+- !private ["SH", "ShoeSleuth"]
 - !private ["SH", "UIApplication"]
 - !private ["SH", "UIImage"]
 - !private ["SH", "XCTAssert"]
@@ -207,6 +217,7 @@ depends-member:
 - !private ["So8NSObjectC", "NSFetchRequest"]
 - !private ["So8NSObjectC", "NSFetchRequestResult"]
 - !private ["So8NSObjectC", "NSManagedObject"]
+- !private ["So8NSObjectC", "ShoeSleuth"]
 - !private ["So8NSObjectC", "UIApplication"]
 - !private ["So8NSObjectC", "UIImage"]
 - !private ["So8NSObjectC", "XCTAssert"]
@@ -237,6 +248,7 @@ depends-member:
 - !private ["So8NSObjectP", "IdentifiedController"]
 - !private ["So8NSObjectP", "ImageClassificationViewController"]
 - !private ["So8NSObjectP", "NSFetchRequest"]
+- !private ["So8NSObjectP", "ShoeSleuth"]
 - !private ["So8NSObjectP", "UIApplication"]
 - !private ["So8NSObjectP", "UIImage"]
 - !private ["So8NSObjectP", "XCTAssert"]
@@ -273,6 +285,7 @@ depends-member:
 - !private ["15ShoeSleuthTestsAAC", "NSFetchRequest"]
 - !private ["15ShoeSleuthTestsAAC", "NSFetchRequestResult"]
 - !private ["15ShoeSleuthTestsAAC", "NSManagedObject"]
+- !private ["15ShoeSleuthTestsAAC", "ShoeSleuth"]
 - !private ["15ShoeSleuthTestsAAC", "UIApplication"]
 - !private ["15ShoeSleuthTestsAAC", "UIImage"]
 - !private ["15ShoeSleuthTestsAAC", "XCTAssert"]
@@ -336,6 +349,7 @@ depends-member:
 - !private ["So11XCTActivityP", "IdentifiedController"]
 - !private ["So11XCTActivityP", "ImageClassificationViewController"]
 - !private ["So11XCTActivityP", "NSFetchRequest"]
+- !private ["So11XCTActivityP", "ShoeSleuth"]
 - !private ["So11XCTActivityP", "UIApplication"]
 - !private ["So11XCTActivityP", "UIImage"]
 - !private ["So11XCTActivityP", "XCTAssert"]
@@ -348,6 +362,7 @@ depends-member:
 - !private ["So17XCTWaiterDelegateP", "IdentifiedController"]
 - !private ["So17XCTWaiterDelegateP", "ImageClassificationViewController"]
 - !private ["So17XCTWaiterDelegateP", "NSFetchRequest"]
+- !private ["So17XCTWaiterDelegateP", "ShoeSleuth"]
 - !private ["So17XCTWaiterDelegateP", "UIApplication"]
 - !private ["So17XCTWaiterDelegateP", "UIImage"]
 - !private ["So17XCTWaiterDelegateP", "XCTAssert"]
@@ -365,6 +380,7 @@ depends-member:
 - !private ["So6XCTestC", "NSFetchRequest"]
 - !private ["So6XCTestC", "NSFetchRequestResult"]
 - !private ["So6XCTestC", "NSManagedObject"]
+- !private ["So6XCTestC", "ShoeSleuth"]
 - !private ["So6XCTestC", "UIApplication"]
 - !private ["So6XCTestC", "UIImage"]
 - !private ["So6XCTestC", "XCTAssert"]
@@ -387,6 +403,7 @@ depends-member:
 - !private ["So10XCTestCaseC", "NSFetchRequest"]
 - !private ["So10XCTestCaseC", "NSFetchRequestResult"]
 - !private ["So10XCTestCaseC", "NSManagedObject"]
+- !private ["So10XCTestCaseC", "ShoeSleuth"]
 - !private ["So10XCTestCaseC", "UIApplication"]
 - !private ["So10XCTestCaseC", "UIImage"]
 - !private ["So10XCTestCaseC", "XCTAssert"]
@@ -407,6 +424,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IdentifiedController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ImageClassificationViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSFetchRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ShoeSleuth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssert"]
@@ -432,6 +450,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IdentifiedController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ImageClassificationViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSFetchRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ShoeSleuth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "XCTAssert"]
@@ -459,6 +478,14 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - "SQ"
+- !private "15ShoeSleuthTests12GalleryImageC"
+- !private "10ShoeSleuth12GalleryImageC"
+- !private "15ShoeSleuthTests12GalleryImageC"
+- !private "10ShoeSleuth12GalleryImageC"
+- !private "15ShoeSleuthTests12GalleryImageC"
+- !private "10ShoeSleuth12GalleryImageC"
+- !private "15ShoeSleuthTests12GalleryImageC"
+- !private "10ShoeSleuth12GalleryImageC"
 - !private "15ShoeSleuthTests12GalleryImageC"
 - "SH"
 - !private "10ShoeSleuth20IdentifiedControllerC"

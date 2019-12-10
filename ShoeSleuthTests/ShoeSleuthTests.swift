@@ -24,7 +24,8 @@ class ShoeSleuthTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    //tests the gallery image model
+    func testGalleryImage() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         var galleryImage =  GalleryImage()
@@ -40,8 +41,9 @@ class ShoeSleuthTests: XCTestCase {
 
     }
     
+    //tests the 'saveShoe' method inside 'ImageClassificationViewController'
     func testImageClassificationViewController() {
-        print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
+        print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in the 'save' method")
         
         var match = false;
         
@@ -78,8 +80,9 @@ class ShoeSleuthTests: XCTestCase {
         
     }
     
+    //tests the 'saveShoe' method inside 'IdentifiedController'
     func testIdentifiedController() {
-        print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
+        print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in the 'save' method")
         
         var match = false;
         
@@ -114,13 +117,6 @@ class ShoeSleuthTests: XCTestCase {
         
         XCTAssertTrue(match)
         
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }

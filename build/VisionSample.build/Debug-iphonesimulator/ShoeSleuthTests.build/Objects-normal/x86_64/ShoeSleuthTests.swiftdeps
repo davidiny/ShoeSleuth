@@ -8,10 +8,9 @@ provides-member:
 provides-dynamic-lookup:
 - "setUp"
 - "tearDown"
-- "testExample"
+- "testGalleryImage"
 - "testIdentifiedController"
 - "testImageClassificationViewController"
-- "testPerformanceExample"
 depends-top-level:
 - !private "!="
 - !private "=="
@@ -55,7 +54,6 @@ depends-member:
 - !private ["s7CVarArgP", "favorited"]
 - !private ["s7CVarArgP", "fetch"]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "measure"]
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "persistentContainer"]
 - !private ["s7CVarArgP", "photo"]
@@ -81,7 +79,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "favorited"]
 - !private ["s28CustomDebugStringConvertibleP", "fetch"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "measure"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "persistentContainer"]
 - !private ["s28CustomDebugStringConvertibleP", "photo"]
@@ -107,7 +104,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "favorited"]
 - !private ["s23CustomStringConvertibleP", "fetch"]
 - !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "measure"]
 - !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "persistentContainer"]
 - !private ["s23CustomStringConvertibleP", "photo"]
@@ -133,7 +129,6 @@ depends-member:
 - !private ["SQ", "favorited"]
 - !private ["SQ", "fetch"]
 - !private ["SQ", "init"]
-- !private ["SQ", "measure"]
 - !private ["SQ", "name"]
 - !private ["SQ", "persistentContainer"]
 - !private ["SQ", "photo"]
@@ -168,7 +163,6 @@ depends-member:
 - !private ["SH", "favorited"]
 - !private ["SH", "fetch"]
 - !private ["SH", "init"]
-- !private ["SH", "measure"]
 - !private ["SH", "name"]
 - !private ["SH", "persistentContainer"]
 - !private ["SH", "photo"]
@@ -227,7 +221,6 @@ depends-member:
 - !private ["So8NSObjectC", "favorited"]
 - !private ["So8NSObjectC", "fetch"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "measure"]
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "persistentContainer"]
 - !private ["So8NSObjectC", "photo"]
@@ -238,10 +231,9 @@ depends-member:
 - ["So8NSObjectC", "setUp"]
 - !private ["So8NSObjectC", "shared"]
 - ["So8NSObjectC", "tearDown"]
-- ["So8NSObjectC", "testExample"]
+- ["So8NSObjectC", "testGalleryImage"]
 - ["So8NSObjectC", "testIdentifiedController"]
 - ["So8NSObjectC", "testImageClassificationViewController"]
-- ["So8NSObjectC", "testPerformanceExample"]
 - !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "viewContext"]
 - !private ["So8NSObjectP", "GalleryImage"]
@@ -259,7 +251,6 @@ depends-member:
 - !private ["So8NSObjectP", "favorited"]
 - !private ["So8NSObjectP", "fetch"]
 - !private ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "measure"]
 - !private ["So8NSObjectP", "name"]
 - !private ["So8NSObjectP", "persistentContainer"]
 - !private ["So8NSObjectP", "photo"]
@@ -292,14 +283,12 @@ depends-member:
 - !private ["15ShoeSleuthTestsAAC", "XCTAssertTrue"]
 - ["15ShoeSleuthTestsAAC", "deinit"]
 - ["15ShoeSleuthTestsAAC", "init"]
-- !private ["15ShoeSleuthTestsAAC", "measure"]
 - !private ["15ShoeSleuthTestsAAC", "print"]
 - ["15ShoeSleuthTestsAAC", "setUp"]
 - ["15ShoeSleuthTestsAAC", "tearDown"]
-- ["15ShoeSleuthTestsAAC", "testExample"]
+- ["15ShoeSleuthTestsAAC", "testGalleryImage"]
 - ["15ShoeSleuthTestsAAC", "testIdentifiedController"]
 - ["15ShoeSleuthTestsAAC", "testImageClassificationViewController"]
-- ["15ShoeSleuthTestsAAC", "testPerformanceExample"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "pngData"]
 - !private ["So21UIAppearanceContainerP", "init"]
@@ -356,7 +345,6 @@ depends-member:
 - !private ["So11XCTActivityP", "XCTAssertTrue"]
 - ["So11XCTActivityP", ""]
 - !private ["So11XCTActivityP", "init"]
-- !private ["So11XCTActivityP", "measure"]
 - !private ["So11XCTActivityP", "print"]
 - !private ["So17XCTWaiterDelegateP", "GalleryImage"]
 - !private ["So17XCTWaiterDelegateP", "IdentifiedController"]
@@ -369,7 +357,6 @@ depends-member:
 - !private ["So17XCTWaiterDelegateP", "XCTAssertTrue"]
 - ["So17XCTWaiterDelegateP", ""]
 - !private ["So17XCTWaiterDelegateP", "init"]
-- !private ["So17XCTWaiterDelegateP", "measure"]
 - !private ["So17XCTWaiterDelegateP", "print"]
 - !private ["So6XCTestC", "AppDelegate"]
 - !private ["So6XCTestC", "Data"]
@@ -386,14 +373,12 @@ depends-member:
 - !private ["So6XCTestC", "XCTAssert"]
 - !private ["So6XCTestC", "XCTAssertTrue"]
 - ["So6XCTestC", "init"]
-- !private ["So6XCTestC", "measure"]
 - !private ["So6XCTestC", "print"]
 - ["So6XCTestC", "setUp"]
 - ["So6XCTestC", "tearDown"]
-- ["So6XCTestC", "testExample"]
+- ["So6XCTestC", "testGalleryImage"]
 - ["So6XCTestC", "testIdentifiedController"]
 - ["So6XCTestC", "testImageClassificationViewController"]
-- ["So6XCTestC", "testPerformanceExample"]
 - !private ["So10XCTestCaseC", "AppDelegate"]
 - !private ["So10XCTestCaseC", "Data"]
 - !private ["So10XCTestCaseC", "GalleryImage"]
@@ -410,14 +395,12 @@ depends-member:
 - !private ["So10XCTestCaseC", "XCTAssertTrue"]
 - ["So10XCTestCaseC", ""]
 - ["So10XCTestCaseC", "init"]
-- !private ["So10XCTestCaseC", "measure"]
 - !private ["So10XCTestCaseC", "print"]
 - ["So10XCTestCaseC", "setUp"]
 - ["So10XCTestCaseC", "tearDown"]
-- ["So10XCTestCaseC", "testExample"]
+- ["So10XCTestCaseC", "testGalleryImage"]
 - ["So10XCTestCaseC", "testIdentifiedController"]
 - ["So10XCTestCaseC", "testImageClassificationViewController"]
-- ["So10XCTestCaseC", "testPerformanceExample"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "pngData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "GalleryImage"]
@@ -435,7 +418,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "favorited"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fetch"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "measure"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "persistentContainer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "photo"]
@@ -461,7 +443,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "favorited"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fetch"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "measure"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "persistentContainer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "photo"]
@@ -2125,4 +2106,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "56ead480cf4ad6f1e58e11539200370f"
+interface-hash: "3ad7a3f307a6e4813267fc1bd062e7a5"
