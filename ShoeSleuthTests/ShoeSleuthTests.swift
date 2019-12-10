@@ -63,7 +63,9 @@ class ShoeSleuthTests: XCTestCase {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
                 if (data.value(forKey: "photo") as! NSData) as Data == binary {
-                    match = true;
+                    match = true
+                    context.delete(data)
+                    break
                 }
             }
         }
@@ -99,7 +101,9 @@ class ShoeSleuthTests: XCTestCase {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
                 if (data.value(forKey: "photo") as! NSData) as Data == binary {
-                    match = true;
+                    match = true
+                    context.delete(data)
+                    break
                 }
             }
         }
