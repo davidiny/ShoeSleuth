@@ -8,6 +8,8 @@
 
 import XCTest
 import UIKit
+import Foundation
+import CoreData
 
 class ShoeSleuthTests: XCTestCase {
 
@@ -40,6 +42,8 @@ class ShoeSleuthTests: XCTestCase {
     func testImageClassificationViewController() {
         print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
         
+        var match = false;
+        
         let shoeTestImage = GalleryImage()
         shoeTestImage.name = "Shoe"
         shoeTestImage.favorited = false
@@ -49,10 +53,32 @@ class ShoeSleuthTests: XCTestCase {
         let shoeTesting = ImageClassificationViewController()
         shoeTesting.saveShoe(image: shoeTestImage)
         
+        let binary = shoeTestImage.photo!.pngData()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if (data.value(forKey: "photo") as! NSData) as Data == binary {
+                    match = true;
+                }
+            }
+        }
+        catch {
+            print("Failed")
+        }
+        
+        XCTAssertTrue(match)
+        
     }
     
     func testIdentifiedController() {
         print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
+        
+        var match = false;
         
         let shoeTestImage = GalleryImage()
         shoeTestImage.name = "Shoe"
@@ -62,6 +88,26 @@ class ShoeSleuthTests: XCTestCase {
         
         let shoeTesting = IdentifiedController()
         shoeTesting.saveShoe(image: shoeTestImage)
+        
+        let binary = shoeTestImage.photo!.pngData()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if (data.value(forKey: "photo") as! NSData) as Data == binary {
+                    match = true;
+                }
+            }
+        }
+        catch {
+            print("Failed")
+        }
+        
+        XCTAssertTrue(match)
         
     }
 
