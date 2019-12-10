@@ -40,19 +40,28 @@ class ShoeSleuthTests: XCTestCase {
     func testImageClassificationViewController() {
         print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
         
-        var shoeTestImage = GalleryImage()
+        let shoeTestImage = GalleryImage()
         shoeTestImage.name = "Shoe"
         shoeTestImage.favorited = false
         let image = UIImage(named: "pngtest1.png")
         shoeTestImage.photo = image
         
-       var shoeTesting = ImageClassificationViewController()
+        let shoeTesting = ImageClassificationViewController()
         shoeTesting.saveShoe(image: shoeTestImage)
         
     }
     
     func testIdentifiedController() {
         print("Cannot test the 'save' method because it requires information from the UI. Testing 'saveShoe' instead which is called in 'save'")
+        
+        let shoeTestImage = GalleryImage()
+        shoeTestImage.name = "Shoe"
+        shoeTestImage.favorited = false
+        let image = UIImage(named: "pngtest1.png")
+        shoeTestImage.photo = image
+        
+        let shoeTesting = IdentifiedController()
+        shoeTesting.saveShoe(image: shoeTestImage)
         
     }
 
